@@ -42,9 +42,11 @@ body = simple_rigid_body(body_I_kgm2,dt_s)
 
 # define some lookups for the actuators
 w_rotor_px_lookup_radps = lookup_1D([-dt_s,t_end_s],[0,20000])
-w_rotor_nx_lookup_rapds = lookup_1D([-dt_s,t_end_s],[0,-20000])
-phi_tilter_px_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(-5),np.deg2rad(5)])
-phi_tilter_nx_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(5),np.deg2rad(-5)])
+w_rotor_nx_lookup_rapds = lookup_1D([-dt_s,t_end_s],[0,-19000])
+# phi_tilter_px_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(-5),np.deg2rad(5)])
+# phi_tilter_nx_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(5),np.deg2rad(-5)])
+phi_tilter_px_lookup_rad = lookup_1D([-dt_s,t_end_s],[0,0])
+phi_tilter_nx_lookup_rad = lookup_1D([-dt_s,t_end_s],[0,0])
 
 # define log array
 log_array = np.zeros((n_steps,18)) # [t_s wx wy wz phi_px phi_nx phidot_px phidot_nx w_px w_nx wdot_px wdot_nx]
