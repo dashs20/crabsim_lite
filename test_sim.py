@@ -47,11 +47,13 @@ phi_tilter_px_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(-5),np.deg2rad(
 phi_tilter_nx_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(5),np.deg2rad(-5)])
 
 # define log array
-log_array = np.zeros((n_steps,12)) # [t_s wx wy wz phi_px phi_nx phidot_px phidot_nx w_px w_nx wdot_px wdot_nx]
+log_array = np.zeros((n_steps,18)) # [t_s wx wy wz phi_px phi_nx phidot_px phidot_nx w_px w_nx wdot_px wdot_nx]
 log_col_names = ["t_s",
                  "wx_radps","wy_radps","wz_radps",
                  "phi_px_rad","phi_nx_rad","phidot_px_radps","phidot_nx_radps",
-                 "w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps"]
+                 "w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps",
+                 "F_px_x_N","F_px_y_N","F_px_z_N",
+                 "F_nx_x_N","F_nx_y_N","F_nx_z_N"]
 log_col_names = ','.join(log_col_names)
 
 # perform simulation
@@ -78,8 +80,8 @@ for i_step in range(n_steps):
     M_nx_wheel_Nm = rotor_wheel_nx.get_M(w_rotor_nx_radps,wdot_rotor_nx_radps2,phi_tilter_nx_rad,phidot_tilter_nx_radps,W_B_wrt_I_radps)
 
     # get thrust moments on rigid body
-    M_px_thrust_Nm = rotor_thruster_px.get_M(phi_tilter_px_rad,w_rotor_px_radps)
-    M_nx_thrust_Nm = rotor_thruster_px.get_M(phi_tilter_nx_rad,w_rotor_nx_radps)
+    M_px_thrust_Nm, F_px_N = rotor_thruster_px.get_M(phi_tilter_px_rad,w_rotor_px_radps)
+    M_nx_thrust_Nm, F_nx_N = rotor_thruster_nx.get_M(phi_tilter_nx_rad,w_rotor_nx_radps)
 
     # get net moment on rigid body
     M_net_Nm = M_px_wheel_Nm + M_nx_wheel_Nm + M_px_thrust_Nm + M_nx_thrust_Nm
@@ -97,7 +99,9 @@ for i_step in range(n_steps):
                                 w_rotor_px_radps,
                                 w_rotor_nx_radps,
                                 wdot_rotor_px_radps2,
-                                wdot_rotor_nx_radps2))
+                                wdot_rotor_nx_radps2,
+                                F_px_N,
+                                F_nx_N))
     
     log_array[i_step,:] = np.transpose(vertical_state)
 

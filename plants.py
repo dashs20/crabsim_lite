@@ -32,7 +32,7 @@ class rotor_as_thruster:
         T_hat = compute_T_hat(phi_rotor_rad)
         f_N = self.w_radps_2_f_N.index(np.abs(w_rotor_radps)) # thrust maps to |rotor speed|
         F_N = f_N * T_hat
-        return np.cross(self.r_cg2r_m,F_N,axis=0)
+        return np.cross(self.r_cg2r_m,F_N,axis=0), F_N
     
 class simple_rigid_body:
     def __init__(self,I_kgm2,dt_s):
