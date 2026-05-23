@@ -47,7 +47,12 @@ phi_tilter_px_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(-5),np.deg2rad(
 phi_tilter_nx_lookup_rad = lookup_1D([-dt_s,t_end_s],[np.deg2rad(5),np.deg2rad(-5)])
 
 # define log array
-log_array = np.zeros((n_steps,12)) # [wx wy wz phi_px phi_nx phidot_px phidot_nx w_px w_nx wdot_px wdot_nx]
+log_array = np.zeros((n_steps,12)) # [t_s wx wy wz phi_px phi_nx phidot_px phidot_nx w_px w_nx wdot_px wdot_nx]
+log_col_names = ["t_s",
+                 "wx_radps","wy_radps","wz_radps",
+                 "phi_px_rad","phi_nx_rad","phidot_px_radps","phidot_nx_radps",
+                 "w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps"]
+log_col_names = ','.join(log_col_names)
 
 # perform simulation
 t_s = 0
@@ -99,11 +104,4 @@ for i_step in range(n_steps):
     # update time
     t_s += dt_s
 
-np.savetxt('log.csv', log_array, delimiter=',', fmt='%.3f')
-
-
-
-
-
-
-
+np.savetxt('log.csv', log_array, delimiter=',', fmt='%.3f', header=log_col_names, comments='')
