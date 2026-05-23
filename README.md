@@ -12,6 +12,16 @@ CrabSim Lite is a lightweight, Python-based dynamics simulation environment desi
 - **Modular Design:** Easily swap out plant models, actuators, and integration methods.
 - **Data Logging & Visualization:** Built-in support for logging simulation data to CSV and generating PDF reports.
 
+## Assumptions
+
+The simulation model makes several simplifying assumptions to balance performance and accuracy for small-scale vehicle dynamics:
+
+| Assumption | Rationale |
+| :--- | :--- |
+| Rotor speed/acceleration is unaffected by the vehicle | For small-scale RC vehicles, the motors are generally powerful enough to push through disturbances from the dynamics of tumble. |
+| Servo angle/speed is unaffected by the vehicle | Same as motors. A sufficiently beefy RC servo is relatively unaffected by external disturbances at this scale. |
+| The tilting assembly has no inertia | $H_{rotor} \gg H_{tilting\ assembly}$. The rotors can spin at upwards of 200,000 deg/s. Meanwhile, the tilters will seldom exceed 500-1000 deg/s, in extreme cases. Since the moments of the rotor assemblies on the body are fundamentally driven by angular momentum, this is a valid assumption. |
+
 ## Installation
 
 Ensure you have Python 3.x installed. You can install the required dependencies using pip:
