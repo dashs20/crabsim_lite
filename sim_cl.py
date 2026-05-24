@@ -1,6 +1,7 @@
 from plants import *
 from gnc import *
 from util import *
+from sensor import ICM42688
 
 # define sim dt (seconds)
 dt_s = 1/4000
@@ -14,14 +15,17 @@ crabcopter = bicopter('crabcopter.yaml',dt_s)
 # define gnc
 crabbrain = gnc('crabcopter_gnc.yaml',dt_s)
 
+# define gyro sensor
+gyro = ICM42688(1000,200)
+
 # define some controller command lookups
 
 t_lookup_s = np.linspace(-dt_s,t_end_s,10)
 
-# wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
-wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
-wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
-# wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
+wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
+# wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
+# wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
+wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 thr_lookup_frac = lookup_1D([-dt_s,t_end_s],[0.4,0.4])
 
@@ -35,8 +39,9 @@ plant_log_col_names = ["wx_radps","wy_radps","wz_radps",
 plant_log_col_names = ','.join(plant_log_col_names)
 
 # define GNC log array
-gnc_log_array = np.zeros((n_steps,10))
+gnc_log_array = np.zeros((n_steps,13))
 gnc_log_col_names = ["wx_cmd_radps","wy_cmd_radps","wz_cmd_radps",
+                     "wx_meas_radps","wy_meas_radps","wz_meas_radps",
                      "Mx_cmd_Nm","My_cmd_Nm","Mz_cmd_Nm",
                      "fpx_frac","fnx_frac","phi_px_cmd_rad","phi_nx_cmd_rad"]
 gnc_log_col_names = ','.join(gnc_log_col_names)
@@ -53,9 +58,12 @@ for i_step in range(n_steps):
     w_des_radps = np.array([wx_cmd_radps,wy_cmd_radps,wz_cmd_radps])
     thr_frac = thr_lookup_frac.index(t_cur_s)
 
+    # get gyro measurement of body rate
+    w_meas_radps = gyro.get_measurement(crabcopter.body.W_B_wrt_I_radps)
+
     # step GNC & log outputs
-    gnc_state = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,thr_frac)
-    gnc_log_array[i_step,:] = np.hstack((w_des_radps, gnc_state))
+    gnc_state = crabbrain.step(w_des_radps,w_meas_radps,thr_frac)
+    gnc_log_array[i_step,:] = np.hstack((w_des_radps, w_meas_radps.flatten(), gnc_state))
     act_cmd = gnc_state[3:7]
 
     # step plant & log output

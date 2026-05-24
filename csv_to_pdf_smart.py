@@ -109,6 +109,25 @@ def generate_smart_pdf_plots(input_csv):
         pdf.savefig(fig)
         plt.close(fig)
 
+        # 5. True vs. Measured Rates
+        fig, axes = plt.subplots(3, 1, figsize=(8.5, 11), sharex=True)
+        rates_meas = [('x (Roll)', 'wx_radps', 'wx_meas_radps'), 
+                      ('y (Pitch)', 'wy_radps', 'wy_meas_radps'), 
+                      ('z (Yaw)', 'wz_radps', 'wz_meas_radps')]
+        
+        for i, (axis, true, meas) in enumerate(rates_meas):
+            axes[i].plot(t, rad2deg(data[true]), label=f'True {axis}')
+            axes[i].plot(t, rad2deg(data[meas]), label=f'Meas {axis}', alpha=0.7)
+            axes[i].set_ylabel(f'w_{axis} [deg/s]')
+            axes[i].legend(loc='upper right')
+            axes[i].grid(True)
+        
+        axes[0].set_title('Body Angular Rates: True vs. Measured')
+        axes[2].set_xlabel('Time [s]')
+        fig.tight_layout()
+        pdf.savefig(fig)
+        plt.close(fig)
+
     print(f"Generated {output_pdf}")
 
 if __name__ == "__main__":
