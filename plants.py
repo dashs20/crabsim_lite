@@ -98,18 +98,18 @@ class bicopter:
         self.body = simple_rigid_body(self.body_I_kgm2,self.dt_s)
 
         # build actuator models
-        self.px_motor_model = tf1(data['motor_time_constant'],1,self.dt_s)
-        self.nx_motor_model = tf1(data['motor_time_constant'],1,self.dt_s)
-        self.px_servo_model = tf1(data['servo_time_constant'],1,self.dt_s)
-        self.nx_servo_model = tf1(data['servo_time_constant'],1,self.dt_s)
+        self.px_motor_model = tf1(ms2s(data['motor_time_constant_ms']),1,self.dt_s)
+        self.nx_motor_model = tf1(ms2s(data['motor_time_constant_ms']),1,self.dt_s)
+        self.px_servo_model = tf1(ms2s(data['servo_time_constant_ms']),1,self.dt_s)
+        self.nx_servo_model = tf1(ms2s(data['servo_time_constant_ms']),1,self.dt_s)
 
     def step(self,act_cmd):
 
         # unpack command vector
         thr_px_cmd_frac = act_cmd[0]
         thr_nx_cmd_frac = act_cmd[1]
-        phi_px_cmd_rad = np.rad2deg(act_cmd[2])
-        phi_nx_cmd_rad = np.rad2deg(act_cmd[3])
+        phi_px_cmd_rad = np.deg2rad(act_cmd[2])
+        phi_nx_cmd_rad = np.deg2rad(act_cmd[3])
 
         # convert throttle fractions into rates
         thr_px_cmd_radps = thr_px_cmd_frac * self.max_motor_w_radps
