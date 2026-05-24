@@ -88,7 +88,7 @@ class bicopter:
         # define rotor thruster rate to force lookup
         raw_data = np.loadtxt(data['motor_lookup'], delimiter=',', skiprows=1)
         self.w_rapds_2_f_N = lookup_1D(raw_data[:,1],raw_data[:,0])
-        self.max_motor_w_radps = np.max(raw_data[:,1])
+        self.max_motor_f_N = np.max(raw_data[:,0])
 
         # build rotors as thrusters
         self.rotor_thruster_px = rotor_as_thruster(self.w_rapds_2_f_N,self.r_cg2px_m)
@@ -111,9 +111,13 @@ class bicopter:
         phi_px_cmd_rad = np.deg2rad(act_cmd[2])
         phi_nx_cmd_rad = np.deg2rad(act_cmd[3])
 
-        # convert throttle fractions into rates
-        thr_px_cmd_radps = thr_px_cmd_frac * self.max_motor_w_radps
-        thr_nx_cmd_radps = thr_nx_cmd_frac * self.max_motor_w_radps * -1 # make the back motor spin the opposite direction
+        # convert throttle fractions into thrusts
+        thr_px_cmd_N = thr_px_cmd_frac * self.max_motor_f_N
+        thr_nx_cmd_N = thr_nx_cmd_frac * self.max_motor_f_N
+
+        # convert motor thrusts into omegas
+        thr_px_cmd_radps = self.w_rapds_2_f_N.index_y(thr_px_cmd_N)
+        thr_nx_cmd_radps = self.w_rapds_2_f_N.index_y(thr_nx_cmd_N) * -1 # spin nx rotor backwards
 
         # step actuator models; obtain actuator states and dstates
         w_rotor_px_radps, wdot_rotor_px_radps2 = self.px_motor_model.step(thr_px_cmd_radps)

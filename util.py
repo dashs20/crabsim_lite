@@ -8,6 +8,9 @@ class lookup_1D:
     def index(self,xq):
         return np.interp(xq, self.x, self.y)
     
+    def index_y(self,yq):
+        return np.interp(yq, self.y, self.x)
+    
 def rec_prism_inertia(x_m,y_m,z_m,m_kg):
     Ixx_kgm2 = 1/12 * m_kg * (y_m**2 + z_m**2)
     Iyy_kgm2 = 1/12 * m_kg * (x_m**2 + z_m**2)
