@@ -108,8 +108,8 @@ class bicopter:
         # unpack command vector
         thr_px_cmd_frac = act_cmd[0]
         thr_nx_cmd_frac = act_cmd[1]
-        phi_px_cmd_rad = np.deg2rad(act_cmd[2])
-        phi_nx_cmd_rad = np.deg2rad(act_cmd[3])
+        phi_px_cmd_rad = act_cmd[2]
+        phi_nx_cmd_rad = act_cmd[3]
 
         # convert throttle fractions into thrusts
         thr_px_cmd_N = thr_px_cmd_frac * self.max_motor_f_N

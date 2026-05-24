@@ -17,42 +17,45 @@ def generate_smart_pdf_plots(input_csv):
 
     t = data['t_s']
 
+    def rad2deg(val):
+        return val * 180 / np.pi
+
     with PdfPages(output_pdf) as pdf:
-        # 1. Angular Rates (Commanded vs. Actual)
+        # 1. Angular Rates (Commanded vs. Actual) - in deg/s
         fig, axes = plt.subplots(3, 1, figsize=(8.5, 11), sharex=True)
-        rates = [('x', 'wx_cmd_radps', 'wx_radps'), 
-                 ('y', 'wy_cmd_radps', 'wy_radps'), 
-                 ('z', 'wz_cmd_radps', 'wz_radps')]
+        rates = [('x (Roll)', 'wx_cmd_radps', 'wx_radps'), 
+                 ('y (Pitch)', 'wy_cmd_radps', 'wy_radps'), 
+                 ('z (Yaw)', 'wz_cmd_radps', 'wz_radps')]
         
         for i, (axis, cmd, act) in enumerate(rates):
-            axes[i].plot(t, data[cmd], '--', label=f'Cmd {axis}')
-            axes[i].plot(t, data[act], label=f'Act {axis}')
-            axes[i].set_ylabel(f'w_{axis} [rad/s]')
+            axes[i].plot(t, rad2deg(data[cmd]), '--', label=f'Cmd {axis}')
+            axes[i].plot(t, rad2deg(data[act]), label=f'Act {axis}')
+            axes[i].set_ylabel(f'w_{axis} [deg/s]')
             axes[i].legend(loc='upper right')
             axes[i].grid(True)
         
-        axes[0].set_title('Angular Rates: Commanded vs. Actual')
+        axes[0].set_title('Body Angular Rates: Commanded vs. Actual')
         axes[2].set_xlabel('Time [s]')
         fig.tight_layout()
         pdf.savefig(fig)
         plt.close(fig)
 
-        # 2. Servos (Angles and Rates)
+        # 2. Servos: Angles and Rates on one page
         fig, axes = plt.subplots(2, 1, figsize=(8.5, 11), sharex=True)
-        # Angles
-        axes[0].plot(t, data['phi_px_cmd_rad'], '--', label='Phi PX Cmd')
-        axes[0].plot(t, data['phi_px_rad'], label='Phi PX Act')
-        axes[0].plot(t, data['phi_nx_cmd_rad'], '--', label='Phi NX Cmd')
-        axes[0].plot(t, data['phi_nx_rad'], label='Phi NX Act')
-        axes[0].set_ylabel('Servo Angle [rad]')
-        axes[0].set_title('Servo Dynamics')
+        # Angles (deg)
+        axes[0].plot(t, rad2deg(data['phi_px_cmd_rad']), '--', label='PX Cmd')
+        axes[0].plot(t, rad2deg(data['phi_px_rad']), label='PX Act')
+        axes[0].plot(t, rad2deg(data['phi_nx_cmd_rad']), '--', label='NX Cmd')
+        axes[0].plot(t, rad2deg(data['phi_nx_rad']), label='NX Act')
+        axes[0].set_ylabel('Servo Angle [deg]')
+        axes[0].set_title('Servo Dynamics (Angles & Rates)')
         axes[0].legend(loc='upper right')
         axes[0].grid(True)
 
-        # Rates
-        axes[1].plot(t, data['phidot_px_radps'], label='PhiDot PX')
-        axes[1].plot(t, data['phidot_nx_radps'], label='PhiDot NX')
-        axes[1].set_ylabel('Servo Rate [rad/s]')
+        # Rates (deg/s)
+        axes[1].plot(t, rad2deg(data['phidot_px_radps']), label='PX Rate')
+        axes[1].plot(t, rad2deg(data['phidot_nx_radps']), label='NX Rate')
+        axes[1].set_ylabel('Servo Rate [deg/s]')
         axes[1].legend(loc='upper right')
         axes[1].grid(True)
         axes[1].set_xlabel('Time [s]')
@@ -61,43 +64,46 @@ def generate_smart_pdf_plots(input_csv):
         pdf.savefig(fig)
         plt.close(fig)
 
-        # 3. Motors (Throttle and Speeds)
+        # 3. Motors: Speeds and Accelerations on one page
         fig, axes = plt.subplots(2, 1, figsize=(8.5, 11), sharex=True)
-        # Fractions
+        # Speeds (rad/s)
+        axes[0].plot(t, data['w_px_radps'], label='PX Speed')
+        axes[0].plot(t, np.abs(data['w_nx_radps']), label='NX Speed (abs)')
+        axes[0].set_ylabel('Motor Speed [rad/s]')
+        axes[0].set_title('Motor Dynamics (Speeds & Accels)')
+        axes[0].legend(loc='upper right')
+        axes[0].grid(True)
+
+        # Accelerations (rad/s^2)
+        axes[1].plot(t, data['wdot_px_radps2'], label='PX Accel')
+        axes[1].plot(t, np.abs(data['wdot_nx_radps2']), label='NX Accel (abs)')
+        axes[1].set_ylabel('Motor Accel [rad/s^2]')
+        axes[1].legend(loc='upper right')
+        axes[1].grid(True)
+        axes[1].set_xlabel('Time [s]')
+
+        fig.tight_layout()
+        pdf.savefig(fig)
+        plt.close(fig)
+
+        # 4. Control Efforts (Throttle & Moments)
+        fig, axes = plt.subplots(2, 1, figsize=(8.5, 11), sharex=True)
+        # Throttle
         axes[0].plot(t, data['fpx_frac'], label='PX Throttle')
         axes[0].plot(t, data['fnx_frac'], label='NX Throttle')
         axes[0].set_ylabel('Throttle Fraction')
-        axes[0].set_title('Motor Performance')
+        axes[0].set_title('Control Efforts')
         axes[0].legend(loc='upper right')
         axes[0].grid(True)
 
-        # Speeds (Note: header in sim_cl had a typo "w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps" as one string)
-        # Looking at log.csv headers from previous check: 
-        # t_s,wx_radps,wy_radps,wz_radps,phi_px_rad,phi_nx_rad,phidot_px_radps,phidot_nx_radps,
-        # w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps,F_px_x_N,F_px_y_N,F_px_z_N,F_nx_x_N,F_nx_y_N,F_nx_z_N,
-        # wx_cmd_radps,wy_cmd_radps,wz_cmd_radps,Mx_cmd_Nm,My_cmd_Nm,Mz_cmd_Nm,fpx_frac,fnx_frac,phi_px_cmd_rad,phi_nx_cmd_rad
-        
-        axes[1].plot(t, data['w_px_radps'], label='Omega PX')
-        axes[1].plot(t, data['w_nx_radps'], label='Omega NX')
-        axes[1].set_ylabel('Motor Speed [rad/s]')
+        # Moments
+        axes[1].plot(t, data['Mx_cmd_Nm'], label='Mx Cmd')
+        axes[1].plot(t, data['My_cmd_Nm'], label='My Cmd')
+        axes[1].plot(t, data['Mz_cmd_Nm'], label='Mz Cmd')
+        axes[1].set_ylabel('Moment [Nm]')
         axes[1].legend(loc='upper right')
         axes[1].grid(True)
         axes[1].set_xlabel('Time [s]')
-
-        fig.tight_layout()
-        pdf.savefig(fig)
-        plt.close(fig)
-
-        # 4. Commanded Moments
-        fig, axes = plt.subplots(1, 1, figsize=(8.5, 5))
-        axes.plot(t, data['Mx_cmd_Nm'], label='Mx Cmd')
-        axes.plot(t, data['My_cmd_Nm'], label='My Cmd')
-        axes.plot(t, data['Mz_cmd_Nm'], label='Mz Cmd')
-        axes.set_ylabel('Moment [Nm]')
-        axes.set_title('Commanded Control Moments')
-        axes.set_xlabel('Time [s]')
-        axes.legend(loc='upper right')
-        axes.grid(True)
 
         fig.tight_layout()
         pdf.savefig(fig)

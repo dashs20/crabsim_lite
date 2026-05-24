@@ -24,7 +24,7 @@ thr_lookup_frac = lookup_1D([-dt_s,t_end_s],[0.4,0.4])
 plant_log_array = np.zeros((n_steps,17))
 plant_log_col_names = ["wx_radps","wy_radps","wz_radps",
                        "phi_px_rad","phi_nx_rad","phidot_px_radps","phidot_nx_radps",
-                       "w_px_radps,w_nx_radps,wdot_px_radps2,wdot_nx_radps",
+                       "w_px_radps","w_nx_radps","wdot_px_radps2","wdot_nx_radps2",
                        "F_px_x_N","F_px_y_N","F_px_z_N",
                        "F_nx_x_N","F_nx_y_N","F_nx_z_N"]
 plant_log_col_names = ','.join(plant_log_col_names)
