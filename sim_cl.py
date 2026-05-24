@@ -18,8 +18,10 @@ crabbrain = gnc('crabcopter_gnc.yaml',dt_s)
 
 t_lookup_s = np.linspace(-dt_s,t_end_s,10)
 
+# wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
 wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,-200,-200,-200,-200,0,0,0]))
+# wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 thr_lookup_frac = lookup_1D([-dt_s,t_end_s],[0.4,0.4])
 
