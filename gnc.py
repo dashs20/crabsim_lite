@@ -164,9 +164,13 @@ class smart_PID:
         self.Mz_max_lookup_Nm = M_max_lookups_Nm[2]
 
     def get_M_cmd(self,w_des_radps,w_est_radps,thr_frac):
-        Mx_cmd = min(self.Mx_max_lookup_Nm.index(thr_frac),self.PID_x.get_cmd(w_des_radps[0],w_est_radps[0,0]))
-        My_cmd = min(self.My_max_lookup_Nm.index(thr_frac),self.PID_y.get_cmd(w_des_radps[1],w_est_radps[1,0]))
-        Mz_cmd = min(self.Mz_max_lookup_Nm.index(thr_frac),self.PID_z.get_cmd(w_des_radps[2],w_est_radps[2,0]))
+        Mx_max = self.Mx_max_lookup_Nm.index(thr_frac)
+        My_max = self.My_max_lookup_Nm.index(thr_frac)
+        Mz_max = self.Mz_max_lookup_Nm.index(thr_frac)
+
+        Mx_cmd = np.clip(self.PID_x.get_cmd(w_des_radps[0],w_est_radps[0,0]),-Mx_max,Mx_max)
+        My_cmd = np.clip(self.PID_y.get_cmd(w_des_radps[1],w_est_radps[1,0]),-My_max,My_max)
+        Mz_cmd = np.clip(self.PID_z.get_cmd(w_des_radps[2],w_est_radps[2,0]),-Mz_max,Mz_max)
 
         return np.array([Mx_cmd,My_cmd,Mz_cmd])
 
