@@ -1,0 +1,13 @@
+rotor_length_mm: 180
+rotor_width_mm: 10
+rotor_thickness_mm: 1
+rotor_mass_g: 4.2
+body_length_mm: 200
+body_width_mm: 40
+body_height_mm: 80
+body_mass_g: 800
+r_cg2px_mm: [100, 0, -50]
+r_cg2nx_mm: [-100, 0, -50]
+motor_lookup: 'motor_lookup.csv'
+motor_time_constant: 1
+servo_time_constant: 1
