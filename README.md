@@ -2,74 +2,72 @@
 
 ![CrabSim Lite Logo](crablite.png)
 
-CrabSim Lite is a lightweight, Python-based dynamics simulation environment designed for modeling rigid bodies equipped with rotors, specifically focusing on bicopter configurations. It provides a modular approach to simulating complex interactions between body motion, rotor reaction torques, tilting actuator dynamics, and thrust-generated moments.
+CrabSim Lite is a lightweight, Python-based dynamics simulation environment designed for modeling rigid bodies equipped with rotors, focusing primarily on bicopter configurations. It provides a modular approach to simulating complex interactions between body motion, rotor reaction torques, tilting actuator dynamics, and thrust-generated moments.
 
 ## Purpose
 
-The primary goal of CrabSim Lite is to capture the major dynamics of an RC, ~1-2kg bicopter (crabcopter) to facilitate experimentation with high-performance GNC (Guidance, Navigation, and Control) algorithms, including rate control and control allocation.
+The primary goal of CrabSim Lite is to capture the major dynamics of an RC, ~1-2kg bicopter (crabcopter) to facilitate experimentation with high-performance Guidance, Navigation, and Control (GNC) algorithms. This includes rate control, control allocation, and closed-loop testing before real-world deployment.
 
 ## Features
 
-- **Rigid Body Dynamics:** Simulate 6-DOF (currently focused on 3-DOF angular) dynamics of a rigid body.
-- **Advanced Rotor Modeling:** Supports modeling rotors as both reaction wheels (for torque) and thrusters (for force), including gyroscopic effects.
-- **GNC System:** Integrated Guidance, Navigation, and Control system including:
-    - **PID Control:** Configurable PID controllers for rate management.
-    - **Control Allocation:** Sophisticated motor/servo mixing logic to map desired moments to actuator commands.
-- **Numerical Integration:** Uses a robust Runge-Kutta 4th order (RK4) integrator for accurate state updates.
-- **YAML Configuration:** Easily configure vehicle parameters and GNC settings using YAML files.
-- **Data Logging & Visualization:** Support for logging simulation data to CSV and generating detailed PDF reports (Standard and "Smart" versions).
+- **Rigid Body Dynamics:** Simulate 6-DOF (currently focused on 3-DOF angular) dynamics of a rigid body using a robust Runge-Kutta 4th order (RK4) integrator.
+- **Advanced Rotor Modeling:** Supports modeling rotors as both reaction wheels (for gyroscopic and reaction torques) and thrusters (for thrust-generated moments).
+- **GNC System Integration:** 
+    - **PID Control:** Configurable 3-axis PID controllers for rate management with anti-windup.
+    - **Control Allocation:** Sophisticated mixing logic that maps desired 3-axis moments and throttle requests to specific motor speeds and servo angles. Computes maximum actuation authority dynamically to avoid control saturation.
+- **YAML Configuration:** Easy parameterization of physical properties, actuator limits, and PID gains without modifying source code.
+- **Data Logging & Visualization:** Built-in logging to CSV and sophisticated PDF plotting tools to compare commanded vs. actual states.
 
-## Project Structure
+## Plant Assumptions & Modeling Simplifications
 
-- `plants.py`: Contains physical models for rigid bodies, rotors, and the `bicopter` assembly.
-- `gnc.py`: Implements the GNC system, including the `gnc` class, `allocator`, and `pid` controllers.
-- `integrator.py`: Implements the RK4 integration algorithm.
-- `util.py`: Utility functions for inertia calculations, unit conversions, and lookup tables.
-- `tf.py`: Coordinate transformations and transfer function utilities.
-- `sim_cl.py`: Closed-loop simulation script demonstrating autonomous control.
-- `sim_ol.py`: Open-loop simulation script for manual actuator commanding.
-- `csv_to_pdf_smart.py`: Advanced post-processing script to convert simulation logs into detailed PDF plots (Commanded vs. Actual).
-- `verify_allocator.py`: Script to verify the control allocation logic against expected physical outputs.
-- `sympy_alloc.py`: Symbolic derivation of the allocation matrix using SymPy.
+To balance simulation speed with fidelity for ~1-2kg RC scale vehicles, CrabSim Lite employs several explicit plant assumptions in its physical models (`plants.py`):
 
-## Quick Start
+1. **Servo kinematics are independent of vehicle dynamics:** Servo angles and rates are strictly governed by their internal first-order transfer functions and are not affected by external aerodynamic loads or the vehicle's motion. On an RC scale, servos are highly geared and powerful enough that this is generally representative of real performance.
+2. **Motor kinematics are independent of vehicle dynamics:** Motor spin rates and accelerations are assumed to follow their own independent first-order transfer function models and are not slowed down by vehicle maneuvers or opposing airflow. This is a valid approximation given the torque of powerful brushless motors typical at this scale.
+3. **Tilting mechanisms are massless (zero inertia):** The simulation models the gyroscopic inertia of the spinning rotor (`H_rotor`), but assumes the actual physical tilting mechanism (the servo arm, mount, and motor housing) has no inertia (`H_tilt = 0`). This is practically valid because in practice $H_{rotor} \gg H_{tilt}$, meaning the gyroscopic forces dominate the actuator dynamics.
 
-1. **Install Dependencies:**
+## Repository Structure
+
+- **Simulation Core:**
+  - `plants.py`: Physical plant models for simple rigid bodies, rotors, and the composite `bicopter` assembly.
+  - `gnc.py`: GNC system components including the `smart_PID` controller, control `allocator`, and main `gnc` loop.
+  - `integrator.py`: Numerical integration utilities (RK4).
+  - `tf.py`: Contains basic transfer functions used for actuator models.
+  - `util.py`: Math and physics utility functions (unit conversions, inertia tensors, 1D lookups).
+- **Simulation Scripts:**
+  - `sim_cl.py`: Closed-loop simulation script demonstrating autonomous GNC stabilization and tracking.
+  - `sim_ol.py`: Open-loop simulation for manual actuator commands or basic step-response testing.
+- **Tools & Utilities:**
+  - `verify_allocator.py`: Validation script for testing control allocation logic independently.
+  - `sympy_alloc.py`: Script using SymPy to symbolically derive the inverse allocation matrix.
+  - `csv_to_pdf.py` / `csv_to_pdf_smart.py`: Parsing and plotting scripts to turn `log.csv` into detailed PDF visualizations (e.g., `log_smart.pdf`).
+- **Configuration (YAML):**
+  - `crabcopter.yaml`: Physical dimensions, mass properties, and hardware specifications (motor/servo time constants).
+  - `crabcopter_gnc.yaml`: Configuration for the allocator constraints (geometry and motor mapping).
+  - `smart_PID.yaml`: Controller configuration including PID gains and integral limits for the X, Y, and Z axes.
+
+## Installation & Quick Start
+
+1. **Clone the repository & Install Dependencies:**
+   Ensure you have Python 3 installed. Install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
 2. **Run a Closed-Loop Simulation:**
-   Execute the `sim_cl.py` script to run a simulation with the GNC system active.
+   Execute `sim_cl.py` to run the default simulation scenario.
    ```bash
    python sim_cl.py
    ```
-   This will generate a `log.csv` file.
+   This generates a `log.csv` file containing the state history.
 
-3. **Visualize Results:**
-   Use the `csv_to_pdf_smart.py` script to generate a visual report comparing commanded and actual states.
+3. **Visualize the Results:**
+   Use the smart post-processing script to generate performance plots.
    ```bash
    python csv_to_pdf_smart.py
    ```
-   The output will be saved as `log_smart.pdf`.
-
-## Configuration
-
-The simulation and GNC systems are configured via YAML files:
-- `crabcopter.yaml`: Defines physical properties of the vehicle (mass, dimensions, motor lookup).
-- `crabcopter_gnc.yaml`: Defines GNC settings (PID gains, allocator constraints).
-- `smart_PID.yaml`: Specialized PID configuration.
-
-## Core Components
-
-### `bicopter` (`plants.py`)
-A high-level class that assembles the rigid body and two tilting rotor assemblies (PX and NX). It handles the propagation of state based on actuator commands.
-
-### `gnc` (`gnc.py`)
-Manages the control loop, taking desired setpoints and current states to produce actuator commands via PID controllers and a control allocator.
-
-### `allocator` (`gnc.py`)
-Maps desired 3-axis moments and throttle requests to specific motor speeds and servo angles. It uses an inverted actuator-to-moment matrix derived in `sympy_alloc.py`.
+   Open the generated `log_smart.pdf` to see the commanded versus actual rates, forces, and moments over time.
 
 ---
-*Developed for high-fidelity, lightweight dynamics research.*
+
+*CrabSim Lite - Developed for high-fidelity, lightweight dynamics research.*
