@@ -1,6 +1,6 @@
 # CrabSim Lite
 
-![CrabSim Lite Logo](crablite.png)
+![CrabSim Lite Logo](crabsim_logo.png)
 
 CrabSim Lite is a lightweight, Python-based dynamics simulation environment designed for modeling rigid bodies equipped with rotors, focusing primarily on bicopter configurations. It provides a modular approach to simulating complex interactions between body motion, rotor reaction torques, tilting actuator dynamics, and thrust-generated moments.
 
