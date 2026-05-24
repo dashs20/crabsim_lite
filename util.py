@@ -24,4 +24,4 @@ def g2kg(mass_g):
     return mass_g/1000
 
 def ms2s(time_ms):
-    return time_ms / 1000
+    return time_ms/1000

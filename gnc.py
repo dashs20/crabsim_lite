@@ -34,7 +34,7 @@ class allocator:
     def allocate(self,M_desired_Nm,thr_frac):
 
         # clip throttle
-        thr_frac = min(thr_frac,self.min_thr_frac)
+        thr_frac = max(thr_frac,self.min_thr_frac)
 
         # build desired actuator "ask"
         Fz_desired_N = thr_frac * -2 * self.f_max_N # 2 thrusters, -z is up
@@ -51,11 +51,11 @@ class allocator:
         # [3]: fnx_z
 
         # obtain servo angles and clip if too large
-        phi_px_rad = np.clip(np.atan2(f[1],-f[0]),-self.phi_max_rad,self.phi_max_rad)
-        phi_nx_rad = np.clip(np.atan2(f[2],-f[1]),-self.phi_max_rad,self.phi_max_rad)
+        phi_px_rad = np.clip(np.atan2(f[0],-f[1]),-self.phi_max_rad,self.phi_max_rad)
+        phi_nx_rad = np.clip(np.atan2(f[2],-f[3]),-self.phi_max_rad,self.phi_max_rad)
 
         # obtain throttle fractions for motors and clip if too large
-        fpx_frac = np.clip(np.linalg.norm(f[0:3])/self.f_max_N,0,1)
+        fpx_frac = np.clip(np.linalg.norm(f[0:2])/self.f_max_N,0,1)
         fnx_frac = np.clip(np.linalg.norm(f[2:4])/self.f_max_N,0,1)
 
         return [fpx_frac,fnx_frac,phi_px_rad,phi_nx_rad]
