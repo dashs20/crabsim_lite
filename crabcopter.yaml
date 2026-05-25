@@ -9,5 +9,5 @@ body_mass_g: 400
 r_cg2px_mm: [100, 0, -50]
 r_cg2nx_mm: [-100, 0, -50]
 motor_lookup: 'motor_lookup.csv'
-motor_time_constant_ms: 100 # time it takes for motor to reach ~2/3 its command RPM
+motor_time_constant_ms: 200 # time it takes for motor to reach ~2/3 its command RPM
 servo_time_constant_ms: 50 # time it takes for servo to reach ~2/3 its command angle

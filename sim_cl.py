@@ -63,7 +63,7 @@ for i_step in range(n_steps):
     w_des_radps = np.array([wx_cmd_radps,wy_cmd_radps,wz_cmd_radps])
 
     # get gyro measurement of body rate
-    # w_meas_radps = gyro.get_measurement(crabcopter.body.W_B_wrt_I_radps)
+    w_meas_radps = gyro.get_measurement(crabcopter.body.W_B_wrt_I_radps)
 
     # get actuator state from plant
     act_est = np.array([crabcopter.px_servo_model.x,
@@ -73,7 +73,7 @@ for i_step in range(n_steps):
 
     # step GNC & log outputs
     act_cmd = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,act_est,thr_frac_cmd)
-    gnc_log_array[i_step,:] = np.hstack((w_des_radps, crabcopter.body.W_B_wrt_I_radps.flatten(), act_cmd, thr_frac_cmd))
+    gnc_log_array[i_step,:] = np.hstack((w_des_radps, w_meas_radps.flatten(), act_cmd, thr_frac_cmd))
 
     # step plant & log output
     plant_log_array[i_step,:] = crabcopter.step(act_cmd)
