@@ -57,7 +57,7 @@ Net moment
 
 M_net = M_thrust + M_wheel_px + M_wheel_nx
 
-sp.pprint(M_net)
+# sp.pprint(M_net)
 
 # This equation is the problem and the solution. It maps the actuator and vehicle state directly to the moment on the vehicle.
 # The million dollar question: how can we get control inputs u such that this equation equals a desired moment M?
@@ -90,7 +90,7 @@ phidot_nx = -1 / tau_s * phi_nx + k_s / tau_s * phi_nx_cmd
 omegadot_rpx = -1 / tau_r * omega_rpx + k_r / tau_r * omega_rpx_cmd
 omegadot_rnx = -1 / tau_r * omega_rnx + k_r / tau_r * omega_rnx_cmd
 
-sp.pprint([phidot_px,phidot_nx,omegadot_rpx,omegadot_rnx])
+# sp.pprint([phidot_px,phidot_nx,omegadot_rpx,omegadot_rnx])
 
 # now we have the whole story. We have
 # - 3 differential equations describing the moment on the body as a function of the vehicle state and its derivatives
@@ -104,5 +104,58 @@ sp.pprint([phidot_px,phidot_nx,omegadot_rpx,omegadot_rnx])
 
 # alternatively, consider that we have an omega_b_desired and an omega_b_current. we want to drive omega_b towards the desired state.
 # to that end, we wish to maximzie omegadot_b towards omega_b. omegadot_b can be approximated as B * M. And M is the big equation we
-# already have.
+# already have. TLDR: both are approximately the same.
 
+# how about linearization? how can that potentially help us here?
+
+# let's add in one more bit so we have a proper equation for the evolution of our desired control state, omega.
+Ixx, Iyy, Izz = sp.symbols('Ixx Iyy Izz') # vehicle body inertias
+omegadot_bx, omegadot_by, omegadot_bz = sp.symbols('omegadot_bx omegadot_by omegadot_bz')
+
+omegadot_b = sp.Matrix([[omegadot_bx],[omegadot_by],[omegadot_bz]])
+I_b = sp.Matrix([[Ixx,0,0],[0,Iyy,0],[0,0,Izz]])
+
+# Define the gyroscopic Euler coupling term: omega x (I * omega)
+euler_coupling = omega_b.cross(I_b * omega_b)
+
+# xdot = f(x,u) where u is M_net (which is a function of x and u)
+# Includes full nonlinear Euler coupling for aggressive maneuvers
+eom = sp.Eq(omegadot_b, sp.Inverse(I_b) * (M_net - euler_coupling)) 
+
+# sp.pprint(eom)
+
+# --- SDRE SDC FACTORIZATION SETUP ---
+
+# 1. Define our monolithic state and input vectors
+X = sp.Matrix([omega_bx, omega_by, omega_bz, phi_px, phi_nx, omega_rpx, omega_rnx])
+U = sp.Matrix([phi_px_cmd, phi_nx_cmd, omega_rpx_cmd, omega_rnx_cmd])
+
+# 2. Assemble the full state derivative vector Xdot = F_full(X, U)
+# We extract the right-hand side of the eom equation for omegadot_b
+omegadot_b_rhs = sp.Inverse(I_b) * (M_net - euler_coupling)
+
+Xdot_full = sp.Matrix([
+    omegadot_b_rhs[0],
+    omegadot_b_rhs[1],
+    omegadot_b_rhs[2],
+    phidot_px,   # Actuator dynamics already defined as expressions
+    phidot_nx,
+    omegadot_rpx,
+    omegadot_rnx
+])
+
+# 3. EXTRACT THE B(x) MATRIX (The easy part)
+# Because standard actuator models are "control-affine" (U enters linearly), 
+# the Jacobian of the full system with respect to U yields the EXACT B(x) matrix!
+B_sdc = sp.simplify(Xdot_full.jacobian(U))
+
+# 4. ISOLATE THE DRIFT DYNAMICS F(X)
+# The remaining dynamics when commands U = 0. We need to factor this into A(x)*X
+F_drift = sp.simplify(Xdot_full - B_sdc * U)
+
+# 5. EXTRACTING A(x) (The manual part)
+# Since SymPy can't guess your factorization, taking the Jacobian of F_drift w.r.t X 
+# gives you the local linear A matrix (Taylor expansion). 
+A_linear = sp.simplify(F_drift.jacobian(X))
+
+sp.pprint(B_sdc)

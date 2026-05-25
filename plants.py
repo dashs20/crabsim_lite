@@ -7,6 +7,9 @@ from tf import tf1
 def compute_T_hat(phi_rad):
     return np.array([[0],[np.sin(phi_rad)],[-np.cos(phi_rad)]])
 
+def compute_Tdot_hat(phi_rad,phidot_rad):
+    return np.array([[0],[phidot_rad*np.sin(phi_rad)],[phidot_rad*np.cos(phi_rad)]])
+
 class rotor_as_wheel:
     def __init__(self,j_kgm2):
         self.j_kgm2 = j_kgm2 # axial moment of inertia of the rotor (1,1)
@@ -19,7 +22,7 @@ class rotor_as_wheel:
         W_B_wrt_I_radps): # angular rate of body (3,1)
         
         T_hat = compute_T_hat(phi_rotor_rad)
-        Tdot_hat = compute_T_hat(phidot_rotor_radps)
+        Tdot_hat = compute_Tdot_hat(phi_rotor_rad,phidot_rotor_radps):
 
         return -self.j_kgm2 * (Tdot_hat * w_rotor_radps + T_hat * wdot_rotor_radps2 + np.cross(T_hat * w_rotor_radps,W_B_wrt_I_radps,axis=0))
     
