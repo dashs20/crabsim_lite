@@ -20,6 +20,11 @@ omegadot_rpx, omegadot_rnx = sp.symbols('omegadot_rpx omegadot_rnx')
 # Motor thrusts (To be provided by LUT during evaluation)
 f_px, f_nx = sp.symbols('f_px f_nx')
 
+# Safe division symbols to prevent nan during numerical evaluation
+f_px_div_w, f_nx_div_w = sp.symbols('f_px_div_w f_nx_div_w')
+sinc_px, sinc_nx = sp.symbols('sinc_px sinc_nx')
+cosc_px, cosc_nx = sp.symbols('cosc_px cosc_nx')
+
 # Body rates and accelerations
 omega_bx, omega_by, omega_bz = sp.symbols('omega_bx omega_by omega_bz')
 omegadot_bx, omegadot_by, omegadot_bz = sp.symbols('omegadot_bx omegadot_by omegadot_bz')
@@ -59,7 +64,7 @@ r_nx = sp.Matrix([[r_nxx], [0], [r_nxz]])
 """
 4. Moments & Equations of Motion
 """
-M_thrust = r_px.cross(t_px * f_px) + r_nx.cross(t_nx * f_px)
+M_thrust = r_px.cross(t_px * f_px) + r_nx.cross(t_nx * f_nx)
 
 M_wheel_px = -j_rotor * (tdot_px * omega_rpx + t_px * omegadot_rpx + omega_rpx * t_px.cross(omega_b))
 M_wheel_nx = -j_rotor * (tdot_nx * omega_rnx + t_nx * omegadot_rnx + omega_rnx * t_nx.cross(omega_b))
@@ -99,7 +104,7 @@ Xdot_full = sp.Matrix([
     omegadot_b_rhs[0],
     omegadot_b_rhs[1],
     omegadot_b_rhs[2],
-    actuator_subs[phidot_px],   
+    actuator_subs[phidot_px],
     actuator_subs[phidot_nx],
     actuator_subs[omegadot_rpx],
     actuator_subs[omegadot_rnx]
@@ -126,15 +131,32 @@ A11 = -sp.Inverse(I_b) * S_omega * I_b
 # A22: 4x4 Actuator Drift Block
 A22 = sp.diag(-1/tau_s, -1/tau_s, -1/tau_r, -1/tau_r)
 
-# A12: 3x4 Actuator-to-Body Coupling Block (Dumping complexity into omega columns)
-M_drift_px = M_drift.subs({phi_nx: 0, omega_rnx: 0, f_nx: 0})
-M_drift_nx = M_drift.subs({phi_px: 0, omega_rpx: 0, f_px: 0})
+# Substitute f_px with f_px_div_w * omega_rpx so that sympy can exact-divide by omega_rpx
+M_drift = M_drift.subs(f_px, f_px_div_w * omega_rpx)
+M_drift = M_drift.subs(f_nx, f_nx_div_w * omega_rnx)
 
-col_omega_rpx = sp.simplify(sp.Inverse(I_b) * M_drift_px / omega_rpx)
-col_omega_rnx = sp.simplify(sp.Inverse(I_b) * M_drift_nx / omega_rnx)
-col_zero = sp.Matrix.zeros(3, 1)
+M_drift_px = M_drift.subs({phi_nx: 0, omega_rnx: 0})
+M_drift_nx = M_drift.subs({phi_px: 0, omega_rpx: 0})
 
-A12 = sp.Matrix.hstack(col_zero, col_zero, col_omega_rpx, col_omega_rnx)
+M_drift_px_0 = M_drift_px.subs({phi_px: 0})
+M_drift_px_phi = M_drift_px - M_drift_px_0
+
+M_drift_nx_0 = M_drift_nx.subs({phi_nx: 0})
+M_drift_nx_phi = M_drift_nx - M_drift_nx_0
+
+# Substitute exact trigonometric functions with limits to allow symbolic factoring
+M_drift_px_phi = M_drift_px_phi.subs(sp.sin(phi_px), sinc_px * phi_px)
+M_drift_px_phi = M_drift_px_phi.subs(sp.cos(phi_px), cosc_px * phi_px + 1)
+col_phi_px = sp.simplify(sp.Inverse(I_b) * (M_drift_px_phi / phi_px))
+
+M_drift_nx_phi = M_drift_nx_phi.subs(sp.sin(phi_nx), sinc_nx * phi_nx)
+M_drift_nx_phi = M_drift_nx_phi.subs(sp.cos(phi_nx), cosc_nx * phi_nx + 1)
+col_phi_nx = sp.simplify(sp.Inverse(I_b) * (M_drift_nx_phi / phi_nx))
+
+col_omega_rpx = sp.simplify(sp.Inverse(I_b) * (M_drift_px_0 / omega_rpx))
+col_omega_rnx = sp.simplify(sp.Inverse(I_b) * (M_drift_nx_0 / omega_rnx))
+
+A12 = sp.Matrix.hstack(col_phi_px, col_phi_nx, col_omega_rpx, col_omega_rnx)
 
 # A21: 4x3 Body-to-Actuator Coupling Block
 A21 = sp.Matrix.zeros(4, 3)
@@ -149,20 +171,24 @@ A_sdc = sp.Matrix.vstack(A_top, A_bot)
 """
 print("-> Lambdifying Matrices for Fast Evaluation...")
 
-# Define the exact input signature. 
-# We explicitly add f_px and f_nx so you can pass in your LUT thrust values!
 vehicle_params = (Ixx, Iyy, Izz, tau_s, tau_r, k_s, k_r, j_rotor, r_pxx, r_pxz, r_nxx, r_nxz)
-eval_args = tuple(X) + (f_px, f_nx) + vehicle_params
+# Our new evaluation signature uses the safe symbols instead of f_px and f_nx!
+eval_args = tuple(X) + (f_px_div_w, f_nx_div_w, sinc_px, sinc_nx, cosc_px, cosc_nx) + vehicle_params
 
-# Lambdify with numpy backend for instant 2D array generation
 A_func = lambdify(eval_args, A_sdc, modules='numpy')
 B_func = lambdify(eval_args, B_sdc, modules='numpy')
+
+# Lambdify M_net
+M_net_eval = M_net.subs(actuator_subs)
+eval_args_M = tuple(X) + tuple(U) + (f_px, f_nx) + vehicle_params
+M_net_func = lambdify(eval_args_M, M_net_eval, modules='numpy')
 
 export_data = {
     'A_func': A_func,
     'B_func': B_func,
+    'M_net_func': M_net_func,
     'state_signature': X,
-    'thrust_signature': (f_px, f_nx),
+    'thrust_signature': (f_px_div_w, f_nx_div_w, sinc_px, sinc_nx, cosc_px, cosc_nx),
     'param_signature': vehicle_params
 }
 

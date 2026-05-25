@@ -153,6 +153,7 @@ class bicopter:
                            wdot_rotor_px_radps2,
                            wdot_rotor_nx_radps2,
                            F_px_N,
-                           F_nx_N))
+                           F_nx_N,
+                           M_net_Nm))
         
         return np.transpose(state)
