@@ -1,0 +1,26 @@
+# body inertia
+body_length_mm: 200
+body_width_mm: 40
+body_height_mm: 80
+body_mass_g: 800
+
+# actuator data
+motor_lookup: 'motor_lookup.csv'
+motor_time_constant_ms: 30 # time it takes for motor to reach ~2/3 its command RPM
+servo_time_constant_ms: 100 # time it takes for servo to reach ~2/3 its command angle
+
+# rotor inertia
+rotor_length_mm: 180
+rotor_width_mm: 10
+rotor_thickness_mm: 1
+rotor_mass_g: 4.2
+
+# vehicle geometry
+r_cg2px_mm: [100, 0, -50]
+r_cg2nx_mm: [-100, 0, -50]
+
+# Q and R (abstracted to Bryson's rule)
+Q_max_acceptable_error_radps: [0.1,0.1,0.1] # wx wy wz
+Servo_max_angles_deg: 60
+
+
