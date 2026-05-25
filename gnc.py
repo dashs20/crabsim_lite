@@ -1,6 +1,8 @@
 import numpy as np
 import yaml
 from util import *
+from state_based_optimal_controller import sboc
+from tf import tf1
 
 def compute_T_hat(phi_rad):
     return np.array([[0],[np.sin(phi_rad)],[-np.cos(phi_rad)]])
@@ -175,36 +177,32 @@ class smart_PID:
         return np.array([Mx_cmd,My_cmd,Mz_cmd])
 
 class gnc:
-    def __init__(self,yaml_path,dt_s):
-
-        self.dt_s = dt_s
-
+    def __init__(self,yaml_path):
         # open yaml
         with open(yaml_path, 'r') as file:
             data = yaml.safe_load(file)
 
-        # build allocator
-        self.allocator = allocator(mm2m(np.array(data['r_cg2px_mm'])),
-                                   mm2m(np.array(data['r_cg2nx_mm'])),
-                                   data['motor_lookup'],
-                                   data['min_thr_frac'],
-                                   np.deg2rad(data['phi_max_deg']))
-        
-        # build controller
-        self.controller = smart_PID(data['controller_yaml'],
-                                    self.allocator.compute_max_authority(),
-                                    self.dt_s)
-        
-    def step(self,w_des_radps,w_est_radps,thr_frac):
+        # build state-based optimal controller
+        self.guh = sboc(yaml_path)
 
-        # run core control algorithm
-        M_cmd_Nm = self.controller.get_M_cmd(w_des_radps,w_est_radps,thr_frac)
-        act_cmd = self.allocator.allocate(M_cmd_Nm,thr_frac)
-
-        # return software state
-        state = np.hstack((M_cmd_Nm,
-                           act_cmd))
+        self.f_max_N = np.max(self.guh.w_rapds_2_f_N.y)
         
-        return state
+    def step(self,w_des_radps,w_est_radps,act_est,thr_frac):
+
+        # build full state estimate
+        full_state_est = np.hstack((w_est_radps.flatten(),act_est))
+
+        u = self.guh.get_u(full_state_est,w_des_radps,thr_frac)
+
+        # u = [phi_px_cmd, phi_nx_cmd, omega_rpx_cmd, omega_rnx_cmd]
+        
+        # convert motor omegas to throttle fractions
+        f_px = self.guh.w_rapds_2_f_N.index(np.abs(u[2]))
+        f_nx = self.guh.w_rapds_2_f_N.index(np.abs(u[3]))
+
+        thr_px_frac = f_px / self.f_max_N
+        thr_nx_frac = f_nx / self.f_max_N
+
+        return np.array([thr_px_frac, thr_nx_frac, u[0], u[1]])
 
 

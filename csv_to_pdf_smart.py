@@ -86,24 +86,16 @@ def generate_smart_pdf_plots(input_csv):
         pdf.savefig(fig)
         plt.close(fig)
 
-        # 4. Control Efforts (Throttle & Moments)
-        fig, axes = plt.subplots(2, 1, figsize=(8.5, 11), sharex=True)
+        # 4. Control Efforts (Throttle)
+        fig, ax = plt.subplots(1, 1, figsize=(8.5, 5.5))
         # Throttle
-        axes[0].plot(t, data['fpx_frac'], label='PX Throttle')
-        axes[0].plot(t, data['fnx_frac'], label='NX Throttle')
-        axes[0].set_ylabel('Throttle Fraction')
-        axes[0].set_title('Control Efforts')
-        axes[0].legend(loc='upper right')
-        axes[0].grid(True)
-
-        # Moments
-        axes[1].plot(t, data['Mx_cmd_Nm'], label='Mx Cmd')
-        axes[1].plot(t, data['My_cmd_Nm'], label='My Cmd')
-        axes[1].plot(t, data['Mz_cmd_Nm'], label='Mz Cmd')
-        axes[1].set_ylabel('Moment [Nm]')
-        axes[1].legend(loc='upper right')
-        axes[1].grid(True)
-        axes[1].set_xlabel('Time [s]')
+        ax.plot(t, data['fpx_frac'], label='PX Throttle')
+        ax.plot(t, data['fnx_frac'], label='NX Throttle')
+        ax.set_ylabel('Throttle Fraction')
+        ax.set_title('Control Efforts (Throttle)')
+        ax.legend(loc='upper right')
+        ax.grid(True)
+        ax.set_xlabel('Time [s]')
 
         fig.tight_layout()
         pdf.savefig(fig)
@@ -123,6 +115,25 @@ def generate_smart_pdf_plots(input_csv):
             axes[i].grid(True)
         
         axes[0].set_title('Body Angular Rates: True vs. Measured')
+        axes[2].set_xlabel('Time [s]')
+        fig.tight_layout()
+        pdf.savefig(fig)
+        plt.close(fig)
+
+        # 6. Net Plant Moments
+        fig, axes = plt.subplots(3, 1, figsize=(8.5, 11), sharex=True)
+        moments = [('x (Roll)', 'M_net_x_Nm'), 
+                   ('y (Pitch)', 'M_net_y_Nm'), 
+                   ('z (Yaw)', 'M_net_z_Nm')]
+        
+        for i, (axis, moment_col) in enumerate(moments):
+            if moment_col in data.dtype.names:
+                axes[i].plot(t, data[moment_col], label=f'Net M_{axis}')
+                axes[i].set_ylabel(f'M_{axis} [Nm]')
+                axes[i].legend(loc='upper right')
+                axes[i].grid(True)
+        
+        axes[0].set_title('Net Plant Moments')
         axes[2].set_xlabel('Time [s]')
         fig.tight_layout()
         pdf.savefig(fig)
