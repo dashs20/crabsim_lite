@@ -57,7 +57,7 @@ class sboc:
         self.f_max_N = max(raw_data[:,0])
 
         # build Q and R matrices for CARE
-        max_omega_b_error_radps = np.array(data['Q_max_acceptable_error_radps'])
+        max_omega_b_error_radps = np.deg2rad(np.array(data['Q_max_acceptable_error_degps']))
         Qii_omega_b = 1/max_omega_b_error_radps**2
         self.Q = np.diag(np.hstack((Qii_omega_b,np.zeros(4))))
 

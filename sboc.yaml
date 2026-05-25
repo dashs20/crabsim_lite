@@ -20,7 +20,7 @@ r_cg2px_mm: [100, 0, -50]
 r_cg2nx_mm: [-100, 0, -50]
 
 # Q and R (abstracted to Bryson's rule)
-Q_max_acceptable_error_radps: [5,5,15] # wx wy wz
+Q_max_acceptable_error_degps: [150,200,900] # wx wy wz
 Servo_max_angles_deg: 60 # phi
 
 # matrix pickle

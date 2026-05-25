@@ -5,7 +5,7 @@ from sensor import ICM42688
 
 # define sim dt (seconds)
 dt_s = 1/1000
-t_end_s = 20
+t_end_s = 5
 n_steps = round(t_end_s/dt_s)
 t_s = np.linspace(0,t_end_s,n_steps)
 
