@@ -32,8 +32,8 @@ Vectors
 # tilt mechanism pointing direction & direction rate change
 t_px = sp.Matrix([[0], [sp.sin(phi_px)], [-sp.cos(phi_px)]])
 t_nx = sp.Matrix([[0], [sp.sin(phi_nx)], [-sp.cos(phi_nx)]])
-tdot_px = sp.Matrix([[0], [sp.sin(phidot_px)], [-sp.cos(phidot_px)]])
-tdot_nx = sp.Matrix([[0], [sp.sin(phidot_nx)], [-sp.cos(phidot_nx)]])
+tdot_px = sp.Matrix([[0], [phidot_px * sp.cos(phi_px)], [phidot_px * sp.sin(phi_px)]])
+tdot_nx = sp.Matrix([[0], [phidot_nx * sp.cos(phi_nx)], [phidot_nx * sp.sin(phi_nx)]])
 
 # body rate
 omega_b = sp.Matrix([[omega_bx], [omega_by], [omega_bz]])
@@ -120,42 +120,4 @@ euler_coupling = omega_b.cross(I_b * omega_b)
 
 # xdot = f(x,u) where u is M_net (which is a function of x and u)
 # Includes full nonlinear Euler coupling for aggressive maneuvers
-eom = sp.Eq(omegadot_b, sp.Inverse(I_b) * (M_net - euler_coupling)) 
-
-# sp.pprint(eom)
-
-# --- SDRE SDC FACTORIZATION SETUP ---
-
-# 1. Define our monolithic state and input vectors
-X = sp.Matrix([omega_bx, omega_by, omega_bz, phi_px, phi_nx, omega_rpx, omega_rnx])
-U = sp.Matrix([phi_px_cmd, phi_nx_cmd, omega_rpx_cmd, omega_rnx_cmd])
-
-# 2. Assemble the full state derivative vector Xdot = F_full(X, U)
-# We extract the right-hand side of the eom equation for omegadot_b
-omegadot_b_rhs = sp.Inverse(I_b) * (M_net - euler_coupling)
-
-Xdot_full = sp.Matrix([
-    omegadot_b_rhs[0],
-    omegadot_b_rhs[1],
-    omegadot_b_rhs[2],
-    phidot_px,   # Actuator dynamics already defined as expressions
-    phidot_nx,
-    omegadot_rpx,
-    omegadot_rnx
-])
-
-# 3. EXTRACT THE B(x) MATRIX (The easy part)
-# Because standard actuator models are "control-affine" (U enters linearly), 
-# the Jacobian of the full system with respect to U yields the EXACT B(x) matrix!
-B_sdc = sp.simplify(Xdot_full.jacobian(U))
-
-# 4. ISOLATE THE DRIFT DYNAMICS F(X)
-# The remaining dynamics when commands U = 0. We need to factor this into A(x)*X
-F_drift = sp.simplify(Xdot_full - B_sdc * U)
-
-# 5. EXTRACTING A(x) (The manual part)
-# Since SymPy can't guess your factorization, taking the Jacobian of F_drift w.r.t X 
-# gives you the local linear A matrix (Taylor expansion). 
-A_linear = sp.simplify(F_drift.jacobian(X))
-
-sp.pprint(B_sdc)
+eom = sp.Eq(omegadot_b, sp.Inverse(I_b) * (M_net - euler_coupling))
