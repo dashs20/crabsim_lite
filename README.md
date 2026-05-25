@@ -13,10 +13,11 @@ The primary goal of CrabSim Lite is to capture the major dynamics of an RC, ~1-2
 - **Rigid Body Dynamics:** Simulate 6-DOF (currently focused on 3-DOF angular) dynamics of a rigid body using a robust Runge-Kutta 4th order (RK4) integrator.
 - **Advanced Rotor Modeling:** Supports modeling rotors as both reaction wheels (for gyroscopic and reaction torques) and thrusters (for thrust-generated moments).
 - **GNC System Integration:** 
-    - **PID Control:** Configurable 3-axis PID controllers for rate management with anti-windup.
+    - **State-Dependent Riccati Equation (SDRE) Control:** An advanced optimal controller (`sboc.py`) that linearizes the highly coupled, non-linear dynamics of the bicopter at each timestep to compute the optimal LQR gain $K$. It correctly handles the complex gyroscopic interactions and thrust mapping inherent to tilting rotors.
+    - **PID Control:** Configurable 3-axis PID controllers for rate management with anti-windup (legacy/fallback).
     - **Control Allocation:** Sophisticated mixing logic that maps desired 3-axis moments and throttle requests to specific motor speeds and servo angles. Computes maximum actuation authority dynamically to avoid control saturation.
-- **YAML Configuration:** Easy parameterization of physical properties, actuator limits, and PID gains without modifying source code.
-- **Data Logging & Visualization:** Built-in logging to CSV and sophisticated PDF plotting tools to compare commanded vs. actual states.
+- **YAML Configuration:** Easy parameterization of physical properties, actuator limits, and optimal control weighting matrices ($Q$ and $R$) without modifying source code.
+- **Data Logging & Visualization:** Built-in logging to CSV and sophisticated PDF plotting tools to compare commanded vs. actual states, as well as true vs. measured rates and net plant moments.
 
 ## Plant Assumptions & Modeling Simplifications
 
@@ -30,7 +31,8 @@ To balance simulation speed with fidelity for ~1-2kg RC scale vehicles, CrabSim 
 
 - **Simulation Core:**
   - `plants.py`: Physical plant models for simple rigid bodies, rotors, and the composite `bicopter` assembly.
-  - `gnc.py`: GNC system components including the `smart_PID` controller, control `allocator`, and main `gnc` loop.
+  - `gnc.py`: GNC system components connecting the state-based optimal controller to the simulated plant.
+  - `state_based_optimal_controller.py`: The SDRE optimal control implementation (`sboc`).
   - `integrator.py`: Numerical integration utilities (RK4).
   - `tf.py`: Contains basic transfer functions used for actuator models.
   - `util.py`: Math and physics utility functions (unit conversions, inertia tensors, 1D lookups).
@@ -38,13 +40,14 @@ To balance simulation speed with fidelity for ~1-2kg RC scale vehicles, CrabSim 
   - `sim_cl.py`: Closed-loop simulation script demonstrating autonomous GNC stabilization and tracking.
   - `sim_ol.py`: Open-loop simulation for manual actuator commands or basic step-response testing.
 - **Tools & Utilities:**
+  - `sympy_plant_gemini_edition.py`: Script using SymPy to symbolically derive the non-linear equations of motion, extract the $A(x)$ and $B(x)$ matrices via analytical factorization, and serialize them for fast evaluation by the SDRE controller.
   - `verify_allocator.py`: Validation script for testing control allocation logic independently.
   - `sympy_alloc.py`: Script using SymPy to symbolically derive the inverse allocation matrix.
   - `csv_to_pdf.py` / `csv_to_pdf_smart.py`: Parsing and plotting scripts to turn `log.csv` into detailed PDF visualizations (e.g., `log_smart.pdf`).
 - **Configuration (YAML):**
   - `crabcopter.yaml`: Physical dimensions, mass properties, and hardware specifications (motor/servo time constants).
-  - `crabcopter_gnc.yaml`: Configuration for the allocator constraints (geometry and motor mapping).
-  - `smart_PID.yaml`: Controller configuration including PID gains and integral limits for the X, Y, and Z axes.
+  - `sboc.yaml`: Configuration for the SDRE controller, including Bryson's rule parameterization for $Q$ and $R$ matrices, and the path to the serialized symbolic plant matrices (`bicopter_sdre_matrices.pkl`).
+  - `smart_PID.yaml`: Legacy controller configuration including PID gains and integral limits for the X, Y, and Z axes.
 
 ## Installation & Quick Start
 
