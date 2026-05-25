@@ -3,3 +3,4 @@ matplotlib
 pyyaml
 sympy
 dill
+scipy

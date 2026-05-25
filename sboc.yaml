@@ -21,6 +21,4 @@ r_cg2nx_mm: [-100, 0, -50]
 
 # Q and R (abstracted to Bryson's rule)
 Q_max_acceptable_error_radps: [0.1,0.1,0.1] # wx wy wz
-Servo_max_angles_deg: 60
-
-
+Servo_max_angles_deg: 60 # phi

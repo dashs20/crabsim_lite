@@ -2,6 +2,7 @@ import numpy as np
 import dill
 import yaml
 from util import *
+from scipy.linalg import solve_continuous_are, inv
 
 class sboc:
     def __init__(self,sboc_yaml,sdre_pickle_path):
@@ -59,12 +60,14 @@ class sboc:
         self.Q = np.diag(np.hstack(Qii_omega_b,np.zeros(4)))
 
         max_servo_angles_rad = np.deg2rad(data['Servo_max_angles_deg'])
-        Rii_phi = np.array([1,1]) * 1/max_servo_angles_rad ** 2
+        Rii_phi = np.ones(2) * 1/max_servo_angles_rad ** 2
 
         max_motor_omega = max(raw_data[:,0])
-        Rii_omega_r = np.array([1,1]) * 1/max_motor_omega ** 2
+        Rii_omega_r = np.ones(2) * 1/max_motor_omega ** 2
 
+        # phi_px_cmd, phi_nx_cmd, omega_rpx_cmd, omega_rnx_cmd
         self.R = np.diag(np.hstack(Rii_phi,Rii_omega_r))
+        self.R_inv = np.inv(self.R)
 
     def get_u(self,full_state_est,w_des_radps):
 
@@ -83,3 +86,11 @@ class sboc:
         A = self.A_func(*eval_args)
         B = self.B_func(*eval_args)
 
+        # solve continuous ARE
+        P = solve_continuous_are(A, B, self.Q, self.R)
+    
+        # compute gain
+        K =  self.R_inv @ B.T @ P
+        
+        # compute U
+        return -K @ full_state_error
