@@ -89,6 +89,8 @@ def generate_smart_pdf_plots(input_csv):
         # 4. Control Efforts (Throttle)
         fig, ax = plt.subplots(1, 1, figsize=(8.5, 5.5))
         # Throttle
+        if 'thr_cmd_frac' in data.dtype.names:
+            ax.plot(t, data['thr_cmd_frac'], '--', label='Cmd Throttle', color='black', alpha=0.7)
         ax.plot(t, data['fpx_frac'], label='PX Throttle')
         ax.plot(t, data['fnx_frac'], label='NX Throttle')
         ax.set_ylabel('Throttle Fraction')

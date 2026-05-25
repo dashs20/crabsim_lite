@@ -4,13 +4,19 @@ from util import *
 from sensor import ICM42688
 from csv_to_pdf_smart import generate_smart_pdf_plots
 
+# load guidance table from CSV
+guidance_data = np.loadtxt('guidance.csv', delimiter=',', skiprows=1)
+t_lookup_s = guidance_data[:,0]
+wx_cmd_lookup_radps = lookup_1D(t_lookup_s, guidance_data[:,1])
+wy_cmd_lookup_radps = lookup_1D(t_lookup_s, guidance_data[:,2])
+wz_cmd_lookup_radps = lookup_1D(t_lookup_s, guidance_data[:,3])
+thr_frac_lookup = lookup_1D(t_lookup_s, guidance_data[:,4])
+
 # define sim dt (seconds)
-dt_s = 1/1000
-t_end_s = 5
+dt_s = 1/2000
+t_end_s = t_lookup_s[-1]
 n_steps = round(t_end_s/dt_s)
 t_s = np.linspace(0,t_end_s,n_steps)
-
-baseline_thr_frac = 0.3
 
 # define bicopter
 crabcopter = bicopter('crabcopter.yaml',dt_s)
@@ -18,21 +24,13 @@ crabcopter = bicopter('crabcopter.yaml',dt_s)
 # define gnc
 crabbrain = gnc('sboc.yaml')
 
-# start the rotors off at a nonzero speed based on the baseline throttle fraction
-initial_thrust_N = baseline_thr_frac * crabcopter.max_motor_f_N
+# start the rotors off at a nonzero speed based on the initial throttle fraction
+initial_thrust_N = thr_frac_lookup.index(0.0) * crabcopter.max_motor_f_N
 crabcopter.px_motor_model.x =   crabcopter.w_rapds_2_f_N.index_y(initial_thrust_N)
 crabcopter.nx_motor_model.x = - crabcopter.w_rapds_2_f_N.index_y(initial_thrust_N)
 
 # define gyro sensor
 gyro = ICM42688(1000,200)
-
-# define some controller command lookups
-t_lookup_s = np.linspace(-dt_s,t_end_s,300)
-
-
-wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.zeros(np.size(t_lookup_s)))
-wy_cmd_lookup_radps = lookup_1D(t_lookup_s,0.1*np.sin(t_lookup_s*3))
-wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.zeros(np.size(t_lookup_s)))
 
 # define plant log array
 plant_log_array = np.zeros((n_steps,20))
@@ -45,10 +43,11 @@ plant_log_col_names = ["wx_radps","wy_radps","wz_radps",
 plant_log_col_names = ','.join(plant_log_col_names)
 
 # define GNC log array
-gnc_log_array = np.zeros((n_steps,10))
+gnc_log_array = np.zeros((n_steps,11))
 gnc_log_col_names = ["wx_cmd_radps","wy_cmd_radps","wz_cmd_radps",
                      "wx_meas_radps","wy_meas_radps","wz_meas_radps",
-                     "fpx_frac","fnx_frac","phi_px_cmd_rad","phi_nx_cmd_rad"]
+                     "fpx_frac","fnx_frac","phi_px_cmd_rad","phi_nx_cmd_rad",
+                     "thr_cmd_frac"]
 gnc_log_col_names = ','.join(gnc_log_col_names)
 
 # perform simulation
@@ -60,6 +59,7 @@ for i_step in range(n_steps):
     wx_cmd_radps = wx_cmd_lookup_radps.index(t_cur_s)
     wy_cmd_radps = wy_cmd_lookup_radps.index(t_cur_s)
     wz_cmd_radps = wz_cmd_lookup_radps.index(t_cur_s)
+    thr_frac_cmd = thr_frac_lookup.index(t_cur_s)
     w_des_radps = np.array([wx_cmd_radps,wy_cmd_radps,wz_cmd_radps])
 
     # get gyro measurement of body rate
@@ -72,8 +72,8 @@ for i_step in range(n_steps):
                         crabcopter.nx_motor_model.x])
 
     # step GNC & log outputs
-    act_cmd = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,act_est,baseline_thr_frac)
-    gnc_log_array[i_step,:] = np.hstack((w_des_radps, crabcopter.body.W_B_wrt_I_radps.flatten(), act_cmd))
+    act_cmd = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,act_est,thr_frac_cmd)
+    gnc_log_array[i_step,:] = np.hstack((w_des_radps, crabcopter.body.W_B_wrt_I_radps.flatten(), act_cmd, thr_frac_cmd))
 
     # step plant & log output
     plant_log_array[i_step,:] = crabcopter.step(act_cmd)
