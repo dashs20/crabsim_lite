@@ -2,6 +2,7 @@ from plants import *
 from gnc import *
 from util import *
 from sensor import ICM42688
+from csv_to_pdf_smart import generate_smart_pdf_plots
 
 # define sim dt (seconds)
 dt_s = 1/1000
@@ -9,24 +10,29 @@ t_end_s = 5
 n_steps = round(t_end_s/dt_s)
 t_s = np.linspace(0,t_end_s,n_steps)
 
+baseline_thr_frac = 0.3
+
 # define bicopter
 crabcopter = bicopter('crabcopter.yaml',dt_s)
 
 # define gnc
 crabbrain = gnc('sboc.yaml')
 
-# start the rotors off at a nonzero speed
-crabcopter.px_motor_model.x =   crabcopter.w_rapds_2_f_N.index_y(5)
-crabcopter.nx_motor_model.x = - crabcopter.w_rapds_2_f_N.index_y(5)
+# start the rotors off at a nonzero speed based on the baseline throttle fraction
+initial_thrust_N = baseline_thr_frac * crabcopter.max_motor_f_N
+crabcopter.px_motor_model.x =   crabcopter.w_rapds_2_f_N.index_y(initial_thrust_N)
+crabcopter.nx_motor_model.x = - crabcopter.w_rapds_2_f_N.index_y(initial_thrust_N)
 
 # define gyro sensor
 gyro = ICM42688(1000,200)
 
 # define some controller command lookups
-t_lookup_s = np.linspace(-dt_s,t_end_s,9)
-wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0]))
-wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,200,200,200,0,0,0]))
-wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0]))
+t_lookup_s = np.linspace(-dt_s,t_end_s,300)
+
+
+wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.zeros(np.size(t_lookup_s)))
+wy_cmd_lookup_radps = lookup_1D(t_lookup_s,0.1*np.sin(t_lookup_s*3))
+wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.zeros(np.size(t_lookup_s)))
 
 # define plant log array
 plant_log_array = np.zeros((n_steps,20))
@@ -66,7 +72,7 @@ for i_step in range(n_steps):
                         crabcopter.nx_motor_model.x])
 
     # step GNC & log outputs
-    act_cmd = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,act_est,0.25)
+    act_cmd = crabbrain.step(w_des_radps,crabcopter.body.W_B_wrt_I_radps,act_est,baseline_thr_frac)
     gnc_log_array[i_step,:] = np.hstack((w_des_radps, crabcopter.body.W_B_wrt_I_radps.flatten(), act_cmd))
 
     # step plant & log output
@@ -76,3 +82,4 @@ for i_step in range(n_steps):
 log_array = np.hstack((t_s[:,np.newaxis],plant_log_array,gnc_log_array))
 log_col_names = "t_s," + plant_log_col_names + "," + gnc_log_col_names
 np.savetxt('log.csv', log_array, delimiter=',', fmt='%.3f', header=log_col_names, comments='')
+generate_smart_pdf_plots("log.csv")
