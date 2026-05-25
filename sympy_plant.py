@@ -121,3 +121,4 @@ euler_coupling = omega_b.cross(I_b * omega_b)
 # xdot = f(x,u) where u is M_net (which is a function of x and u)
 # Includes full nonlinear Euler coupling for aggressive maneuvers
 eom = sp.Eq(omegadot_b, sp.Inverse(I_b) * (M_net - euler_coupling))
+sp.pprint(eom)
