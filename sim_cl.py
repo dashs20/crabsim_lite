@@ -4,8 +4,8 @@ from util import *
 from sensor import ICM42688
 
 # define sim dt (seconds)
-dt_s = 1/4000
-t_end_s = 5
+dt_s = 1/1000
+t_end_s = 20
 n_steps = round(t_end_s/dt_s)
 t_s = np.linspace(0,t_end_s,n_steps)
 
@@ -23,10 +23,10 @@ crabcopter.nx_motor_model.x = - crabcopter.w_rapds_2_f_N.index_y(5)
 gyro = ICM42688(1000,200)
 
 # define some controller command lookups
-t_lookup_s = np.linspace(-dt_s,t_end_s,10)
-wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
-wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([5,5,5,5,5,5,5,5,5,5]))
-wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
+t_lookup_s = np.linspace(-dt_s,t_end_s,9)
+wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0]))
+wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,200,200,200,0,0,0]))
+wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0]))
 
 # define plant log array
 plant_log_array = np.zeros((n_steps,20))
