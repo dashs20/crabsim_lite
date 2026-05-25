@@ -25,8 +25,7 @@ gyro = ICM42688(1000,200)
 # define some controller command lookups
 t_lookup_s = np.linspace(-dt_s,t_end_s,10)
 wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
-# wx_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([-5,-5,-5,-5,-5,-5,-5,-5,-5,-5]))
-wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,10,10,0,0,0,0]))
+wy_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([5,5,5,5,5,5,5,5,5,5]))
 wz_cmd_lookup_radps = lookup_1D(t_lookup_s,np.deg2rad([0,0,0,0,0,0,0,0,0,0]))
 
 # define plant log array

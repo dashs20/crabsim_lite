@@ -62,10 +62,10 @@ class sboc:
         self.Q = np.diag(np.hstack((Qii_omega_b,np.zeros(4))))
 
         self.max_servo_angles_rad = np.deg2rad(data['Servo_max_angles_deg'])
-        Rii_phi = np.ones(2) * 1/self.max_servo_angles_rad ** 2
+        Rii_phi = np.ones(2) * 1/self.max_servo_angles_rad ** 2 * 0.1
 
         self.max_motor_omega = max(raw_data[:,1])
-        Rii_omega_r = np.ones(2) * 1/self.max_motor_omega ** 2
+        Rii_omega_r = np.ones(2) * 1/self.max_motor_omega ** 2 * 0.1
 
         # phi_px_cmd, phi_nx_cmd, omega_rpx_cmd, omega_rnx_cmd
         self.R = np.diag(np.hstack((Rii_phi,Rii_omega_r)))
@@ -124,15 +124,21 @@ class sboc:
             # K = self.R_inv @ B.T @ (P / scale)
             K = self.R_inv @ B.T @ (P / scale)
             
-            # compute U
+            # compute U delta
             # [phi_px, phi_nx, omega_rpx, omega_rnx]
-            u = -K @ full_state_error
+            u_delta = -K @ full_state_error
+            
+            # add nominal desired state to get absolute command
+            u = u_delta + desired_actuator_state
 
             # clip if it's too high
             phi_cmd_clipped = np.clip(u[0:2],-self.max_servo_angles_rad,self.max_servo_angles_rad)
-            omega_cmd_clipped = np.clip(u[2:4],-self.max_motor_omega,self.max_motor_omega)
-            u = np.hstack((phi_cmd_clipped,omega_cmd_clipped))
-        except:
+            omega_rpx_cmd_clipped = np.clip(u[2], 0, self.max_motor_omega)
+            omega_rnx_cmd_clipped = np.clip(u[3], -self.max_motor_omega, 0)
+            u = np.hstack((phi_cmd_clipped, omega_rpx_cmd_clipped, omega_rnx_cmd_clipped))
+        except Exception as e:
+            import sys
+            print(f"EXCEPTION in sboc: {e}", file=sys.stderr)
             u = np.zeros(4)
 
         return u
