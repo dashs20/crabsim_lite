@@ -38,7 +38,7 @@ if __name__ == '__main__':
     for f in glob.glob('mc_logs/log_*.csv'):
         os.remove(f)
 
-    n_runs = 200
+    n_runs = 100
     
     # Run in parallel
     with multiprocessing.Pool() as pool:
