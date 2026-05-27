@@ -24,8 +24,9 @@ def run_sim(plant_config_dict=None, log_filename='log.csv', generate_pdf=True):
     # define bicopter
     crabcopter = bicopter('crabcopter.yaml',dt_s, config_dict=plant_config_dict)
 
-    # define gnc
-    crabbrain = gnc('sboc.yaml', 'nav.yaml', dt_s)
+    # define gnc - run at half the sim frequency
+    gnc_dt_s = 2 * dt_s
+    crabbrain = gnc('sboc.yaml', 'nav.yaml', gnc_dt_s)
 
     # start the rotors off at a nonzero speed based on the initial throttle fraction
     initial_thrust_N = thr_frac_lookup.index(0.0) * crabcopter.max_motor_f_N
@@ -61,6 +62,9 @@ def run_sim(plant_config_dict=None, log_filename='log.csv', generate_pdf=True):
                          "i_err_x","i_err_y","i_err_z"]
     gnc_log_col_names = ','.join(gnc_log_col_names)
 
+    # initialize actuator commands
+    act_cmd = np.array([0.0, 0.0, 0.0, 0.0])
+
     # perform simulation
     for i_step in range(n_steps):
 
@@ -85,8 +89,9 @@ def run_sim(plant_config_dict=None, log_filename='log.csv', generate_pdf=True):
         # apply gaussian noise to actuator state estimate
         act_est += np.random.normal(0, ACTUATOR_NOISE_STD_DEV, act_est.shape)
 
-        # step GNC & log outputs
-        act_cmd = crabbrain.step(w_des_radps,w_meas_radps,act_est,thr_frac_cmd)
+        # step GNC every other time-step
+        if i_step % 2 == 0:
+            act_cmd = crabbrain.step(w_des_radps,w_meas_radps,act_est,thr_frac_cmd)
         
         # Log all data
         gnc_log_array[i_step,:] = np.hstack((
