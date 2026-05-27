@@ -58,11 +58,14 @@ class simple_rigid_body:
         self.W_B_wrt_I_radps = rk4(dstate,self.W_B_wrt_I_radps,self.dt_s)
 
 class bicopter:
-    def __init__(self,yaml_path,dt_s):
+    def __init__(self,yaml_path,dt_s,config_dict=None):
 
-        # open yaml
-        with open(yaml_path, 'r') as file:
-            data = yaml.safe_load(file)
+        # load config
+        if config_dict is not None:
+            data = config_dict
+        else:
+            with open(yaml_path, 'r') as file:
+                data = yaml.safe_load(file)
 
         # save timestep size
         self.dt_s = dt_s

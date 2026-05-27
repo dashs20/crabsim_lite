@@ -1,0 +1,3800 @@
+- body_height_mm: 37.15902602903078
+  body_length_mm: 129.0398911077434
+  body_mass_g: 382.36466441508884
+  body_width_mm: 25.966076208329397
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.52479757190875
+  r_cg2nx_mm:
+  - -101.17920501853622
+  - -2.802247825916497
+  - -48.67736311853684
+  r_cg2px_mm:
+  - 100.07749565979887
+  - -0.33682933247274693
+  - -49.48953054780202
+  rotor_length_mm: 126.37320089273221
+  rotor_mass_g: 2.3337942333946584
+  rotor_thickness_mm: 0.9101814765421048
+  rotor_width_mm: 9.982538394324912
+  servo_time_constant_ms: 53.157925855456014
+- body_height_mm: 34.5907393447114
+  body_length_mm: 119.72531498349558
+  body_mass_g: 407.73287939403866
+  body_width_mm: 25.04913867777515
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.43498486755834
+  r_cg2nx_mm:
+  - -101.08225720258726
+  - 0.7571485740995874
+  - -49.3671134386499
+  r_cg2px_mm:
+  - 99.63791566070658
+  - -2.793687870725912
+  - -48.62955177595988
+  rotor_length_mm: 126.53013662772496
+  rotor_mass_g: 2.271354785086004
+  rotor_thickness_mm: 1.054007518319057
+  rotor_width_mm: 9.95667372376489
+  servo_time_constant_ms: 49.42446581206222
+- body_height_mm: 32.37063603813302
+  body_length_mm: 114.11172576329349
+  body_mass_g: 388.2470961007562
+  body_width_mm: 23.75013727058336
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.41706869797295
+  r_cg2nx_mm:
+  - -99.56959502190809
+  - 0.2641601608267572
+  - -48.96243368466371
+  r_cg2px_mm:
+  - 102.91431706269658
+  - -0.2910420114564922
+  - -49.56974072273663
+  rotor_length_mm: 126.29850462341095
+  rotor_mass_g: 2.0788450978941073
+  rotor_thickness_mm: 0.9739141426479523
+  rotor_width_mm: 10.065357646269362
+  servo_time_constant_ms: 50.568922333922266
+- body_height_mm: 35.296573875601396
+  body_length_mm: 112.727574953798
+  body_mass_g: 408.343667445035
+  body_width_mm: 25.859392742747136
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.8298688814258
+  r_cg2nx_mm:
+  - -101.14513273223673
+  - 2.9918106966931424
+  - -48.241685087916004
+  r_cg2px_mm:
+  - 99.1494986114825
+  - 1.7772614158193356
+  - -49.29655880512849
+  rotor_length_mm: 126.77029983610281
+  rotor_mass_g: 2.3964796240846273
+  rotor_thickness_mm: 0.9091394642532663
+  rotor_width_mm: 10.053343847292554
+  servo_time_constant_ms: 45.98270502992722
+- body_height_mm: 34.880674953107075
+  body_length_mm: 114.6009671847241
+  body_mass_g: 388.639661329477
+  body_width_mm: 24.34856253875877
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.96334001206318
+  r_cg2nx_mm:
+  - -100.26428533736792
+  - -0.23338343627754643
+  - -49.24412404309887
+  r_cg2px_mm:
+  - 99.05867320258713
+  - 0.8154910676852731
+  - -51.00828500862276
+  rotor_length_mm: 126.95039758187544
+  rotor_mass_g: 2.318225111614299
+  rotor_thickness_mm: 1.0559089957760392
+  rotor_width_mm: 10.069178228432916
+  servo_time_constant_ms: 45.48358927020281
+- body_height_mm: 36.244702327897585
+  body_length_mm: 111.40078829332566
+  body_mass_g: 393.50678398431285
+  body_width_mm: 24.698375958717236
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.9565995981515
+  r_cg2nx_mm:
+  - -97.9964721996043
+  - -2.021971132769778
+  - -50.770804955912126
+  r_cg2px_mm:
+  - 100.93184167185292
+  - 1.9511292006712688
+  - -51.32689787382286
+  rotor_length_mm: 127.11188475946972
+  rotor_mass_g: 2.2174401892236157
+  rotor_thickness_mm: 0.9800430100986226
+  rotor_width_mm: 10.000990952644369
+  servo_time_constant_ms: 49.50555659143827
+- body_height_mm: 36.00875538751978
+  body_length_mm: 120.4333771018757
+  body_mass_g: 406.7756980192702
+  body_width_mm: 26.40620434342801
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 203.0768001543912
+  r_cg2nx_mm:
+  - -102.06829578127079
+  - 2.4890718784566275
+  - -49.43307527936718
+  r_cg2px_mm:
+  - 98.63039096468651
+  - 0.17306588464099848
+  - -48.84886929704233
+  rotor_length_mm: 126.49502050180409
+  rotor_mass_g: 2.062484746710048
+  rotor_thickness_mm: 0.9807399648267839
+  rotor_width_mm: 9.922416970373774
+  servo_time_constant_ms: 50.38054344317202
+- body_height_mm: 36.7206728721061
+  body_length_mm: 113.4924025072656
+  body_mass_g: 383.75840185528676
+  body_width_mm: 25.768641859019233
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.35406069338876
+  r_cg2nx_mm:
+  - -97.12971835622554
+  - -1.5665922491720392
+  - -49.92206980297493
+  r_cg2px_mm:
+  - 102.01118822446814
+  - 1.697458791309133
+  - -50.80651720092274
+  rotor_length_mm: 126.94673133674574
+  rotor_mass_g: 2.075883228354768
+  rotor_thickness_mm: 0.9636826854594875
+  rotor_width_mm: 10.02464266251922
+  servo_time_constant_ms: 51.36969248987442
+- body_height_mm: 37.09673515189968
+  body_length_mm: 110.2350204719485
+  body_mass_g: 419.03417670769
+  body_width_mm: 23.03072078278767
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.16934182474378
+  r_cg2nx_mm:
+  - -99.33442513983486
+  - -0.44927312775221395
+  - -52.323121907127685
+  r_cg2px_mm:
+  - 100.93772424340608
+  - 2.6313477556501113
+  - -52.083387985081835
+  rotor_length_mm: 126.96178744893025
+  rotor_mass_g: 2.2709473433807763
+  rotor_thickness_mm: 1.0462838886268035
+  rotor_width_mm: 10.095244374937362
+  servo_time_constant_ms: 53.933586081538806
+- body_height_mm: 33.11223638293728
+  body_length_mm: 122.21879457814714
+  body_mass_g: 383.74130384393084
+  body_width_mm: 25.76198039589979
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.47789993487788
+  r_cg2nx_mm:
+  - -100.42117601930308
+  - -1.6677174102485963
+  - -49.26315156647139
+  r_cg2px_mm:
+  - 101.6206180599871
+  - 0.9755208485796785
+  - -52.179858140652975
+  rotor_length_mm: 126.84560405633324
+  rotor_mass_g: 2.086941353743817
+  rotor_thickness_mm: 0.9674945038625004
+  rotor_width_mm: 9.975471853814485
+  servo_time_constant_ms: 54.62735633399805
+- body_height_mm: 37.593929297070574
+  body_length_mm: 125.44908563363765
+  body_mass_g: 387.73398096760275
+  body_width_mm: 24.078875709581467
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 203.69227321858293
+  r_cg2nx_mm:
+  - -99.65531625592061
+  - 1.2565578301148754
+  - -49.24792245919769
+  r_cg2px_mm:
+  - 99.30693867455881
+  - -1.2534928823920108
+  - -52.68909655453756
+  rotor_length_mm: 127.94231634018772
+  rotor_mass_g: 2.1170981994378186
+  rotor_thickness_mm: 0.9202278240723661
+  rotor_width_mm: 9.97904015812094
+  servo_time_constant_ms: 47.93715676695136
+- body_height_mm: 34.96655887675924
+  body_length_mm: 123.04941245548063
+  body_mass_g: 411.63333017101047
+  body_width_mm: 25.287347516679347
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.85751055058483
+  r_cg2nx_mm:
+  - -99.26236921354217
+  - 1.9151379622281883
+  - -47.60787340513532
+  r_cg2px_mm:
+  - 98.16493179783492
+  - 1.5630017949178985
+  - -51.414237013810606
+  rotor_length_mm: 127.79776125729326
+  rotor_mass_g: 2.0761973197518366
+  rotor_thickness_mm: 0.946241172287106
+  rotor_width_mm: 9.941822016367666
+  servo_time_constant_ms: 53.531792056795005
+- body_height_mm: 36.97001036601019
+  body_length_mm: 127.68580385831392
+  body_mass_g: 402.81680318683055
+  body_width_mm: 24.45582439218936
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.44038772622247
+  r_cg2nx_mm:
+  - -101.69893500238572
+  - -0.7354324824294891
+  - -52.55551347811197
+  r_cg2px_mm:
+  - 102.38642402847114
+  - 2.534243864984232
+  - -50.892260346931494
+  rotor_length_mm: 126.52834594238564
+  rotor_mass_g: 2.1847047439162095
+  rotor_thickness_mm: 0.9664435752420362
+  rotor_width_mm: 10.071255852683496
+  servo_time_constant_ms: 47.87626624537049
+- body_height_mm: 35.88331911956344
+  body_length_mm: 122.27793789451528
+  body_mass_g: 408.37298952929746
+  body_width_mm: 24.447562440004145
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 194.6439758578422
+  r_cg2nx_mm:
+  - -97.15627199893034
+  - 2.578834474137113
+  - -47.81033936816906
+  r_cg2px_mm:
+  - 100.27203873280352
+  - -1.4615272617243482
+  - -52.47636647411429
+  rotor_length_mm: 127.84272722579703
+  rotor_mass_g: 2.3320973879910745
+  rotor_thickness_mm: 0.9591260256989051
+  rotor_width_mm: 9.926975679314953
+  servo_time_constant_ms: 49.319695736699934
+- body_height_mm: 35.078868265023644
+  body_length_mm: 128.0854833892312
+  body_mass_g: 416.1231636079725
+  body_width_mm: 23.258232664695466
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 191.12575988801532
+  r_cg2nx_mm:
+  - -97.66113489370247
+  - 0.9366827788018304
+  - -50.45528020032326
+  r_cg2px_mm:
+  - 99.99749462391323
+  - 2.035454077896352
+  - -49.422225275975904
+  rotor_length_mm: 126.76949902101214
+  rotor_mass_g: 2.1467324612785132
+  rotor_thickness_mm: 1.0514064470404123
+  rotor_width_mm: 9.933458620512859
+  servo_time_constant_ms: 54.63953215819342
+- body_height_mm: 36.20202584327696
+  body_length_mm: 121.11669784699154
+  body_mass_g: 380.7111387720409
+  body_width_mm: 23.99926992897648
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.8709493717643
+  r_cg2nx_mm:
+  - -101.43555658475125
+  - 0.7386964895136341
+  - -48.24941281422485
+  r_cg2px_mm:
+  - 100.9108945676779
+  - -2.4777979697596737
+  - -50.43966412197865
+  rotor_length_mm: 127.24997176307734
+  rotor_mass_g: 2.126632153239063
+  rotor_thickness_mm: 1.004618862778409
+  rotor_width_mm: 9.983817330437018
+  servo_time_constant_ms: 54.33230251752189
+- body_height_mm: 34.85729845029218
+  body_length_mm: 112.16583700224214
+  body_mass_g: 408.2518848660057
+  body_width_mm: 26.645257578296516
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 212.19641819907002
+  r_cg2nx_mm:
+  - -100.99538699580923
+  - 0.5582217522992741
+  - -50.27835336515016
+  r_cg2px_mm:
+  - 98.9036071965747
+  - 0.7516445091370039
+  - -50.000895705825094
+  rotor_length_mm: 126.96442199162037
+  rotor_mass_g: 2.1258993525537826
+  rotor_thickness_mm: 1.0938754235464736
+  rotor_width_mm: 10.046829829049997
+  servo_time_constant_ms: 50.76002335504986
+- body_height_mm: 32.53872342652987
+  body_length_mm: 111.3664085806903
+  body_mass_g: 387.4108040354147
+  body_width_mm: 25.923211203236296
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 192.69049166868467
+  r_cg2nx_mm:
+  - -99.58200994603891
+  - 1.7782575221014776
+  - -52.7652073844171
+  r_cg2px_mm:
+  - 102.87971748714601
+  - -0.004951599922410566
+  - -51.42027025690539
+  rotor_length_mm: 126.58920932600904
+  rotor_mass_g: 2.0752808921845562
+  rotor_thickness_mm: 0.9427620817154256
+  rotor_width_mm: 10.014813241923115
+  servo_time_constant_ms: 52.04785924936327
+- body_height_mm: 37.92201875172852
+  body_length_mm: 112.45596188290938
+  body_mass_g: 417.09920270823494
+  body_width_mm: 26.400220139914275
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.56326012750418
+  r_cg2nx_mm:
+  - -99.39613334517854
+  - -0.2319465233938045
+  - -49.592814576201846
+  r_cg2px_mm:
+  - 101.50248427847458
+  - 2.255545171749125
+  - -52.485389242844334
+  rotor_length_mm: 126.63247166832856
+  rotor_mass_g: 2.155355779836503
+  rotor_thickness_mm: 0.9587170873709887
+  rotor_width_mm: 9.976426667095897
+  servo_time_constant_ms: 45.77782658038178
+- body_height_mm: 35.76002007565278
+  body_length_mm: 114.64331621875695
+  body_mass_g: 419.7649617358149
+  body_width_mm: 25.931098259085566
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.8836897789164
+  r_cg2nx_mm:
+  - -98.69347808220198
+  - -1.8954033352614075
+  - -47.4875946931113
+  r_cg2px_mm:
+  - 101.74038209641154
+  - 0.5373058242229165
+  - -51.43653401227669
+  rotor_length_mm: 127.19860996903034
+  rotor_mass_g: 2.265019204411927
+  rotor_thickness_mm: 0.9702187191660604
+  rotor_width_mm: 10.03773640845658
+  servo_time_constant_ms: 48.60248558270103
+- body_height_mm: 36.80313025982244
+  body_length_mm: 129.57618588649416
+  body_mass_g: 404.13042494822594
+  body_width_mm: 26.443443347537162
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.114024589428
+  r_cg2nx_mm:
+  - -98.71318540728811
+  - -0.32122645855190957
+  - -48.21616512459815
+  r_cg2px_mm:
+  - 102.33114509787058
+  - 1.219745601619719
+  - -47.55558163107137
+  rotor_length_mm: 127.39472890180816
+  rotor_mass_g: 2.3733267366868205
+  rotor_thickness_mm: 1.0678016997780049
+  rotor_width_mm: 10.043528126019215
+  servo_time_constant_ms: 51.08760734197342
+- body_height_mm: 37.11589278433976
+  body_length_mm: 118.73949300977017
+  body_mass_g: 380.1902408897629
+  body_width_mm: 25.888337751637422
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 190.25555614069526
+  r_cg2nx_mm:
+  - -99.28639000705317
+  - 2.067886504542976
+  - -49.516086461899235
+  r_cg2px_mm:
+  - 98.2300982342488
+  - -2.489063483507689
+  - -51.35938994896618
+  rotor_length_mm: 127.83875064918549
+  rotor_mass_g: 2.3860502225350153
+  rotor_thickness_mm: 1.0366765839872472
+  rotor_width_mm: 9.936234023124758
+  servo_time_constant_ms: 49.265626887377415
+- body_height_mm: 33.14354154724775
+  body_length_mm: 125.56736600095606
+  body_mass_g: 389.3539157946125
+  body_width_mm: 24.546095865118897
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 206.55827769326189
+  r_cg2nx_mm:
+  - -102.4568511864154
+  - -2.1119827660258306
+  - -47.68457279288609
+  r_cg2px_mm:
+  - 98.14730873407125
+  - -1.9011515952139297
+  - -49.451527272021536
+  rotor_length_mm: 127.61984908572883
+  rotor_mass_g: 2.104892387208863
+  rotor_thickness_mm: 1.0019887887129006
+  rotor_width_mm: 9.962880878487683
+  servo_time_constant_ms: 50.3099338611339
+- body_height_mm: 37.8350986160984
+  body_length_mm: 126.098145542158
+  body_mass_g: 410.87354530328423
+  body_width_mm: 25.144323354837894
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.1587169973944
+  r_cg2nx_mm:
+  - -97.48553008001826
+  - 0.6879279970355237
+  - -49.70622155668695
+  r_cg2px_mm:
+  - 102.40591011760877
+  - 2.6240758559026016
+  - -49.78332496668625
+  rotor_length_mm: 127.83471218255738
+  rotor_mass_g: 2.0307470918374335
+  rotor_thickness_mm: 1.0357680723519624
+  rotor_width_mm: 10.06857468558457
+  servo_time_constant_ms: 54.40040538168485
+- body_height_mm: 32.465848187818395
+  body_length_mm: 121.47626824049681
+  body_mass_g: 380.7093445695896
+  body_width_mm: 24.989282996522192
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 193.10970974213083
+  r_cg2nx_mm:
+  - -99.8370712383335
+  - 0.6392224819847838
+  - -49.59312770900114
+  r_cg2px_mm:
+  - 101.7711176913083
+  - 2.1654350088059857
+  - -48.70719304820956
+  rotor_length_mm: 127.9883730455102
+  rotor_mass_g: 2.2930350400475534
+  rotor_thickness_mm: 1.0626603822114629
+  rotor_width_mm: 9.979268613271156
+  servo_time_constant_ms: 53.362126492949415
+- body_height_mm: 33.4488118399033
+  body_length_mm: 114.66148849059138
+  body_mass_g: 403.31594193124675
+  body_width_mm: 24.43387149727893
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.0973779499446
+  r_cg2nx_mm:
+  - -100.79318955473627
+  - 1.710734864698007
+  - -47.92684714087803
+  r_cg2px_mm:
+  - 97.93102932788197
+  - -2.684887468623407
+  - -48.956048316765504
+  rotor_length_mm: 127.93813322213872
+  rotor_mass_g: 2.2782569924147915
+  rotor_thickness_mm: 0.9620452679847787
+  rotor_width_mm: 9.92493881293079
+  servo_time_constant_ms: 49.143811387671626
+- body_height_mm: 34.87958838639777
+  body_length_mm: 124.19151356054533
+  body_mass_g: 419.461090039923
+  body_width_mm: 25.63379806319718
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 197.0023810515973
+  r_cg2nx_mm:
+  - -97.28315702338608
+  - -2.6235756856114922
+  - -52.15196549097108
+  r_cg2px_mm:
+  - 101.41112740705537
+  - -0.8687573881191111
+  - -50.160647101810355
+  rotor_length_mm: 126.24108172476575
+  rotor_mass_g: 2.3727279408974153
+  rotor_thickness_mm: 0.9982736829519709
+  rotor_width_mm: 9.972884386143983
+  servo_time_constant_ms: 47.820338097395286
+- body_height_mm: 35.4602516160362
+  body_length_mm: 119.40862614956917
+  body_mass_g: 391.81507245948336
+  body_width_mm: 25.24985233347149
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.2897778987124
+  r_cg2nx_mm:
+  - -100.16619150259024
+  - 2.08175008946049
+  - -51.9959518481804
+  r_cg2px_mm:
+  - 102.84263396196172
+  - 1.436118199524567
+  - -52.111258300350066
+  rotor_length_mm: 126.55696987940459
+  rotor_mass_g: 2.1324497606923063
+  rotor_thickness_mm: 0.9729513757934473
+  rotor_width_mm: 9.93684616728127
+  servo_time_constant_ms: 46.77747618109957
+- body_height_mm: 32.2393376654576
+  body_length_mm: 115.59745381746862
+  body_mass_g: 386.9066289317004
+  body_width_mm: 25.13749601565929
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.05397681288994
+  r_cg2nx_mm:
+  - -100.33689572631084
+  - 2.6967315799840623
+  - -52.35883146398464
+  r_cg2px_mm:
+  - 99.94355688848007
+  - 0.8641722479698761
+  - -51.29971366133297
+  rotor_length_mm: 126.82026556275599
+  rotor_mass_g: 2.3235568679988323
+  rotor_thickness_mm: 0.9739819058526415
+  rotor_width_mm: 9.960090156321149
+  servo_time_constant_ms: 52.71590982170126
+- body_height_mm: 35.558860130022815
+  body_length_mm: 121.08658205475082
+  body_mass_g: 414.8286622754327
+  body_width_mm: 25.235934472062652
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 209.45884442950526
+  r_cg2nx_mm:
+  - -99.07003935607679
+  - -0.5346109567898818
+  - -49.68981675766487
+  r_cg2px_mm:
+  - 101.49224392203006
+  - 1.7199348497052203
+  - -51.89686752396719
+  rotor_length_mm: 127.96563510729169
+  rotor_mass_g: 2.31506637852924
+  rotor_thickness_mm: 0.9512806295750166
+  rotor_width_mm: 10.08170753145942
+  servo_time_constant_ms: 49.919925993372516
+- body_height_mm: 34.0232344195779
+  body_length_mm: 122.84706578119655
+  body_mass_g: 401.17171825815495
+  body_width_mm: 25.889569053324294
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 189.2182035942044
+  r_cg2nx_mm:
+  - -102.70066166625766
+  - -1.5040959242741174
+  - -49.59006900516459
+  r_cg2px_mm:
+  - 101.74833284751784
+  - -2.7945766971173978
+  - -48.35731650125288
+  rotor_length_mm: 127.21837180644773
+  rotor_mass_g: 2.2117601415434684
+  rotor_thickness_mm: 1.041909867609175
+  rotor_width_mm: 10.037789450138112
+  servo_time_constant_ms: 49.83944167642445
+- body_height_mm: 32.73282888469385
+  body_length_mm: 118.40914677597814
+  body_mass_g: 413.88755409023366
+  body_width_mm: 26.935177925601636
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 213.96923566091687
+  r_cg2nx_mm:
+  - -98.64231395732077
+  - 1.8885421399667655
+  - -48.25531047674066
+  r_cg2px_mm:
+  - 99.94343008705515
+  - -1.936632198948083
+  - -50.17824555152548
+  rotor_length_mm: 126.78294359242683
+  rotor_mass_g: 2.1473731306830244
+  rotor_thickness_mm: 1.0369761432138218
+  rotor_width_mm: 9.938960338912475
+  servo_time_constant_ms: 46.37825812492141
+- body_height_mm: 37.281010209823314
+  body_length_mm: 122.02730941578479
+  body_mass_g: 400.83485983701746
+  body_width_mm: 23.044071855046376
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 197.74205402363688
+  r_cg2nx_mm:
+  - -102.462734593888
+  - -1.6606678263006036
+  - -47.33355464114497
+  r_cg2px_mm:
+  - 99.2774936173025
+  - -2.392205960938746
+  - -49.20328111104764
+  rotor_length_mm: 127.84571632379614
+  rotor_mass_g: 2.2303707028611246
+  rotor_thickness_mm: 0.939057212130251
+  rotor_width_mm: 10.005949037678166
+  servo_time_constant_ms: 50.89053918883561
+- body_height_mm: 37.931457148508876
+  body_length_mm: 114.33469673132416
+  body_mass_g: 404.88775257372276
+  body_width_mm: 25.5863147439108
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.40051350320803
+  r_cg2nx_mm:
+  - -100.70171351036385
+  - 0.05879991172708543
+  - -52.90664068524057
+  r_cg2px_mm:
+  - 102.65154040632555
+  - 1.5670283100083138
+  - -49.68431882235091
+  rotor_length_mm: 126.64287709811309
+  rotor_mass_g: 2.1018424350376663
+  rotor_thickness_mm: 0.9331167226901497
+  rotor_width_mm: 9.904283288905011
+  servo_time_constant_ms: 50.5026872505942
+- body_height_mm: 36.339875947670635
+  body_length_mm: 127.84693270665241
+  body_mass_g: 391.2126197691733
+  body_width_mm: 24.860770682622015
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 192.73359508086634
+  r_cg2nx_mm:
+  - -97.42450367966295
+  - -1.5794987213125007
+  - -51.90065241098823
+  r_cg2px_mm:
+  - 102.04475100775521
+  - -2.6676463850745846
+  - -50.29783387374442
+  rotor_length_mm: 126.36836777528534
+  rotor_mass_g: 2.1732074530512797
+  rotor_thickness_mm: 1.033876459181202
+  rotor_width_mm: 10.086702296841532
+  servo_time_constant_ms: 45.68823337521511
+- body_height_mm: 32.18931292687858
+  body_length_mm: 117.8523496128364
+  body_mass_g: 390.5163240540438
+  body_width_mm: 24.145092877339753
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.19451143670057
+  r_cg2nx_mm:
+  - -102.1236090569883
+  - 1.870021832482677
+  - -47.813612906959605
+  r_cg2px_mm:
+  - 101.54106648320902
+  - 1.8227331362631727
+  - -49.979771461299464
+  rotor_length_mm: 126.41806653973637
+  rotor_mass_g: 2.364877986535781
+  rotor_thickness_mm: 0.9298621894142963
+  rotor_width_mm: 9.934383629642305
+  servo_time_constant_ms: 47.489392112821605
+- body_height_mm: 33.96694329129347
+  body_length_mm: 111.16155012122078
+  body_mass_g: 401.70289106102905
+  body_width_mm: 24.37544410638748
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.61428861026096
+  r_cg2nx_mm:
+  - -98.96456506295432
+  - 1.8642260559163955
+  - -48.8368529066433
+  r_cg2px_mm:
+  - 97.03950465786932
+  - 1.4286170979358754
+  - -49.20468756656934
+  rotor_length_mm: 126.14882973294026
+  rotor_mass_g: 2.0133776186731596
+  rotor_thickness_mm: 0.9957875415146522
+  rotor_width_mm: 9.933733720470633
+  servo_time_constant_ms: 48.355992032437044
+- body_height_mm: 34.97553559690026
+  body_length_mm: 124.48472479260448
+  body_mass_g: 388.401209828269
+  body_width_mm: 26.602130985052497
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 187.18873398603665
+  r_cg2nx_mm:
+  - -102.64026438475146
+  - -0.909301179498538
+  - -48.57321144141574
+  r_cg2px_mm:
+  - 97.22808738065076
+  - 0.4688690391350887
+  - -52.407894137259305
+  rotor_length_mm: 126.24989551257394
+  rotor_mass_g: 2.063654653192597
+  rotor_thickness_mm: 1.0985844060161887
+  rotor_width_mm: 9.955775213948986
+  servo_time_constant_ms: 45.55778085764446
+- body_height_mm: 33.67019076088246
+  body_length_mm: 120.68102765357546
+  body_mass_g: 391.77867104822326
+  body_width_mm: 24.46710156519989
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 181.79995890594418
+  r_cg2nx_mm:
+  - -97.58132918268083
+  - 1.6560942723890122
+  - -49.28481438249511
+  r_cg2px_mm:
+  - 98.42010381197665
+  - 0.21723819048751025
+  - -48.43246219985137
+  rotor_length_mm: 126.82281400036226
+  rotor_mass_g: 2.1474030239016906
+  rotor_thickness_mm: 1.0175826806940298
+  rotor_width_mm: 10.010424916484274
+  servo_time_constant_ms: 46.54793747305009
+- body_height_mm: 32.27640342373199
+  body_length_mm: 119.38763130686024
+  body_mass_g: 382.04679411830557
+  body_width_mm: 25.45987435221901
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.15091769736824
+  r_cg2nx_mm:
+  - -98.65039576637176
+  - 2.616115094013171
+  - -47.774914948366
+  r_cg2px_mm:
+  - 97.85803679039725
+  - -2.901383466995239
+  - -52.82786427989364
+  rotor_length_mm: 127.94872807857398
+  rotor_mass_g: 2.1044755704054645
+  rotor_thickness_mm: 1.0071344314464716
+  rotor_width_mm: 9.964277882346055
+  servo_time_constant_ms: 49.59080655288069
+- body_height_mm: 36.93124618120655
+  body_length_mm: 120.26358203475868
+  body_mass_g: 418.74737412456244
+  body_width_mm: 24.907886435376444
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.75983307266083
+  r_cg2nx_mm:
+  - -98.21309588656018
+  - -2.7734371090590266
+  - -52.23369435017267
+  r_cg2px_mm:
+  - 102.0566480434834
+  - -2.2520780005896097
+  - -51.15013208279296
+  rotor_length_mm: 127.3346759531006
+  rotor_mass_g: 2.3778960742242825
+  rotor_thickness_mm: 1.0403541656460382
+  rotor_width_mm: 10.090858124016794
+  servo_time_constant_ms: 54.79158660167319
+- body_height_mm: 35.44058389514442
+  body_length_mm: 114.30004792714716
+  body_mass_g: 391.6633501502847
+  body_width_mm: 26.570297817142244
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.80310611525158
+  r_cg2nx_mm:
+  - -100.61003367653718
+  - -0.8596608324945056
+  - -52.23729696377331
+  r_cg2px_mm:
+  - 100.95846069247257
+  - -1.1766699323190433
+  - -48.80013700099804
+  rotor_length_mm: 127.36530413899231
+  rotor_mass_g: 2.3270577564098467
+  rotor_thickness_mm: 0.9724197700541272
+  rotor_width_mm: 9.987590034635573
+  servo_time_constant_ms: 45.78579657678195
+- body_height_mm: 35.02948677585225
+  body_length_mm: 110.2763015458021
+  body_mass_g: 381.25158412191627
+  body_width_mm: 23.855041304757403
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 203.3092995524533
+  r_cg2nx_mm:
+  - -100.78424952127007
+  - 0.3612520996372499
+  - -47.89555828528616
+  r_cg2px_mm:
+  - 98.34627552511101
+  - -2.1250732764553146
+  - -50.596790814927324
+  rotor_length_mm: 127.40123400288998
+  rotor_mass_g: 2.0972291880472778
+  rotor_thickness_mm: 1.0779124673662044
+  rotor_width_mm: 9.97037850483962
+  servo_time_constant_ms: 52.56680745722244
+- body_height_mm: 33.03452859751813
+  body_length_mm: 120.8031299618695
+  body_mass_g: 397.01366219280067
+  body_width_mm: 24.22018998487072
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 187.406446366791
+  r_cg2nx_mm:
+  - -98.38062264045946
+  - 1.4579656380843593
+  - -52.96375585504564
+  r_cg2px_mm:
+  - 98.99578428492117
+  - 1.6505091529271718
+  - -52.59524991472604
+  rotor_length_mm: 127.78880783412427
+  rotor_mass_g: 2.1949517817213677
+  rotor_thickness_mm: 0.996741466745419
+  rotor_width_mm: 10.06731936585577
+  servo_time_constant_ms: 51.305717588482096
+- body_height_mm: 37.971221070100455
+  body_length_mm: 112.83050365495302
+  body_mass_g: 400.31375461502057
+  body_width_mm: 23.210989533240074
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.90766170765426
+  r_cg2nx_mm:
+  - -100.91410661535984
+  - 2.981375008427116
+  - -48.34691329173295
+  r_cg2px_mm:
+  - 100.34547435175838
+  - 1.5866289839061203
+  - -47.99484240103545
+  rotor_length_mm: 126.06602478489151
+  rotor_mass_g: 2.265470038595382
+  rotor_thickness_mm: 0.9554163185245085
+  rotor_width_mm: 9.913139321173459
+  servo_time_constant_ms: 50.476606708190374
+- body_height_mm: 35.190124972748286
+  body_length_mm: 112.03687785640543
+  body_mass_g: 384.0821921295174
+  body_width_mm: 25.568336455204605
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.32600413618655
+  r_cg2nx_mm:
+  - -102.88874160906998
+  - 1.8737179300439184
+  - -50.795571213619866
+  r_cg2px_mm:
+  - 101.077002441889
+  - 1.1241519878095874
+  - -50.58454235318875
+  rotor_length_mm: 126.37403310153996
+  rotor_mass_g: 2.2525389659810497
+  rotor_thickness_mm: 1.0538864516421504
+  rotor_width_mm: 10.056050713665805
+  servo_time_constant_ms: 46.82566764245336
+- body_height_mm: 33.475756705916496
+  body_length_mm: 113.53641536458373
+  body_mass_g: 417.8234957883462
+  body_width_mm: 24.30642245368068
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.46161418379336
+  r_cg2nx_mm:
+  - -99.82915128602475
+  - 1.8983506812482416
+  - -50.96048171199066
+  r_cg2px_mm:
+  - 100.45550300413673
+  - -0.4094166126694585
+  - -47.08066682059254
+  rotor_length_mm: 127.88882783828495
+  rotor_mass_g: 2.3557568529334745
+  rotor_thickness_mm: 1.036487792623042
+  rotor_width_mm: 9.919223730993235
+  servo_time_constant_ms: 52.49404187778211
+- body_height_mm: 33.4029890691047
+  body_length_mm: 122.542598735559
+  body_mass_g: 386.9677807004255
+  body_width_mm: 25.97462065673938
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 193.487177391238
+  r_cg2nx_mm:
+  - -102.79109150749143
+  - -2.871285670006733
+  - -50.701268748290175
+  r_cg2px_mm:
+  - 100.30519371451402
+  - 2.4653138417087064
+  - -51.56684725241633
+  rotor_length_mm: 126.37933672113535
+  rotor_mass_g: 2.275751571997459
+  rotor_thickness_mm: 0.9424596330623437
+  rotor_width_mm: 10.086135470257757
+  servo_time_constant_ms: 46.3750500684163
+- body_height_mm: 32.504491345534824
+  body_length_mm: 126.2678563310258
+  body_mass_g: 397.8361902346105
+  body_width_mm: 25.74124029969297
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 199.32653983181697
+  r_cg2nx_mm:
+  - -98.21718080522245
+  - -0.649887555610448
+  - -51.13796388532481
+  r_cg2px_mm:
+  - 101.74826047075521
+  - 2.0169737662949334
+  - -49.305790390544715
+  rotor_length_mm: 126.13983814582123
+  rotor_mass_g: 2.20563099946665
+  rotor_thickness_mm: 0.9498498236169374
+  rotor_width_mm: 9.929443750445055
+  servo_time_constant_ms: 53.569064531429156
+- body_height_mm: 33.460925542524386
+  body_length_mm: 121.92340551979694
+  body_mass_g: 411.77828617581446
+  body_width_mm: 24.001208913010778
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.35677699957515
+  r_cg2nx_mm:
+  - -102.0336497238287
+  - -1.1423882782730936
+  - -48.38372109571785
+  r_cg2px_mm:
+  - 100.2323464831525
+  - -0.39493528553867385
+  - -49.93124999286486
+  rotor_length_mm: 127.11444898622536
+  rotor_mass_g: 2.1472334818527345
+  rotor_thickness_mm: 0.9089492052469577
+  rotor_width_mm: 10.076397300198852
+  servo_time_constant_ms: 53.02127918008328
+- body_height_mm: 32.33655703066277
+  body_length_mm: 115.88126799857935
+  body_mass_g: 416.41887921288316
+  body_width_mm: 25.91761496407581
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.17579976018695
+  r_cg2nx_mm:
+  - -97.5830508388426
+  - 0.23972867354573468
+  - -52.73070648033513
+  r_cg2px_mm:
+  - 101.28966329968955
+  - -1.540809683258274
+  - -48.56638603201575
+  rotor_length_mm: 127.37630040627437
+  rotor_mass_g: 2.2020717674879355
+  rotor_thickness_mm: 1.0092123201250875
+  rotor_width_mm: 9.901756727505209
+  servo_time_constant_ms: 50.97066523565198
+- body_height_mm: 33.30286417978958
+  body_length_mm: 111.26159320809306
+  body_mass_g: 388.37523014914757
+  body_width_mm: 25.471458260595846
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.8788571352968
+  r_cg2nx_mm:
+  - -98.44886027158073
+  - 0.3905345006958325
+  - -51.75091699060989
+  r_cg2px_mm:
+  - 100.67387070449718
+  - 2.9255087850793657
+  - -49.34506515192431
+  rotor_length_mm: 127.54786085092722
+  rotor_mass_g: 2.2298667301205537
+  rotor_thickness_mm: 0.9101485745565928
+  rotor_width_mm: 9.943031369005306
+  servo_time_constant_ms: 49.11456067706091
+- body_height_mm: 36.18410903553314
+  body_length_mm: 128.42673181480225
+  body_mass_g: 388.3147414279712
+  body_width_mm: 24.057531139211566
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.4217106063547
+  r_cg2nx_mm:
+  - -99.6113924233352
+  - -2.3720449903450556
+  - -52.53756348933773
+  r_cg2px_mm:
+  - 102.88040365193108
+  - -1.6444017873591115
+  - -48.06029198888582
+  rotor_length_mm: 127.26342628120648
+  rotor_mass_g: 2.2244026771406653
+  rotor_thickness_mm: 1.068684951742439
+  rotor_width_mm: 10.022694037453602
+  servo_time_constant_ms: 53.015076990416496
+- body_height_mm: 34.02082376886186
+  body_length_mm: 112.20543514357571
+  body_mass_g: 386.9071721888381
+  body_width_mm: 24.632617254206682
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 193.87867798767323
+  r_cg2nx_mm:
+  - -101.25252273264289
+  - 1.5647860836541767
+  - -48.40525238473769
+  r_cg2px_mm:
+  - 100.18437766392569
+  - -2.1109047326507504
+  - -48.772298323858216
+  rotor_length_mm: 127.3179911522033
+  rotor_mass_g: 2.3765446074385324
+  rotor_thickness_mm: 0.9327763656264486
+  rotor_width_mm: 9.94967676338688
+  servo_time_constant_ms: 45.35202652268201
+- body_height_mm: 37.26374671784207
+  body_length_mm: 123.4907205944254
+  body_mass_g: 385.8031252963578
+  body_width_mm: 24.37130072333705
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.93374093774355
+  r_cg2nx_mm:
+  - -98.8860921596702
+  - -1.6326149746126253
+  - -51.66320751778994
+  r_cg2px_mm:
+  - 100.00869705910083
+  - -2.6679258606313456
+  - -47.355958919517775
+  rotor_length_mm: 126.18909106983841
+  rotor_mass_g: 2.124884705483668
+  rotor_thickness_mm: 1.0120829771987185
+  rotor_width_mm: 9.943710609519766
+  servo_time_constant_ms: 54.58402863757152
+- body_height_mm: 32.65478056496695
+  body_length_mm: 129.20762211810845
+  body_mass_g: 408.06832807607765
+  body_width_mm: 25.101111321245813
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.7105183757268
+  r_cg2nx_mm:
+  - -98.01433183589025
+  - -0.10431891578951014
+  - -51.14878771632394
+  r_cg2px_mm:
+  - 102.42999058612295
+  - -2.3161082520173375
+  - -51.05819768087384
+  rotor_length_mm: 127.4637934820312
+  rotor_mass_g: 2.1327823763574507
+  rotor_thickness_mm: 0.9717965918745414
+  rotor_width_mm: 9.910637897276583
+  servo_time_constant_ms: 53.17750340721547
+- body_height_mm: 37.27162744057651
+  body_length_mm: 119.63599434323343
+  body_mass_g: 403.58476185257655
+  body_width_mm: 23.548259911000738
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.62055912639002
+  r_cg2nx_mm:
+  - -100.79267832154844
+  - 0.04075388997242069
+  - -51.853674760276355
+  r_cg2px_mm:
+  - 100.39077862822859
+  - 0.5405991856800236
+  - -50.50696959285146
+  rotor_length_mm: 126.09163446234263
+  rotor_mass_g: 2.1841255062477702
+  rotor_thickness_mm: 1.0707762867065491
+  rotor_width_mm: 10.050857415173537
+  servo_time_constant_ms: 47.65587022314425
+- body_height_mm: 37.65823082304417
+  body_length_mm: 122.8214804126892
+  body_mass_g: 402.9549010316954
+  body_width_mm: 26.240010331333536
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 219.18391559117745
+  r_cg2nx_mm:
+  - -97.6920634862237
+  - -1.4647219801993325
+  - -48.59591562279533
+  r_cg2px_mm:
+  - 97.95020120287026
+  - 2.4768284670483958
+  - -50.712559748889575
+  rotor_length_mm: 127.42492695281209
+  rotor_mass_g: 2.1407894357937174
+  rotor_thickness_mm: 1.042764797668732
+  rotor_width_mm: 10.060667246984726
+  servo_time_constant_ms: 54.41930416362601
+- body_height_mm: 33.10876411517255
+  body_length_mm: 113.57693294611481
+  body_mass_g: 403.7712140396534
+  body_width_mm: 26.60735752266805
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 218.04864706170508
+  r_cg2nx_mm:
+  - -99.62051156167362
+  - -1.3070053163413238
+  - -50.50619008014414
+  r_cg2px_mm:
+  - 100.32621347481947
+  - 2.0831376214129236
+  - -48.89270717345218
+  rotor_length_mm: 127.52553539247847
+  rotor_mass_g: 2.290266495864694
+  rotor_thickness_mm: 0.9462460182491734
+  rotor_width_mm: 9.948439907211572
+  servo_time_constant_ms: 46.93085482518432
+- body_height_mm: 35.417244673679775
+  body_length_mm: 120.4177117566086
+  body_mass_g: 411.7171069791751
+  body_width_mm: 25.636803897242547
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.43730042318327
+  r_cg2nx_mm:
+  - -100.59038096907253
+  - 0.9493854400173323
+  - -51.379843212030146
+  r_cg2px_mm:
+  - 98.46332557936337
+  - -2.880282498604372
+  - -51.22975947033922
+  rotor_length_mm: 127.74417003367394
+  rotor_mass_g: 2.3528908349546978
+  rotor_thickness_mm: 1.0114936930368223
+  rotor_width_mm: 10.043989341615196
+  servo_time_constant_ms: 45.6993780050748
+- body_height_mm: 36.03266214547914
+  body_length_mm: 110.0747198419863
+  body_mass_g: 403.92796634821826
+  body_width_mm: 24.224193296652388
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.10644292527667
+  r_cg2nx_mm:
+  - -98.78138397876367
+  - -2.1864280396210996
+  - -49.61488784779525
+  r_cg2px_mm:
+  - 101.29399957381767
+  - -2.408737141583805
+  - -50.71495679444902
+  rotor_length_mm: 127.80139766236734
+  rotor_mass_g: 2.1795991270516626
+  rotor_thickness_mm: 0.9235556768069336
+  rotor_width_mm: 10.095246937956166
+  servo_time_constant_ms: 54.84132622995334
+- body_height_mm: 34.42286433871078
+  body_length_mm: 121.28795283299698
+  body_mass_g: 399.0268051224207
+  body_width_mm: 24.536684017077803
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 182.76546630334047
+  r_cg2nx_mm:
+  - -102.37590769817055
+  - -1.4519479307401009
+  - -52.27192837052432
+  r_cg2px_mm:
+  - 98.86258127259723
+  - -0.6192573241879566
+  - -50.22927265837857
+  rotor_length_mm: 126.00515658979339
+  rotor_mass_g: 2.12813426910126
+  rotor_thickness_mm: 0.9642670250675356
+  rotor_width_mm: 10.041545175680632
+  servo_time_constant_ms: 54.838613995629125
+- body_height_mm: 32.00327284654395
+  body_length_mm: 120.38238939120555
+  body_mass_g: 418.63489836408723
+  body_width_mm: 24.080111695977752
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 208.99487790131818
+  r_cg2nx_mm:
+  - -101.69938644432577
+  - 2.6727654441876396
+  - -48.35841669199838
+  r_cg2px_mm:
+  - 101.08445569508555
+  - -1.3640072343978085
+  - -49.360168516073955
+  rotor_length_mm: 127.99823182174595
+  rotor_mass_g: 2.0906843488181113
+  rotor_thickness_mm: 0.9692890259200052
+  rotor_width_mm: 9.952136669252923
+  servo_time_constant_ms: 52.94692308942669
+- body_height_mm: 32.73149283273644
+  body_length_mm: 116.64507033504907
+  body_mass_g: 402.44067154057853
+  body_width_mm: 24.75491190920296
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 185.48476318184086
+  r_cg2nx_mm:
+  - -100.9560824017608
+  - -1.9051161182308114
+  - -52.69612900062019
+  r_cg2px_mm:
+  - 97.64575859622936
+  - -1.4274188008470052
+  - -48.0756033877759
+  rotor_length_mm: 126.70702239580109
+  rotor_mass_g: 2.370808498980405
+  rotor_thickness_mm: 0.9466325388868171
+  rotor_width_mm: 9.972446252725085
+  servo_time_constant_ms: 46.37976056790328
+- body_height_mm: 32.264959994232484
+  body_length_mm: 123.60336089078858
+  body_mass_g: 407.8763299948711
+  body_width_mm: 24.16381330683413
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 191.77786106154497
+  r_cg2nx_mm:
+  - -102.23637811946595
+  - 0.3549512244620896
+  - -48.81394017822437
+  r_cg2px_mm:
+  - 97.52919842896696
+  - -1.7609988894680555
+  - -47.250903998502864
+  rotor_length_mm: 127.26830088374682
+  rotor_mass_g: 2.3096324410278726
+  rotor_thickness_mm: 0.9975582289860814
+  rotor_width_mm: 10.097590499582294
+  servo_time_constant_ms: 51.26173581877871
+- body_height_mm: 37.110754762250764
+  body_length_mm: 129.19187458194247
+  body_mass_g: 394.2335838237036
+  body_width_mm: 23.986304355738966
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 205.00964088698777
+  r_cg2nx_mm:
+  - -97.25084822034185
+  - -0.3247356532813548
+  - -52.79376410858921
+  r_cg2px_mm:
+  - 99.2319771386487
+  - 0.4849248539985842
+  - -52.78158949441712
+  rotor_length_mm: 127.94444748864045
+  rotor_mass_g: 2.2466484087102168
+  rotor_thickness_mm: 0.9793777141579411
+  rotor_width_mm: 9.968248228764326
+  servo_time_constant_ms: 48.08424925219775
+- body_height_mm: 34.70690895077892
+  body_length_mm: 116.96386708796679
+  body_mass_g: 418.34887632112793
+  body_width_mm: 24.753737197769297
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.21207855199077
+  r_cg2nx_mm:
+  - -102.1288225010014
+  - -0.8672775036325744
+  - -48.3884556499146
+  r_cg2px_mm:
+  - 101.38730054320575
+  - -2.7436795584091755
+  - -50.728795635660994
+  rotor_length_mm: 127.25698007043661
+  rotor_mass_g: 2.153554485911214
+  rotor_thickness_mm: 1.0429132746919607
+  rotor_width_mm: 10.083573846101029
+  servo_time_constant_ms: 54.32055751227549
+- body_height_mm: 32.81531285458682
+  body_length_mm: 125.06074301607018
+  body_mass_g: 414.36887461336374
+  body_width_mm: 24.023486490582684
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 185.82421573260783
+  r_cg2nx_mm:
+  - -100.93351773464637
+  - 0.731840409137257
+  - -50.1660478400327
+  r_cg2px_mm:
+  - 101.07219665988467
+  - 0.47714935293111704
+  - -51.68659261943615
+  rotor_length_mm: 127.11615192684255
+  rotor_mass_g: 2.3682092951859723
+  rotor_thickness_mm: 1.0580951465122648
+  rotor_width_mm: 9.937772479709613
+  servo_time_constant_ms: 54.84249151811905
+- body_height_mm: 33.46438536982597
+  body_length_mm: 121.69322841210067
+  body_mass_g: 419.413634172019
+  body_width_mm: 24.659671649221625
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 190.0484226838428
+  r_cg2nx_mm:
+  - -102.15973696434655
+  - 1.4796221391476863
+  - -52.10273823499138
+  r_cg2px_mm:
+  - 100.08111986337697
+  - -1.165473630806776
+  - -47.76992912351041
+  rotor_length_mm: 126.23474555357691
+  rotor_mass_g: 2.1756178995770634
+  rotor_thickness_mm: 1.061243918553942
+  rotor_width_mm: 9.996655493275329
+  servo_time_constant_ms: 48.80455718676182
+- body_height_mm: 33.56046727466886
+  body_length_mm: 122.04059531708403
+  body_mass_g: 403.3892319353971
+  body_width_mm: 24.5464866542578
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 204.33548939398713
+  r_cg2nx_mm:
+  - -101.83422054184152
+  - 2.601472414275567
+  - -48.210444759005014
+  r_cg2px_mm:
+  - 102.98757082567491
+  - 2.7146534854405395
+  - -51.8813389704773
+  rotor_length_mm: 126.38576466507686
+  rotor_mass_g: 2.1742653092202073
+  rotor_thickness_mm: 1.0712917075618014
+  rotor_width_mm: 10.073129456969477
+  servo_time_constant_ms: 49.01557988350367
+- body_height_mm: 35.97586285135567
+  body_length_mm: 117.72366080750216
+  body_mass_g: 398.4419680381355
+  body_width_mm: 26.211737180439627
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.00276244681618
+  r_cg2nx_mm:
+  - -98.73670835751611
+  - -0.036768754047772134
+  - -48.225492994120756
+  r_cg2px_mm:
+  - 97.1376872646403
+  - 0.6500040674256846
+  - -52.78038112552635
+  rotor_length_mm: 126.27252974606697
+  rotor_mass_g: 2.19395046178219
+  rotor_thickness_mm: 1.0512507626062952
+  rotor_width_mm: 10.06311760081372
+  servo_time_constant_ms: 52.95021409071205
+- body_height_mm: 33.47649523654743
+  body_length_mm: 119.6048789735993
+  body_mass_g: 397.9814131475741
+  body_width_mm: 26.65359680177241
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 212.37888588183097
+  r_cg2nx_mm:
+  - -101.32054943015117
+  - -0.9054364753396782
+  - -49.97704802390184
+  r_cg2px_mm:
+  - 98.76879526183859
+  - 1.930582829426898
+  - -48.307168226742725
+  rotor_length_mm: 126.8650475310601
+  rotor_mass_g: 2.21968191135236
+  rotor_thickness_mm: 0.911602673203505
+  rotor_width_mm: 9.960372359764495
+  servo_time_constant_ms: 53.87492443948871
+- body_height_mm: 33.195362805694096
+  body_length_mm: 119.76734904941709
+  body_mass_g: 384.34264489025287
+  body_width_mm: 26.028824986424276
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.22541912494856
+  r_cg2nx_mm:
+  - -101.45335822187786
+  - -0.4220090019508458
+  - -48.41740681991864
+  r_cg2px_mm:
+  - 98.85600242288383
+  - -1.4085615782243037
+  - -47.94092038124364
+  rotor_length_mm: 126.41323011910606
+  rotor_mass_g: 2.088277468401183
+  rotor_thickness_mm: 0.9087508717186198
+  rotor_width_mm: 9.906528482864944
+  servo_time_constant_ms: 47.92073085934047
+- body_height_mm: 36.68717184929147
+  body_length_mm: 111.71640704140414
+  body_mass_g: 381.6247248911244
+  body_width_mm: 26.647162531176807
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 194.50396180825985
+  r_cg2nx_mm:
+  - -100.34396023765613
+  - -0.6351291457244699
+  - -47.53777342242401
+  r_cg2px_mm:
+  - 98.32795702683542
+  - 0.4253338770257371
+  - -51.64381892294637
+  rotor_length_mm: 126.07963093895462
+  rotor_mass_g: 2.3396631061601445
+  rotor_thickness_mm: 1.0857886972575304
+  rotor_width_mm: 10.029050395916142
+  servo_time_constant_ms: 50.38443229235472
+- body_height_mm: 35.06066167535683
+  body_length_mm: 114.60595553560077
+  body_mass_g: 399.1587353038367
+  body_width_mm: 24.29847321242018
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 182.45015952326014
+  r_cg2nx_mm:
+  - -100.07013018056445
+  - -2.143272692161103
+  - -48.45754114142311
+  r_cg2px_mm:
+  - 97.02267862243508
+  - 2.624065609171482
+  - -50.94775895901912
+  rotor_length_mm: 127.16085758963305
+  rotor_mass_g: 2.3326141986736793
+  rotor_thickness_mm: 1.0056004568595407
+  rotor_width_mm: 10.08112155515332
+  servo_time_constant_ms: 54.04372445787395
+- body_height_mm: 35.82620547796229
+  body_length_mm: 119.72622871537966
+  body_mass_g: 381.71317469336464
+  body_width_mm: 26.46350436614286
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 212.84778351165005
+  r_cg2nx_mm:
+  - -97.10261713189182
+  - -0.11824485077229685
+  - -48.629805210272295
+  r_cg2px_mm:
+  - 99.87833928543932
+  - 0.3798381543603293
+  - -50.57911594725884
+  rotor_length_mm: 126.84244346715457
+  rotor_mass_g: 2.0153877517096856
+  rotor_thickness_mm: 1.0890833444527754
+  rotor_width_mm: 9.912148579298423
+  servo_time_constant_ms: 45.1166396446781
+- body_height_mm: 34.68452679723133
+  body_length_mm: 116.79952272816229
+  body_mass_g: 405.3770688116567
+  body_width_mm: 25.565833958104683
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.043714363964
+  r_cg2nx_mm:
+  - -99.86902280395712
+  - 1.9427746079728578
+  - -48.51364442598457
+  r_cg2px_mm:
+  - 98.23642270403502
+  - 2.0778564346633184
+  - -49.46298890131151
+  rotor_length_mm: 127.35294665609752
+  rotor_mass_g: 2.3962342507627388
+  rotor_thickness_mm: 1.0884755190907125
+  rotor_width_mm: 9.913606178147239
+  servo_time_constant_ms: 50.86263290666551
+- body_height_mm: 32.26631197003235
+  body_length_mm: 118.46710656322004
+  body_mass_g: 408.7494707024425
+  body_width_mm: 25.209014956163358
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 203.86896785213892
+  r_cg2nx_mm:
+  - -101.47939946560908
+  - -1.1209465206809772
+  - -47.16067307601387
+  r_cg2px_mm:
+  - 100.49791511881297
+  - -1.7953798969532229
+  - -52.18014721276839
+  rotor_length_mm: 127.48764905032246
+  rotor_mass_g: 2.230117260363185
+  rotor_thickness_mm: 1.0607966485342544
+  rotor_width_mm: 9.911172491136615
+  servo_time_constant_ms: 52.75541016075098
+- body_height_mm: 37.366722053841045
+  body_length_mm: 128.07467150643942
+  body_mass_g: 416.4897354028561
+  body_width_mm: 23.17466163226329
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.5503980731404
+  r_cg2nx_mm:
+  - -99.55787601514092
+  - 2.3138499117720155
+  - -52.93408395233176
+  r_cg2px_mm:
+  - 99.36796473571181
+  - 2.180041122154485
+  - -51.17404050408327
+  rotor_length_mm: 127.20025046582423
+  rotor_mass_g: 2.2262832522197624
+  rotor_thickness_mm: 1.0754291121918718
+  rotor_width_mm: 10.095636266979222
+  servo_time_constant_ms: 54.96913742745453
+- body_height_mm: 36.653136331451925
+  body_length_mm: 121.87070013978507
+  body_mass_g: 419.1353324692472
+  body_width_mm: 23.719225520069113
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 199.31864413370764
+  r_cg2nx_mm:
+  - -97.72175704318101
+  - 1.3156111812213158
+  - -51.110434937964456
+  r_cg2px_mm:
+  - 97.81088011116793
+  - 1.893416892981242
+  - -47.799407300367996
+  rotor_length_mm: 126.97998332223011
+  rotor_mass_g: 2.1717529516374356
+  rotor_thickness_mm: 1.050201952805542
+  rotor_width_mm: 10.099067527774915
+  servo_time_constant_ms: 52.917799494284765
+- body_height_mm: 33.3360617269761
+  body_length_mm: 123.42330190680677
+  body_mass_g: 385.0369650657606
+  body_width_mm: 23.717539418539822
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.95563747524332
+  r_cg2nx_mm:
+  - -98.19452341382222
+  - 1.2067853776075035
+  - -49.59492063003419
+  r_cg2px_mm:
+  - 101.0102210165096
+  - -1.4883983414604243
+  - -47.56091604957233
+  rotor_length_mm: 126.61353781473923
+  rotor_mass_g: 2.193214294191375
+  rotor_thickness_mm: 1.0452917556726053
+  rotor_width_mm: 10.00017546458437
+  servo_time_constant_ms: 49.551559387998886
+- body_height_mm: 35.06197939232389
+  body_length_mm: 128.0665888025535
+  body_mass_g: 385.0704946085924
+  body_width_mm: 25.92553805376082
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.5551507179474
+  r_cg2nx_mm:
+  - -100.57505186040294
+  - -0.5443016402129528
+  - -47.67298451869872
+  r_cg2px_mm:
+  - 102.4723019927139
+  - -1.9871424854996653
+  - -52.688217937348696
+  rotor_length_mm: 126.89865493602822
+  rotor_mass_g: 2.3804916490606356
+  rotor_thickness_mm: 0.9383558723923966
+  rotor_width_mm: 9.920404216447073
+  servo_time_constant_ms: 51.24697428567592
+- body_height_mm: 33.556248407233525
+  body_length_mm: 119.49759267053395
+  body_mass_g: 413.97454778623813
+  body_width_mm: 25.862213395273606
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.3597491092857
+  r_cg2nx_mm:
+  - -97.69443367113688
+  - 1.1490277804242695
+  - -48.58032804642396
+  r_cg2px_mm:
+  - 102.53898526935448
+  - 0.5091691228638044
+  - -51.64776110354968
+  rotor_length_mm: 127.06577474930968
+  rotor_mass_g: 2.218030182114192
+  rotor_thickness_mm: 1.0050706599671644
+  rotor_width_mm: 9.96291643354838
+  servo_time_constant_ms: 54.97045235958076
+- body_height_mm: 33.12164501478281
+  body_length_mm: 116.95160071137906
+  body_mass_g: 397.98386296576484
+  body_width_mm: 26.679725581538257
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.47660820004978
+  r_cg2nx_mm:
+  - -98.56737317603313
+  - 1.0394162780417684
+  - -48.70378195113271
+  r_cg2px_mm:
+  - 98.35486693653381
+  - -2.6093021072219527
+  - -47.8087808992765
+  rotor_length_mm: 126.30564323329628
+  rotor_mass_g: 2.212854564447237
+  rotor_thickness_mm: 1.0601845036105035
+  rotor_width_mm: 10.015570583261312
+  servo_time_constant_ms: 45.66870698453333
+- body_height_mm: 35.57118936968425
+  body_length_mm: 110.40482246146883
+  body_mass_g: 385.2076678803323
+  body_width_mm: 25.378671307537907
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.42607581144512
+  r_cg2nx_mm:
+  - -98.2876206534267
+  - 0.4740699066790661
+  - -49.4174785740312
+  r_cg2px_mm:
+  - 100.71947475861315
+  - -1.4036165436613488
+  - -52.63418803995907
+  rotor_length_mm: 127.51872749933004
+  rotor_mass_g: 2.1205773328419903
+  rotor_thickness_mm: 1.0874732414484012
+  rotor_width_mm: 10.062226161411768
+  servo_time_constant_ms: 50.6704102142383
+- body_height_mm: 34.18383354368443
+  body_length_mm: 129.50035492746633
+  body_mass_g: 406.7681782049502
+  body_width_mm: 23.137620016190247
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 205.54394853565935
+  r_cg2nx_mm:
+  - -101.60204411791707
+  - -0.7985413029930863
+  - -49.83653396735994
+  r_cg2px_mm:
+  - 98.90508912654467
+  - -0.4907013572912824
+  - -51.908722955925924
+  rotor_length_mm: 126.54232164599465
+  rotor_mass_g: 2.173525568075763
+  rotor_thickness_mm: 1.0804703766788784
+  rotor_width_mm: 10.089555645171144
+  servo_time_constant_ms: 54.11720830773554
+- body_height_mm: 36.40388166637583
+  body_length_mm: 119.37570602568866
+  body_mass_g: 412.77877514901314
+  body_width_mm: 24.729140708466126
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.80368957324498
+  r_cg2nx_mm:
+  - -100.85165422543804
+  - -0.8671202740778243
+  - -49.097980047289184
+  r_cg2px_mm:
+  - 100.45368933571875
+  - 2.177125514864036
+  - -49.248553519810606
+  rotor_length_mm: 127.39893805032318
+  rotor_mass_g: 2.1882474958771496
+  rotor_thickness_mm: 1.0018412515691746
+  rotor_width_mm: 10.063035000814425
+  servo_time_constant_ms: 50.25518567620082
+- body_height_mm: 33.91036644626864
+  body_length_mm: 119.85845648656684
+  body_mass_g: 398.28374381003295
+  body_width_mm: 26.76942868219928
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.5945292637147
+  r_cg2nx_mm:
+  - -97.8442648554009
+  - 0.8713931272201401
+  - -51.230774335520735
+  r_cg2px_mm:
+  - 102.3371571392377
+  - 1.144252792998926
+  - -51.98632798183142
+  rotor_length_mm: 126.61286918163299
+  rotor_mass_g: 2.0474859367035165
+  rotor_thickness_mm: 1.0176691292564066
+  rotor_width_mm: 10.059567383393638
+  servo_time_constant_ms: 52.54803471739785
+- body_height_mm: 33.371180021636036
+  body_length_mm: 125.25871262305412
+  body_mass_g: 386.937144951032
+  body_width_mm: 24.038334241597614
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 182.99132590890363
+  r_cg2nx_mm:
+  - -99.2278123365168
+  - -1.2621573324705793
+  - -47.50707988893983
+  r_cg2px_mm:
+  - 100.75385286056539
+  - 2.2851842645400833
+  - -48.33351960383559
+  rotor_length_mm: 126.88386188077115
+  rotor_mass_g: 2.185153264093904
+  rotor_thickness_mm: 1.091774923755946
+  rotor_width_mm: 9.91582701901378
+  servo_time_constant_ms: 49.31661326158077
+- body_height_mm: 32.35995128689323
+  body_length_mm: 118.22814951985711
+  body_mass_g: 401.8267513579859
+  body_width_mm: 26.423102238890543
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 206.3654475229475
+  r_cg2nx_mm:
+  - -101.99462974824229
+  - 0.8557961136671457
+  - -50.87400851466421
+  r_cg2px_mm:
+  - 98.56885685562607
+  - -1.8723550446177202
+  - -50.9942404539808
+  rotor_length_mm: 126.83132112027589
+  rotor_mass_g: 2.1643192502495054
+  rotor_thickness_mm: 0.9900943330432815
+  rotor_width_mm: 10.004062731086634
+  servo_time_constant_ms: 50.30113814287944
+- body_height_mm: 32.96935836291095
+  body_length_mm: 124.75390609488387
+  body_mass_g: 406.2316641065718
+  body_width_mm: 25.74005894396543
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.77083269725657
+  r_cg2nx_mm:
+  - -100.03674146876118
+  - -2.9428383125301427
+  - -50.004043309823125
+  r_cg2px_mm:
+  - 100.16343127574214
+  - -2.6044390367746137
+  - -47.95843327814921
+  rotor_length_mm: 127.84774052908917
+  rotor_mass_g: 2.0199612072460162
+  rotor_thickness_mm: 1.0512479783732198
+  rotor_width_mm: 9.901101041622221
+  servo_time_constant_ms: 46.16837392488918
+- body_height_mm: 35.29065906914533
+  body_length_mm: 116.84004025179527
+  body_mass_g: 397.83656415465896
+  body_width_mm: 25.175556106668225
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.44978219190097
+  r_cg2nx_mm:
+  - -102.70647101369737
+  - -0.5397075579795123
+  - -51.523897704002465
+  r_cg2px_mm:
+  - 102.25357210962535
+  - -1.2650647448056234
+  - -48.52189647222612
+  rotor_length_mm: 127.68574703496249
+  rotor_mass_g: 2.102486265234766
+  rotor_thickness_mm: 1.0595333979387507
+  rotor_width_mm: 9.944255154089044
+  servo_time_constant_ms: 53.21058115885088
+- body_height_mm: 34.58533458672059
+  body_length_mm: 123.26692719838066
+  body_mass_g: 413.7364250946099
+  body_width_mm: 23.33099708974684
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 211.6408866879686
+  r_cg2nx_mm:
+  - -97.14377431721712
+  - -2.414076252483232
+  - -47.30655840414516
+  r_cg2px_mm:
+  - 100.72074279648541
+  - -2.984150572389498
+  - -49.38388587948169
+  rotor_length_mm: 126.99886182596177
+  rotor_mass_g: 2.3704216561645586
+  rotor_thickness_mm: 1.0460262226050687
+  rotor_width_mm: 9.916822527033311
+  servo_time_constant_ms: 45.85961941565858
+- body_height_mm: 35.34258452447533
+  body_length_mm: 111.49617382579274
+  body_mass_g: 411.6325215428086
+  body_width_mm: 24.51144913205639
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.37174044572905
+  r_cg2nx_mm:
+  - -99.02995157738735
+  - 1.1363026133722336
+  - -52.52200604697828
+  r_cg2px_mm:
+  - 99.15358972753384
+  - 2.989382632851674
+  - -52.48004380235356
+  rotor_length_mm: 126.0444766388447
+  rotor_mass_g: 2.3194215872516004
+  rotor_thickness_mm: 0.95769981827132
+  rotor_width_mm: 10.053708612893358
+  servo_time_constant_ms: 52.20947892778996
+- body_height_mm: 32.24117467123684
+  body_length_mm: 118.71928247850342
+  body_mass_g: 383.0423702483104
+  body_width_mm: 25.21495974435415
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 192.34796020398974
+  r_cg2nx_mm:
+  - -97.01153721655066
+  - -2.203427435260159
+  - -49.0383416363936
+  r_cg2px_mm:
+  - 101.70202453630411
+  - -1.4483334043974265
+  - -52.10216874866779
+  rotor_length_mm: 126.74276200744802
+  rotor_mass_g: 2.2653091364971063
+  rotor_thickness_mm: 0.9573381981392635
+  rotor_width_mm: 10.091733646305087
+  servo_time_constant_ms: 53.841573687002736
+- body_height_mm: 35.51407095527229
+  body_length_mm: 123.27695965208906
+  body_mass_g: 397.02766418542666
+  body_width_mm: 24.95759280149305
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.95843422946777
+  r_cg2nx_mm:
+  - -102.17351811872824
+  - -2.113268512623524
+  - -51.39297803926369
+  r_cg2px_mm:
+  - 97.38845950800555
+  - 1.9917921173479023
+  - -47.73101310485733
+  rotor_length_mm: 127.61980068998122
+  rotor_mass_g: 2.1290919801969848
+  rotor_thickness_mm: 0.9423860344070057
+  rotor_width_mm: 9.96717172147457
+  servo_time_constant_ms: 46.47113972038239
+- body_height_mm: 37.04980679470386
+  body_length_mm: 122.49988914259083
+  body_mass_g: 395.35025889026616
+  body_width_mm: 23.530176138937787
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.71822688461276
+  r_cg2nx_mm:
+  - -97.65854751241525
+  - 1.8233578419030465
+  - -49.29692529055277
+  r_cg2px_mm:
+  - 100.80466703589461
+  - -2.0309945606201145
+  - -47.38773398246511
+  rotor_length_mm: 126.69490143621155
+  rotor_mass_g: 2.318517739032556
+  rotor_thickness_mm: 0.9468252793293109
+  rotor_width_mm: 10.040522627328532
+  servo_time_constant_ms: 46.2754327305522
+- body_height_mm: 35.656302609411796
+  body_length_mm: 127.65019035578781
+  body_mass_g: 402.4303060672883
+  body_width_mm: 26.83279055336094
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.2189521207647
+  r_cg2nx_mm:
+  - -101.31935539872197
+  - 0.07489565991229252
+  - -51.28721840835117
+  r_cg2px_mm:
+  - 97.19725133356772
+  - 1.6455828363880691
+  - -47.53625714265996
+  rotor_length_mm: 127.80705195188138
+  rotor_mass_g: 2.177406611322274
+  rotor_thickness_mm: 1.0622155445486556
+  rotor_width_mm: 9.902450291285671
+  servo_time_constant_ms: 51.57637378353082
+- body_height_mm: 35.279532840998115
+  body_length_mm: 111.09030784238084
+  body_mass_g: 382.17302846491765
+  body_width_mm: 24.11857510402736
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.4127950367385
+  r_cg2nx_mm:
+  - -99.36990052135512
+  - -1.9710811800337813
+  - -50.18349441412186
+  r_cg2px_mm:
+  - 99.88702287221241
+  - 1.2364263012518544
+  - -47.286326438276035
+  rotor_length_mm: 126.76118229925908
+  rotor_mass_g: 2.1781883811904277
+  rotor_thickness_mm: 0.974730068900639
+  rotor_width_mm: 9.933298340135314
+  servo_time_constant_ms: 45.61106000793977
+- body_height_mm: 32.30835917697898
+  body_length_mm: 115.64165410063882
+  body_mass_g: 390.29647733039604
+  body_width_mm: 25.2139769564949
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.08110139135545
+  r_cg2nx_mm:
+  - -101.09196422532864
+  - 2.2609339994876754
+  - -48.65011904325833
+  r_cg2px_mm:
+  - 99.19810051588533
+  - 1.4380528415575098
+  - -48.09026939813637
+  rotor_length_mm: 127.57587788246202
+  rotor_mass_g: 2.198063645496141
+  rotor_thickness_mm: 1.0814779382138107
+  rotor_width_mm: 10.02954239186351
+  servo_time_constant_ms: 49.19094942727338
+- body_height_mm: 35.41021766386309
+  body_length_mm: 114.56309997127222
+  body_mass_g: 413.4599420909998
+  body_width_mm: 23.207144297670105
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.63970473037847
+  r_cg2nx_mm:
+  - -98.77993350907191
+  - -1.2038175439576906
+  - -51.98797902849151
+  r_cg2px_mm:
+  - 98.63068599341806
+  - -0.5040000746233275
+  - -51.24007755625941
+  rotor_length_mm: 127.15858484240078
+  rotor_mass_g: 2.0523512632337444
+  rotor_thickness_mm: 1.0215224170621322
+  rotor_width_mm: 9.918259146455418
+  servo_time_constant_ms: 51.07546596988386
+- body_height_mm: 32.11694687825203
+  body_length_mm: 125.95881624964463
+  body_mass_g: 380.0841754341498
+  body_width_mm: 24.72076724711107
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 211.61994595070132
+  r_cg2nx_mm:
+  - -97.34166592927582
+  - -0.4231338676341254
+  - -51.35234054118079
+  r_cg2px_mm:
+  - 98.41176849186411
+  - -0.7333558985298754
+  - -47.49811089975223
+  rotor_length_mm: 127.52280641894822
+  rotor_mass_g: 2.379739441327842
+  rotor_thickness_mm: 1.0156779451157798
+  rotor_width_mm: 10.081179956178358
+  servo_time_constant_ms: 51.76455459429936
+- body_height_mm: 37.57709282084661
+  body_length_mm: 111.37140847667058
+  body_mass_g: 414.0982550482407
+  body_width_mm: 26.285872174645736
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.38061336358925
+  r_cg2nx_mm:
+  - -100.57801862669591
+  - -1.407705337408857
+  - -49.855263572511724
+  r_cg2px_mm:
+  - 100.80765236694626
+  - 0.07144320372413171
+  - -48.629854183447215
+  rotor_length_mm: 126.31979160871326
+  rotor_mass_g: 2.0006500833110703
+  rotor_thickness_mm: 0.9896839196452604
+  rotor_width_mm: 10.01533139551028
+  servo_time_constant_ms: 48.95867108398423
+- body_height_mm: 34.81330010634471
+  body_length_mm: 128.01753204307792
+  body_mass_g: 399.62519264296094
+  body_width_mm: 24.90177804557586
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 194.78791117153366
+  r_cg2nx_mm:
+  - -97.21821362635481
+  - -1.1376953627241826
+  - -47.2277062605239
+  r_cg2px_mm:
+  - 98.00312770495194
+  - -2.6119565173326693
+  - -49.930788980323555
+  rotor_length_mm: 127.57447739798205
+  rotor_mass_g: 2.2833117031543373
+  rotor_thickness_mm: 0.9891096924570321
+  rotor_width_mm: 10.019720680705767
+  servo_time_constant_ms: 46.303784684155104
+- body_height_mm: 34.10728688205951
+  body_length_mm: 123.92856634223024
+  body_mass_g: 391.25709867534744
+  body_width_mm: 26.01402137864479
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 194.32627219605118
+  r_cg2nx_mm:
+  - -99.92659309077884
+  - -2.953941307532922
+  - -51.77257356342765
+  r_cg2px_mm:
+  - 97.79847433401605
+  - -2.6108871559042925
+  - -48.2122591153677
+  rotor_length_mm: 126.8435014743127
+  rotor_mass_g: 2.197240898002065
+  rotor_thickness_mm: 1.0755484530628745
+  rotor_width_mm: 10.03094560850013
+  servo_time_constant_ms: 45.13179117685961
+- body_height_mm: 36.03148333711817
+  body_length_mm: 122.34181728189922
+  body_mass_g: 386.1269155676681
+  body_width_mm: 23.416504457255897
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 189.73132931914765
+  r_cg2nx_mm:
+  - -100.25350461248642
+  - -1.7646320881703623
+  - -52.14783569715978
+  r_cg2px_mm:
+  - 101.39117671576705
+  - -2.820410367882804
+  - -47.06509934852814
+  rotor_length_mm: 126.20741573768781
+  rotor_mass_g: 2.2603773427655605
+  rotor_thickness_mm: 1.0627399893821732
+  rotor_width_mm: 9.957882200872499
+  servo_time_constant_ms: 51.5228442032704
+- body_height_mm: 36.46271754816316
+  body_length_mm: 123.30550074102335
+  body_mass_g: 410.85147727435077
+  body_width_mm: 26.981981352620327
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.41617977867563
+  r_cg2nx_mm:
+  - -98.50424351261313
+  - 2.116996156599889
+  - -48.16396940933622
+  r_cg2px_mm:
+  - 98.4062542315923
+  - -0.7815343982827048
+  - -51.827896651222375
+  rotor_length_mm: 126.725535615774
+  rotor_mass_g: 2.1219691753350647
+  rotor_thickness_mm: 0.9263928273387703
+  rotor_width_mm: 10.001891189983194
+  servo_time_constant_ms: 49.63543216878144
+- body_height_mm: 34.934452525497576
+  body_length_mm: 122.26287184731353
+  body_mass_g: 419.00176239075654
+  body_width_mm: 24.97096130576548
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.56985390257535
+  r_cg2nx_mm:
+  - -99.88023967989892
+  - 0.30126986978957593
+  - -48.378695524608204
+  r_cg2px_mm:
+  - 101.17761349955143
+  - -0.8980939864829995
+  - -52.33752282277365
+  rotor_length_mm: 127.05505704265627
+  rotor_mass_g: 2.3300163289070874
+  rotor_thickness_mm: 1.0186559913940139
+  rotor_width_mm: 9.919056268487095
+  servo_time_constant_ms: 46.68323569616251
+- body_height_mm: 34.789312042963246
+  body_length_mm: 111.70617660720825
+  body_mass_g: 386.44410417929896
+  body_width_mm: 24.140482057693788
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 207.83302938087843
+  r_cg2nx_mm:
+  - -97.53257356583678
+  - -2.0524250307183984
+  - -50.5265796268321
+  r_cg2px_mm:
+  - 97.89526652663251
+  - 0.7325049108620041
+  - -52.87008497855069
+  rotor_length_mm: 127.97149546998374
+  rotor_mass_g: 2.3533465978729855
+  rotor_thickness_mm: 0.9137184766174427
+  rotor_width_mm: 10.060266979025325
+  servo_time_constant_ms: 46.63349214647294
+- body_height_mm: 34.821727377112026
+  body_length_mm: 121.83676519270733
+  body_mass_g: 409.4458020346706
+  body_width_mm: 26.37036061396882
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 193.2728368691942
+  r_cg2nx_mm:
+  - -99.30075012075498
+  - 1.4782098991095527
+  - -48.052424307430144
+  r_cg2px_mm:
+  - 99.81844208330511
+  - 2.7287814154540397
+  - -48.39028096197462
+  rotor_length_mm: 126.21250986495525
+  rotor_mass_g: 2.299115647182495
+  rotor_thickness_mm: 0.909454744690949
+  rotor_width_mm: 9.98930005405335
+  servo_time_constant_ms: 54.295649253945925
+- body_height_mm: 34.67106679169472
+  body_length_mm: 126.44018579601911
+  body_mass_g: 414.3161134741894
+  body_width_mm: 26.88334938720658
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 180.13909715340074
+  r_cg2nx_mm:
+  - -99.73040217333303
+  - 1.4391660431823645
+  - -47.00463665198729
+  r_cg2px_mm:
+  - 97.04046141386918
+  - -0.22673354382399857
+  - -51.44118498251734
+  rotor_length_mm: 127.79131827185863
+  rotor_mass_g: 2.200119977697412
+  rotor_thickness_mm: 0.9393494725263036
+  rotor_width_mm: 10.018995270494555
+  servo_time_constant_ms: 48.43533082952361
+- body_height_mm: 32.81830865253248
+  body_length_mm: 111.00494620114894
+  body_mass_g: 403.15895069718385
+  body_width_mm: 23.38102414891887
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 209.74260968192175
+  r_cg2nx_mm:
+  - -98.71559905585262
+  - 0.6679219673066115
+  - -51.48480871873978
+  r_cg2px_mm:
+  - 101.68764299060011
+  - 2.625111723928833
+  - -49.14564951034285
+  rotor_length_mm: 127.85783859594578
+  rotor_mass_g: 2.2507032952934063
+  rotor_thickness_mm: 1.0090688531769396
+  rotor_width_mm: 9.987119809572524
+  servo_time_constant_ms: 49.01735399368222
+- body_height_mm: 35.1202157678632
+  body_length_mm: 113.40387808509873
+  body_mass_g: 390.14812250819057
+  body_width_mm: 24.33542395035403
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 181.36592790036738
+  r_cg2nx_mm:
+  - -97.16302795503253
+  - 2.764860792506444
+  - -49.61133655407826
+  r_cg2px_mm:
+  - 100.69047541770975
+  - 1.4824054660947414
+  - -48.41950450248467
+  rotor_length_mm: 126.88036085685181
+  rotor_mass_g: 2.1340745224780044
+  rotor_thickness_mm: 0.9302630161731742
+  rotor_width_mm: 10.059376865212123
+  servo_time_constant_ms: 45.06495165743239
+- body_height_mm: 33.94684582836639
+  body_length_mm: 117.3531560719646
+  body_mass_g: 398.12460604307734
+  body_width_mm: 23.083705225959683
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 207.3979904919154
+  r_cg2nx_mm:
+  - -99.82516418581982
+  - -1.280690784507072
+  - -52.38708433956634
+  r_cg2px_mm:
+  - 100.86705340413509
+  - -2.196935380996341
+  - -51.71770800109069
+  rotor_length_mm: 126.53591174974602
+  rotor_mass_g: 2.1173723486073057
+  rotor_thickness_mm: 1.071290718178155
+  rotor_width_mm: 9.992067295662748
+  servo_time_constant_ms: 49.31023416348337
+- body_height_mm: 34.456115721807414
+  body_length_mm: 112.06628228877906
+  body_mass_g: 414.2105457220335
+  body_width_mm: 24.708700614949898
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 181.90408921333304
+  r_cg2nx_mm:
+  - -98.19244704201111
+  - 1.4676583894984008
+  - -50.57437422530763
+  r_cg2px_mm:
+  - 101.6989261913161
+  - -0.37743008200168227
+  - -51.62368153838728
+  rotor_length_mm: 127.76187490798497
+  rotor_mass_g: 2.396181078905563
+  rotor_thickness_mm: 0.9727132957317991
+  rotor_width_mm: 9.977768853722752
+  servo_time_constant_ms: 48.11071705585959
+- body_height_mm: 37.37467840191191
+  body_length_mm: 121.29428220204618
+  body_mass_g: 382.7637317187546
+  body_width_mm: 26.882191015836323
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.58060846335292
+  r_cg2nx_mm:
+  - -102.03531537145565
+  - -0.13360151566020306
+  - -49.88054556230272
+  r_cg2px_mm:
+  - 98.40359343830991
+  - -0.4106425292933835
+  - -51.1188410707003
+  rotor_length_mm: 127.85880326251926
+  rotor_mass_g: 2.0732052933492926
+  rotor_thickness_mm: 1.0601390403464734
+  rotor_width_mm: 9.983327187544424
+  servo_time_constant_ms: 45.46385000846884
+- body_height_mm: 35.89645046725395
+  body_length_mm: 126.77014845601407
+  body_mass_g: 381.45057278580697
+  body_width_mm: 26.597839602875105
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 209.89252022699023
+  r_cg2nx_mm:
+  - -101.68136820201225
+  - 0.7249405079118723
+  - -50.95184527498882
+  r_cg2px_mm:
+  - 100.87166890844503
+  - 2.573659210882939
+  - -52.496907481418795
+  rotor_length_mm: 126.97540898740361
+  rotor_mass_g: 2.271022679246999
+  rotor_thickness_mm: 0.9043702101503721
+  rotor_width_mm: 9.96040682914107
+  servo_time_constant_ms: 49.71339300161341
+- body_height_mm: 32.637190919454255
+  body_length_mm: 123.43733881861851
+  body_mass_g: 392.13335463170256
+  body_width_mm: 26.13922814810747
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.06805599076452
+  r_cg2nx_mm:
+  - -101.40945720665312
+  - -0.850615078792734
+  - -48.50863009341053
+  r_cg2px_mm:
+  - 97.7916083365377
+  - -0.35550294120143633
+  - -52.43530942140311
+  rotor_length_mm: 127.96331002924016
+  rotor_mass_g: 2.0927786340039614
+  rotor_thickness_mm: 1.0272148309114753
+  rotor_width_mm: 10.050301377215224
+  servo_time_constant_ms: 53.61561248695074
+- body_height_mm: 35.33797515983646
+  body_length_mm: 122.94919000055127
+  body_mass_g: 390.99403553193775
+  body_width_mm: 25.204020105810304
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.56027240617047
+  r_cg2nx_mm:
+  - -97.22231890380266
+  - 0.4170149937879839
+  - -52.61131444285012
+  r_cg2px_mm:
+  - 98.26781655877767
+  - -2.036247634080991
+  - -47.16486579377774
+  rotor_length_mm: 127.91085605574841
+  rotor_mass_g: 2.2858187143790247
+  rotor_thickness_mm: 0.900193878809524
+  rotor_width_mm: 9.92258397152319
+  servo_time_constant_ms: 45.797185130912894
+- body_height_mm: 36.00413880087234
+  body_length_mm: 122.13687092184308
+  body_mass_g: 386.06716631979776
+  body_width_mm: 24.793110520809275
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.19247098935284
+  r_cg2nx_mm:
+  - -100.39488353716118
+  - 2.9548274703720363
+  - -52.5980866220538
+  r_cg2px_mm:
+  - 101.20151745527949
+  - 2.29285955400721
+  - -49.946482376598304
+  rotor_length_mm: 126.06977444076949
+  rotor_mass_g: 2.1734590309184454
+  rotor_thickness_mm: 1.0059439569929471
+  rotor_width_mm: 9.92421468875183
+  servo_time_constant_ms: 47.07633160597591
+- body_height_mm: 37.855101359414476
+  body_length_mm: 114.3371334732153
+  body_mass_g: 395.11646238305013
+  body_width_mm: 26.394276045820078
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 189.4707295068169
+  r_cg2nx_mm:
+  - -99.0976148431529
+  - 2.1947570795011933
+  - -48.73798928408025
+  r_cg2px_mm:
+  - 98.18382236884806
+  - -1.7665395839859344
+  - -49.11359552929163
+  rotor_length_mm: 126.24423101165226
+  rotor_mass_g: 2.1002416697366737
+  rotor_thickness_mm: 1.00595061688783
+  rotor_width_mm: 10.037419752132596
+  servo_time_constant_ms: 53.16985216697735
+- body_height_mm: 37.109875283270846
+  body_length_mm: 129.15930602026378
+  body_mass_g: 399.8702343843897
+  body_width_mm: 24.719705074506976
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 208.06287711430397
+  r_cg2nx_mm:
+  - -98.20961410156103
+  - 0.24920254909419626
+  - -51.76379771100514
+  r_cg2px_mm:
+  - 100.93779528077764
+  - 2.8566704996617958
+  - -50.92493855595284
+  rotor_length_mm: 126.24707834398907
+  rotor_mass_g: 2.1394029757650173
+  rotor_thickness_mm: 0.9742371718624739
+  rotor_width_mm: 9.981546235134804
+  servo_time_constant_ms: 51.36582552857019
+- body_height_mm: 35.81784144442998
+  body_length_mm: 121.32917422111313
+  body_mass_g: 386.10234258922725
+  body_width_mm: 23.069277045712624
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.81567868005953
+  r_cg2nx_mm:
+  - -102.1595368793398
+  - -1.776889288309279
+  - -47.72771865887487
+  r_cg2px_mm:
+  - 98.00901872716939
+  - -2.919828204412843
+  - -48.269050200369755
+  rotor_length_mm: 127.53605866565576
+  rotor_mass_g: 2.098177035873575
+  rotor_thickness_mm: 1.0131817709912263
+  rotor_width_mm: 10.095699561374238
+  servo_time_constant_ms: 46.4693117655166
+- body_height_mm: 32.780456475853306
+  body_length_mm: 117.99157659065392
+  body_mass_g: 415.96775544040725
+  body_width_mm: 24.56289302159525
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.52885768925768
+  r_cg2nx_mm:
+  - -97.14600536139665
+  - -0.9495186285601402
+  - -47.012678095268214
+  r_cg2px_mm:
+  - 99.47062914288527
+  - -1.3767447641293808
+  - -51.886142398141956
+  rotor_length_mm: 126.11565842054347
+  rotor_mass_g: 2.0800108558788852
+  rotor_thickness_mm: 1.069039537856763
+  rotor_width_mm: 9.902977547431542
+  servo_time_constant_ms: 52.18945228399318
+- body_height_mm: 33.671208808060825
+  body_length_mm: 127.01283368826107
+  body_mass_g: 413.27684522188605
+  body_width_mm: 25.338496660869883
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.90869031272547
+  r_cg2nx_mm:
+  - -100.0131096281207
+  - 1.4124412082130924
+  - -49.87644309927635
+  r_cg2px_mm:
+  - 97.15642177185802
+  - 2.57399961367324
+  - -52.82702911926793
+  rotor_length_mm: 127.68845538211491
+  rotor_mass_g: 2.032728070525664
+  rotor_thickness_mm: 0.9464981631348492
+  rotor_width_mm: 10.041853710911525
+  servo_time_constant_ms: 45.04649996270143
+- body_height_mm: 36.8207080052499
+  body_length_mm: 112.34425653196102
+  body_mass_g: 401.5966147111838
+  body_width_mm: 24.63261718888989
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.35976874923034
+  r_cg2nx_mm:
+  - -99.07748966344467
+  - 2.911892167056159
+  - -47.119199718794555
+  r_cg2px_mm:
+  - 101.37735383997915
+  - 1.88527525460157
+  - -47.95798319929821
+  rotor_length_mm: 127.24294114094273
+  rotor_mass_g: 2.3188325291999505
+  rotor_thickness_mm: 0.9709956136992983
+  rotor_width_mm: 10.056503152627933
+  servo_time_constant_ms: 45.57334429402057
+- body_height_mm: 33.0168309480715
+  body_length_mm: 128.54284567229348
+  body_mass_g: 418.2956171791206
+  body_width_mm: 24.470488973364603
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 181.70234343630096
+  r_cg2nx_mm:
+  - -99.5959084063014
+  - -0.6950801401787272
+  - -49.34120156210261
+  r_cg2px_mm:
+  - 101.56866929327919
+  - -1.414460641276523
+  - -47.87354222029169
+  rotor_length_mm: 127.97009706116954
+  rotor_mass_g: 2.251873803563911
+  rotor_thickness_mm: 1.0805889923509262
+  rotor_width_mm: 10.06123260655527
+  servo_time_constant_ms: 51.65357715458685
+- body_height_mm: 37.37502754080977
+  body_length_mm: 121.87465217429511
+  body_mass_g: 418.741464541703
+  body_width_mm: 26.576772649399445
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.41560696324643
+  r_cg2nx_mm:
+  - -97.78708207599833
+  - 0.11463835815995171
+  - -50.87270921322853
+  r_cg2px_mm:
+  - 97.10656290872969
+  - 1.6827634651257624
+  - -52.52819864943032
+  rotor_length_mm: 126.78177886123315
+  rotor_mass_g: 2.291276940042714
+  rotor_thickness_mm: 0.9278710818690757
+  rotor_width_mm: 10.065039984157893
+  servo_time_constant_ms: 49.19489431723643
+- body_height_mm: 34.810170091847496
+  body_length_mm: 122.09853259644615
+  body_mass_g: 397.9301912058053
+  body_width_mm: 24.533872873903107
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.7708612175434
+  r_cg2nx_mm:
+  - -98.95180431126873
+  - -1.1569793704841296
+  - -47.32585884280085
+  r_cg2px_mm:
+  - 102.9460584762324
+  - 1.3599890619165809
+  - -48.47954012450521
+  rotor_length_mm: 127.701576727748
+  rotor_mass_g: 2.373614437379053
+  rotor_thickness_mm: 1.0308585655437406
+  rotor_width_mm: 10.067853745977404
+  servo_time_constant_ms: 54.68734775478833
+- body_height_mm: 36.880863155813
+  body_length_mm: 124.8741577807531
+  body_mass_g: 405.043042233754
+  body_width_mm: 23.895133542392212
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 205.37186750851288
+  r_cg2nx_mm:
+  - -99.18070208860617
+  - -1.8553425396790402
+  - -49.45653521773416
+  r_cg2px_mm:
+  - 101.15812120004887
+  - -0.7197559824044788
+  - -48.152928985619795
+  rotor_length_mm: 126.80965845802633
+  rotor_mass_g: 2.3441242826257804
+  rotor_thickness_mm: 1.011779439094005
+  rotor_width_mm: 10.05555058890425
+  servo_time_constant_ms: 46.86632159334633
+- body_height_mm: 34.998250670595674
+  body_length_mm: 128.4864140571813
+  body_mass_g: 405.80815904801045
+  body_width_mm: 25.652918722772828
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.11447732883673
+  r_cg2nx_mm:
+  - -99.48813799488099
+  - 0.8442794407794989
+  - -52.2163335485861
+  r_cg2px_mm:
+  - 97.5235740106194
+  - 1.3008376321107722
+  - -52.599555375104856
+  rotor_length_mm: 126.62002125625878
+  rotor_mass_g: 2.2246006446820514
+  rotor_thickness_mm: 0.9662907033532104
+  rotor_width_mm: 10.09477862197925
+  servo_time_constant_ms: 50.826505769947225
+- body_height_mm: 34.69793573459758
+  body_length_mm: 127.37483348369253
+  body_mass_g: 408.77451499477826
+  body_width_mm: 24.841998040434454
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 206.30420611303936
+  r_cg2nx_mm:
+  - -101.2163787452321
+  - 2.9966772308441314
+  - -47.45951768015124
+  r_cg2px_mm:
+  - 97.92494733317827
+  - 0.06524267518335769
+  - -47.27077189825583
+  rotor_length_mm: 127.64758653498106
+  rotor_mass_g: 2.1209615043198182
+  rotor_thickness_mm: 0.9473920634178342
+  rotor_width_mm: 10.040664043377644
+  servo_time_constant_ms: 50.441096575042586
+- body_height_mm: 34.14858948493206
+  body_length_mm: 116.0610673767038
+  body_mass_g: 390.24204648652676
+  body_width_mm: 25.0748173197076
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 188.4291900592888
+  r_cg2nx_mm:
+  - -99.4442319377076
+  - -2.7853258296551076
+  - -49.05142618865006
+  r_cg2px_mm:
+  - 102.18905132219956
+  - 0.6181016518092819
+  - -52.08185152108831
+  rotor_length_mm: 126.34536757931714
+  rotor_mass_g: 2.2164548618873425
+  rotor_thickness_mm: 1.0434017709920314
+  rotor_width_mm: 9.947406403719745
+  servo_time_constant_ms: 52.63639764294238
+- body_height_mm: 35.02209666236069
+  body_length_mm: 111.060454545469
+  body_mass_g: 404.3787984306888
+  body_width_mm: 23.26700649541753
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.61087436825397
+  r_cg2nx_mm:
+  - -99.55582878227555
+  - 0.6062387309628208
+  - -50.074991056098916
+  r_cg2px_mm:
+  - 99.27836027388896
+  - 2.0538816157911484
+  - -49.17370911622812
+  rotor_length_mm: 127.9555332781312
+  rotor_mass_g: 2.2461166280684948
+  rotor_thickness_mm: 0.9553137008636586
+  rotor_width_mm: 9.934199315826016
+  servo_time_constant_ms: 45.35739129981196
+- body_height_mm: 34.61709677078808
+  body_length_mm: 113.82495877528291
+  body_mass_g: 388.3943484555173
+  body_width_mm: 26.81853267951799
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.4733137898703
+  r_cg2nx_mm:
+  - -99.25427208963605
+  - -0.16319060578704558
+  - -48.290400280367066
+  r_cg2px_mm:
+  - 97.68833347240144
+  - 0.6954154046563277
+  - -49.02194910992329
+  rotor_length_mm: 126.29408616978739
+  rotor_mass_g: 2.2303175129133654
+  rotor_thickness_mm: 0.919365600593018
+  rotor_width_mm: 9.972115141103634
+  servo_time_constant_ms: 53.04838411200408
+- body_height_mm: 36.78945898981526
+  body_length_mm: 117.0622805602485
+  body_mass_g: 417.3215235711508
+  body_width_mm: 26.364363367162426
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 181.106647765404
+  r_cg2nx_mm:
+  - -97.01745560174365
+  - 2.6758496324890357
+  - -47.375696825815496
+  r_cg2px_mm:
+  - 98.90788817678362
+  - -0.6200105784668715
+  - -52.84326017564408
+  rotor_length_mm: 126.64728926637136
+  rotor_mass_g: 2.375170845587557
+  rotor_thickness_mm: 1.0523145039928816
+  rotor_width_mm: 10.075029047522628
+  servo_time_constant_ms: 46.27241738108267
+- body_height_mm: 36.12100800169707
+  body_length_mm: 122.8511722114881
+  body_mass_g: 405.94420551190655
+  body_width_mm: 23.800576779259764
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.15682772215456
+  r_cg2nx_mm:
+  - -101.4984191044075
+  - -1.035936772984725
+  - -52.85402300917631
+  r_cg2px_mm:
+  - 102.50580702714434
+  - 0.3951690742640821
+  - -51.20856640724458
+  rotor_length_mm: 126.82598103598062
+  rotor_mass_g: 2.0269782673424315
+  rotor_thickness_mm: 1.0170479649873445
+  rotor_width_mm: 9.995537483594408
+  servo_time_constant_ms: 45.5977332472281
+- body_height_mm: 37.68181673443335
+  body_length_mm: 126.06092515459714
+  body_mass_g: 405.49179796593216
+  body_width_mm: 23.28671286809226
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.82078157274526
+  r_cg2nx_mm:
+  - -98.02891425343367
+  - -0.09954509956490298
+  - -48.0837040454332
+  r_cg2px_mm:
+  - 99.28677771109926
+  - -2.44651551238107
+  - -47.95072271702351
+  rotor_length_mm: 126.70898353395162
+  rotor_mass_g: 2.195439074157393
+  rotor_thickness_mm: 0.9397512821972863
+  rotor_width_mm: 9.966103360623997
+  servo_time_constant_ms: 46.3386233306682
+- body_height_mm: 34.48259698689509
+  body_length_mm: 118.46466576406709
+  body_mass_g: 385.71075492492656
+  body_width_mm: 26.617017906325025
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.90751924342456
+  r_cg2nx_mm:
+  - -100.57983718233213
+  - -2.4512557767077237
+  - -52.827800920604005
+  r_cg2px_mm:
+  - 102.36719782770214
+  - -1.9181904613770517
+  - -50.178308153252196
+  rotor_length_mm: 127.67067014589085
+  rotor_mass_g: 2.0576424603756234
+  rotor_thickness_mm: 0.9087618200496441
+  rotor_width_mm: 10.090457732835176
+  servo_time_constant_ms: 51.547889404665604
+- body_height_mm: 36.7146376610574
+  body_length_mm: 117.5017550992333
+  body_mass_g: 395.71573532198136
+  body_width_mm: 23.24155235844646
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 207.83981130598454
+  r_cg2nx_mm:
+  - -98.51033611040377
+  - 1.0833810130826391
+  - -51.38011591751873
+  r_cg2px_mm:
+  - 98.06645169060369
+  - 2.4472718385857632
+  - -50.432376801673556
+  rotor_length_mm: 127.79257417582522
+  rotor_mass_g: 2.129712602986894
+  rotor_thickness_mm: 1.0361687152446497
+  rotor_width_mm: 9.954112561423624
+  servo_time_constant_ms: 47.31029427362796
+- body_height_mm: 34.512131117429995
+  body_length_mm: 129.50198838504775
+  body_mass_g: 400.73718085162324
+  body_width_mm: 24.218386374409665
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 207.55511982395387
+  r_cg2nx_mm:
+  - -102.23300194354516
+  - 2.7754682028861746
+  - -49.26217820780084
+  r_cg2px_mm:
+  - 102.38132720295101
+  - -1.1831507509244013
+  - -52.19084442242095
+  rotor_length_mm: 127.2909052571399
+  rotor_mass_g: 2.1342865364128722
+  rotor_thickness_mm: 0.978643629070336
+  rotor_width_mm: 9.918760670403127
+  servo_time_constant_ms: 45.96095977882514
+- body_height_mm: 32.188200095856246
+  body_length_mm: 112.4144053223395
+  body_mass_g: 415.9265594177693
+  body_width_mm: 25.26834868237299
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 211.51331754616277
+  r_cg2nx_mm:
+  - -97.87567396238589
+  - 1.4812355952941019
+  - -49.42309167204101
+  r_cg2px_mm:
+  - 97.99680127046717
+  - 0.589530718170395
+  - -48.04196998623189
+  rotor_length_mm: 127.14524235012264
+  rotor_mass_g: 2.3654492605342363
+  rotor_thickness_mm: 1.0056050461364197
+  rotor_width_mm: 10.024112656021284
+  servo_time_constant_ms: 53.509091903719586
+- body_height_mm: 37.69590199557939
+  body_length_mm: 122.23764515293274
+  body_mass_g: 389.0485463175157
+  body_width_mm: 25.369468169584657
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 186.14233202600576
+  r_cg2nx_mm:
+  - -101.22435018495456
+  - -0.23191674586488453
+  - -47.211271827695334
+  r_cg2px_mm:
+  - 100.23512208550683
+  - 0.40491598703350196
+  - -52.47169083930636
+  rotor_length_mm: 126.262055156049
+  rotor_mass_g: 2.1172032762847746
+  rotor_thickness_mm: 1.0479112166038393
+  rotor_width_mm: 10.078437506772136
+  servo_time_constant_ms: 45.24439128277966
+- body_height_mm: 33.18629311431614
+  body_length_mm: 114.72012371288024
+  body_mass_g: 412.41063420610755
+  body_width_mm: 24.973703374452246
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.8542025267406
+  r_cg2nx_mm:
+  - -100.90714162856548
+  - -0.3901063647581555
+  - -48.11873164374897
+  r_cg2px_mm:
+  - 100.06332429024296
+  - 0.6441903393579027
+  - -47.54138259019925
+  rotor_length_mm: 127.71222476556275
+  rotor_mass_g: 2.2110222669065873
+  rotor_thickness_mm: 0.9928843158888367
+  rotor_width_mm: 10.097458343388043
+  servo_time_constant_ms: 45.72626838787974
+- body_height_mm: 34.29498197056064
+  body_length_mm: 128.3612144457003
+  body_mass_g: 383.0153068441539
+  body_width_mm: 25.944574859274237
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 218.26708104340358
+  r_cg2nx_mm:
+  - -100.04067723734724
+  - -2.481564408983208
+  - -52.608264976177395
+  r_cg2px_mm:
+  - 98.11981722356079
+  - -1.346404174842464
+  - -51.28304406741865
+  rotor_length_mm: 126.96206132800569
+  rotor_mass_g: 2.0906367511812363
+  rotor_thickness_mm: 0.9456988795040844
+  rotor_width_mm: 9.954371497480091
+  servo_time_constant_ms: 46.44689437290263
+- body_height_mm: 37.88871690247707
+  body_length_mm: 126.62873501239676
+  body_mass_g: 407.4438690636689
+  body_width_mm: 24.9548337831394
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 218.75350043897495
+  r_cg2nx_mm:
+  - -101.01881129471104
+  - -1.9268776179008429
+  - -48.01859315177038
+  r_cg2px_mm:
+  - 101.53016302662365
+  - 2.563255263226088
+  - -51.787190944732764
+  rotor_length_mm: 126.43105936646481
+  rotor_mass_g: 2.042339471323747
+  rotor_thickness_mm: 1.0615016918190423
+  rotor_width_mm: 10.096364958780333
+  servo_time_constant_ms: 52.70434002832907
+- body_height_mm: 33.86880558061837
+  body_length_mm: 121.6790743358844
+  body_mass_g: 418.9746351358058
+  body_width_mm: 26.81035075578363
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 212.3160808576126
+  r_cg2nx_mm:
+  - -97.53906555207611
+  - -0.032690309079768554
+  - -51.74023589173449
+  r_cg2px_mm:
+  - 97.22169233557743
+  - -2.1940544310408185
+  - -51.862224918177
+  rotor_length_mm: 126.19394395800083
+  rotor_mass_g: 2.345231952774727
+  rotor_thickness_mm: 1.0200309110139558
+  rotor_width_mm: 9.949229374424316
+  servo_time_constant_ms: 53.14249080589669
+- body_height_mm: 35.48485110821016
+  body_length_mm: 128.00332472677485
+  body_mass_g: 419.72728074815274
+  body_width_mm: 23.183703527556144
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 203.9442885047215
+  r_cg2nx_mm:
+  - -102.33714300883314
+  - -1.1179093003684035
+  - -49.6847962545716
+  r_cg2px_mm:
+  - 98.62533324699187
+  - -2.9414949413116593
+  - -52.5823982799372
+  rotor_length_mm: 126.47131576647588
+  rotor_mass_g: 2.012112084712498
+  rotor_thickness_mm: 0.9002496845716998
+  rotor_width_mm: 9.906321714523175
+  servo_time_constant_ms: 52.38085999253379
+- body_height_mm: 35.29676111923258
+  body_length_mm: 124.27433961545769
+  body_mass_g: 410.73494200102283
+  body_width_mm: 26.85444043529016
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.3751260170237
+  r_cg2nx_mm:
+  - -99.62181659147005
+  - -1.0987565245139723
+  - -47.61502701599117
+  r_cg2px_mm:
+  - 97.92254289735334
+  - 2.3598333256468207
+  - -48.64268913331531
+  rotor_length_mm: 126.57639576132067
+  rotor_mass_g: 2.024575111967623
+  rotor_thickness_mm: 0.9173561761287604
+  rotor_width_mm: 9.900898363203115
+  servo_time_constant_ms: 45.93994179187724
+- body_height_mm: 36.03436860653678
+  body_length_mm: 129.86911626593312
+  body_mass_g: 411.3437367499815
+  body_width_mm: 23.762758607256668
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 219.05766413163323
+  r_cg2nx_mm:
+  - -98.5899005779978
+  - -1.733502491331239
+  - -51.51523716850985
+  r_cg2px_mm:
+  - 99.38552677518592
+  - 2.112625398645399
+  - -52.082867538582214
+  rotor_length_mm: 126.58002971084335
+  rotor_mass_g: 2.075587861301962
+  rotor_thickness_mm: 1.0186967779745775
+  rotor_width_mm: 9.973887630343047
+  servo_time_constant_ms: 54.844997479877875
+- body_height_mm: 37.49923158893836
+  body_length_mm: 124.89505160692067
+  body_mass_g: 393.15932739512726
+  body_width_mm: 23.182432624495675
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 189.9457850990079
+  r_cg2nx_mm:
+  - -102.47235046961876
+  - 2.7712058749655144
+  - -51.69846020803829
+  r_cg2px_mm:
+  - 97.16020756910743
+  - -2.1247742220997594
+  - -48.48528604213737
+  rotor_length_mm: 126.36335888141687
+  rotor_mass_g: 2.3351928012917824
+  rotor_thickness_mm: 1.0135191813411393
+  rotor_width_mm: 10.087156094500928
+  servo_time_constant_ms: 47.3118220820626
+- body_height_mm: 36.04310776650166
+  body_length_mm: 127.33692084771539
+  body_mass_g: 385.2911077280501
+  body_width_mm: 23.439425596822673
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.7906558696828
+  r_cg2nx_mm:
+  - -98.28907881205464
+  - -0.6469872411931998
+  - -49.47542362327507
+  r_cg2px_mm:
+  - 99.25799059877147
+  - -1.8192943717507348
+  - -51.18757304557566
+  rotor_length_mm: 127.75326940076974
+  rotor_mass_g: 2.008275759277387
+  rotor_thickness_mm: 0.9962680315771558
+  rotor_width_mm: 10.030364735673626
+  servo_time_constant_ms: 46.207519781259975
+- body_height_mm: 37.118236808574245
+  body_length_mm: 121.95701528725802
+  body_mass_g: 412.5063328354704
+  body_width_mm: 23.437291991535428
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 215.43913914618113
+  r_cg2nx_mm:
+  - -98.39313389209295
+  - -1.7835306333335372
+  - -49.743554806488184
+  r_cg2px_mm:
+  - 99.97771007754774
+  - -0.045757462855226194
+  - -51.830547749408616
+  rotor_length_mm: 126.27715738087808
+  rotor_mass_g: 2.3394369294519173
+  rotor_thickness_mm: 1.0241994258802773
+  rotor_width_mm: 10.027144021732381
+  servo_time_constant_ms: 45.2763631605565
+- body_height_mm: 34.026029342298415
+  body_length_mm: 112.95295469495291
+  body_mass_g: 394.8759683912267
+  body_width_mm: 24.96641852109783
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 206.1372490768941
+  r_cg2nx_mm:
+  - -102.263752325425
+  - 1.1248209457879028
+  - -51.02433848274005
+  r_cg2px_mm:
+  - 98.31334501281306
+  - -0.28142420719619254
+  - -50.65790487899891
+  rotor_length_mm: 127.46634210267638
+  rotor_mass_g: 2.1708074431654705
+  rotor_thickness_mm: 0.9176150328781845
+  rotor_width_mm: 10.06576377992799
+  servo_time_constant_ms: 53.17875708006272
+- body_height_mm: 35.96713574265661
+  body_length_mm: 120.34453526883938
+  body_mass_g: 411.02467788274436
+  body_width_mm: 25.724808439831634
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.72829563335813
+  r_cg2nx_mm:
+  - -97.59598340851119
+  - -0.13963205355710961
+  - -50.4914071097719
+  r_cg2px_mm:
+  - 102.97748964210736
+  - 2.3073199028752818
+  - -50.14128546235411
+  rotor_length_mm: 126.88861535432342
+  rotor_mass_g: 2.121072226187815
+  rotor_thickness_mm: 0.9025596141690665
+  rotor_width_mm: 9.98170687730768
+  servo_time_constant_ms: 46.09042578328117
+- body_height_mm: 37.65043408348379
+  body_length_mm: 121.90026216555742
+  body_mass_g: 394.7500637576434
+  body_width_mm: 24.20018996461447
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.59992744976256
+  r_cg2nx_mm:
+  - -99.1611042384983
+  - 0.5231813830425605
+  - -47.94217446792212
+  r_cg2px_mm:
+  - 99.2872519427776
+  - 0.1451404450656919
+  - -48.708716972903424
+  rotor_length_mm: 126.2283558974119
+  rotor_mass_g: 2.300912978642173
+  rotor_thickness_mm: 1.0996488753651155
+  rotor_width_mm: 10.050206399894472
+  servo_time_constant_ms: 48.54994774256302
+- body_height_mm: 35.676635957766145
+  body_length_mm: 112.22803909867152
+  body_mass_g: 396.689350991989
+  body_width_mm: 23.69829091385928
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.70047027056887
+  r_cg2nx_mm:
+  - -97.85668210366839
+  - -0.27420063734946787
+  - -47.651605205569204
+  r_cg2px_mm:
+  - 99.16928572395062
+  - 2.4395230335772746
+  - -50.61017968006684
+  rotor_length_mm: 126.4591239214091
+  rotor_mass_g: 2.1237338538413546
+  rotor_thickness_mm: 0.9455636771375242
+  rotor_width_mm: 9.98044826313295
+  servo_time_constant_ms: 46.426120531206166
+- body_height_mm: 37.587802662904906
+  body_length_mm: 124.08115680959123
+  body_mass_g: 401.3699351724149
+  body_width_mm: 26.75559037278983
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.73994519959072
+  r_cg2nx_mm:
+  - -100.12912716525236
+  - 2.71336471129509
+  - -48.826212621202984
+  r_cg2px_mm:
+  - 99.61713131736188
+  - -2.6934477043596003
+  - -51.087450822554764
+  rotor_length_mm: 126.94734452499404
+  rotor_mass_g: 2.0045624279157135
+  rotor_thickness_mm: 1.0045621696418845
+  rotor_width_mm: 9.957001976282237
+  servo_time_constant_ms: 50.79636607271097
+- body_height_mm: 32.00804762750174
+  body_length_mm: 117.55861346617293
+  body_mass_g: 390.4504447335802
+  body_width_mm: 24.12161836125467
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.01931129859582
+  r_cg2nx_mm:
+  - -100.49160913757396
+  - 2.1304803352818906
+  - -49.25708307734091
+  r_cg2px_mm:
+  - 100.10961195910713
+  - 1.6558790569994626
+  - -51.43552439449683
+  rotor_length_mm: 126.99818224488456
+  rotor_mass_g: 2.073828751971837
+  rotor_thickness_mm: 0.9250919863480515
+  rotor_width_mm: 10.018323746384652
+  servo_time_constant_ms: 53.11776431932129
+- body_height_mm: 34.90915871297513
+  body_length_mm: 120.40742797867155
+  body_mass_g: 400.6868847010555
+  body_width_mm: 23.378569890900135
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 183.00563935275653
+  r_cg2nx_mm:
+  - -99.19611536261633
+  - 1.4980904683195968
+  - -52.07877738231016
+  r_cg2px_mm:
+  - 99.80357100767152
+  - 2.1637068725853146
+  - -50.05109191472515
+  rotor_length_mm: 127.59597702698494
+  rotor_mass_g: 2.2928901607775636
+  rotor_thickness_mm: 1.0756036485740657
+  rotor_width_mm: 9.963765121251665
+  servo_time_constant_ms: 46.782244710343136
+- body_height_mm: 33.10713919958153
+  body_length_mm: 120.36576583641599
+  body_mass_g: 409.43976873685824
+  body_width_mm: 26.586440756371527
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 209.02281651919205
+  r_cg2nx_mm:
+  - -100.95704016814223
+  - -1.6791054869852464
+  - -49.13363363444514
+  r_cg2px_mm:
+  - 98.45375365545804
+  - -2.4605230305810544
+  - -47.74643172265927
+  rotor_length_mm: 126.81341020639664
+  rotor_mass_g: 2.0069203335217467
+  rotor_thickness_mm: 1.0235315032009946
+  rotor_width_mm: 10.098085911884638
+  servo_time_constant_ms: 54.604506721873314
+- body_height_mm: 32.92341390999902
+  body_length_mm: 129.78936177676542
+  body_mass_g: 416.2140224698063
+  body_width_mm: 23.97401716486681
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 190.10681941489355
+  r_cg2nx_mm:
+  - -101.89563309234546
+  - -2.7710051285064905
+  - -49.21510599992284
+  r_cg2px_mm:
+  - 101.50592819419063
+  - -0.9612503595796338
+  - -49.52101518254625
+  rotor_length_mm: 126.06688108633026
+  rotor_mass_g: 2.1209983144868523
+  rotor_thickness_mm: 1.026485321826243
+  rotor_width_mm: 9.963277315157322
+  servo_time_constant_ms: 49.2074301034608
+- body_height_mm: 34.51069080496368
+  body_length_mm: 120.00741720636819
+  body_mass_g: 388.1527295290104
+  body_width_mm: 23.056570052901048
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 217.88206345018932
+  r_cg2nx_mm:
+  - -97.79510724468636
+  - -1.5439726781220364
+  - -48.196917717142426
+  r_cg2px_mm:
+  - 102.03975347317542
+  - -2.5778159549325443
+  - -50.90962176908452
+  rotor_length_mm: 127.71958333969445
+  rotor_mass_g: 2.0917288868769206
+  rotor_thickness_mm: 1.086619658383669
+  rotor_width_mm: 9.944935805874643
+  servo_time_constant_ms: 48.29519872176946
+- body_height_mm: 34.44948992218809
+  body_length_mm: 123.42907326621003
+  body_mass_g: 395.9875288898358
+  body_width_mm: 23.08236671477591
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 187.11331632930205
+  r_cg2nx_mm:
+  - -102.73858645430512
+  - 1.0075440444997703
+  - -50.52507810420386
+  r_cg2px_mm:
+  - 101.39022740012393
+  - -0.08808149537561016
+  - -50.28946235096484
+  rotor_length_mm: 127.67226225014329
+  rotor_mass_g: 2.3963876176970285
+  rotor_thickness_mm: 0.9613472742742891
+  rotor_width_mm: 9.915266257519434
+  servo_time_constant_ms: 54.06502225664649
+- body_height_mm: 34.74356401463141
+  body_length_mm: 120.70633157113167
+  body_mass_g: 419.9850975566386
+  body_width_mm: 25.15164605898327
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.29635245192574
+  r_cg2nx_mm:
+  - -102.35767821005479
+  - 1.6347077672263968
+  - -52.71130051273374
+  r_cg2px_mm:
+  - 99.74099076819795
+  - 1.783351422174606
+  - -48.18601785353346
+  rotor_length_mm: 127.93490232916034
+  rotor_mass_g: 2.1343535785040495
+  rotor_thickness_mm: 0.9115703891476281
+  rotor_width_mm: 9.995197855744909
+  servo_time_constant_ms: 51.7369544713433
+- body_height_mm: 36.005976911395145
+  body_length_mm: 119.64473083349539
+  body_mass_g: 389.42357408637423
+  body_width_mm: 25.496860471410372
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 205.8435192924353
+  r_cg2nx_mm:
+  - -99.468392200538
+  - 2.484672923383374
+  - -47.164143537681014
+  r_cg2px_mm:
+  - 101.1318072241949
+  - 0.31430132921279785
+  - -49.55213738437039
+  rotor_length_mm: 127.41793513725594
+  rotor_mass_g: 2.3674208259001848
+  rotor_thickness_mm: 0.9131483105398952
+  rotor_width_mm: 9.902494426233941
+  servo_time_constant_ms: 47.69556553874452
+- body_height_mm: 34.978605538372115
+  body_length_mm: 112.17595423017093
+  body_mass_g: 412.35972052058037
+  body_width_mm: 26.229343722364078
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.00732663280672
+  r_cg2nx_mm:
+  - -100.91757552082453
+  - -0.8692067263315009
+  - -51.83947256109108
+  r_cg2px_mm:
+  - 102.59990553818439
+  - 1.841870841179654
+  - -50.64442801122067
+  rotor_length_mm: 127.87976541180136
+  rotor_mass_g: 2.175315845520329
+  rotor_thickness_mm: 0.9156328233619512
+  rotor_width_mm: 10.061061309250551
+  servo_time_constant_ms: 54.851687171606685
+- body_height_mm: 34.972105860742666
+  body_length_mm: 110.68607861907793
+  body_mass_g: 380.86625691391185
+  body_width_mm: 25.48544418158214
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 211.25545766165266
+  r_cg2nx_mm:
+  - -99.9812522346345
+  - -0.023047935736230762
+  - -47.55455333103262
+  r_cg2px_mm:
+  - 100.62192967332955
+  - 1.106420722855221
+  - -48.5632668935249
+  rotor_length_mm: 127.74419204068009
+  rotor_mass_g: 2.037666709914878
+  rotor_thickness_mm: 0.9762184071675849
+  rotor_width_mm: 10.090285260135373
+  servo_time_constant_ms: 51.538774541422185
+- body_height_mm: 32.00198749870229
+  body_length_mm: 115.10262121212428
+  body_mass_g: 390.8033382711507
+  body_width_mm: 25.16554718762255
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.63992854694973
+  r_cg2nx_mm:
+  - -100.30325717869192
+  - 1.4308570870544077
+  - -49.59894992737712
+  r_cg2px_mm:
+  - 102.74341027796606
+  - 2.664617827107511
+  - -49.799149331921285
+  rotor_length_mm: 127.12954021691179
+  rotor_mass_g: 2.058438419036258
+  rotor_thickness_mm: 1.0449329170611987
+  rotor_width_mm: 10.069260595983025
+  servo_time_constant_ms: 50.73809616036395
+- body_height_mm: 36.63658095276351
+  body_length_mm: 119.26800908477203
+  body_mass_g: 404.7884713612597
+  body_width_mm: 25.963480416997438
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 184.26037216966856
+  r_cg2nx_mm:
+  - -99.41852493234236
+  - -0.9914263538566086
+  - -50.711123976653504
+  r_cg2px_mm:
+  - 98.182736874683
+  - -2.0415286068836886
+  - -51.138248179061165
+  rotor_length_mm: 127.63962408216548
+  rotor_mass_g: 2.1540729531722302
+  rotor_thickness_mm: 1.0197220720145226
+  rotor_width_mm: 9.929252437960239
+  servo_time_constant_ms: 48.40687376499537
+- body_height_mm: 34.089217540748514
+  body_length_mm: 119.25174897058987
+  body_mass_g: 415.8532494416106
+  body_width_mm: 26.87897888670922
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 182.123973134982
+  r_cg2nx_mm:
+  - -97.78155801792546
+  - -2.135860384943293
+  - -50.01752331400046
+  r_cg2px_mm:
+  - 101.68507466318431
+  - 0.10944212297771383
+  - -47.05898099529936
+  rotor_length_mm: 127.09197672177204
+  rotor_mass_g: 2.3512685432503018
+  rotor_thickness_mm: 0.9427807549361809
+  rotor_width_mm: 9.91446494946583
+  servo_time_constant_ms: 51.86377097299643
+- body_height_mm: 35.25860992247721
+  body_length_mm: 110.81164236095356
+  body_mass_g: 400.46773207828954
+  body_width_mm: 25.85420961296442
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 191.08973188494227
+  r_cg2nx_mm:
+  - -99.5957847386583
+  - 1.2993995756129477
+  - -49.853817573974794
+  r_cg2px_mm:
+  - 101.67405931591489
+  - -2.9364482783593484
+  - -49.35711659187492
+  rotor_length_mm: 126.88890690730337
+  rotor_mass_g: 2.094777968775129
+  rotor_thickness_mm: 0.9747218765846735
+  rotor_width_mm: 10.069175798588557
+  servo_time_constant_ms: 51.61590657617808
+- body_height_mm: 36.81173489821391
+  body_length_mm: 126.67169241554741
+  body_mass_g: 412.66588894952525
+  body_width_mm: 24.015153169659577
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 213.50021765195604
+  r_cg2nx_mm:
+  - -97.48007219384918
+  - 0.05685725253449814
+  - -52.135996030993574
+  r_cg2px_mm:
+  - 100.18493234372457
+  - 1.4584751056505967
+  - -52.43040303647665
+  rotor_length_mm: 126.51739918696285
+  rotor_mass_g: 2.0086550188335046
+  rotor_thickness_mm: 1.039652745162011
+  rotor_width_mm: 10.069225126557262
+  servo_time_constant_ms: 53.36018671984449
+- body_height_mm: 33.210029082050745
+  body_length_mm: 128.99204353824825
+  body_mass_g: 398.3304397017322
+  body_width_mm: 23.906078096055648
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 196.53879809802612
+  r_cg2nx_mm:
+  - -97.3141798611797
+  - 0.9157797493115138
+  - -52.214073735999655
+  r_cg2px_mm:
+  - 101.86173303500512
+  - 0.4962907600766169
+  - -48.94613816584011
+  rotor_length_mm: 126.22604186704113
+  rotor_mass_g: 2.093793808961809
+  rotor_thickness_mm: 1.0112955840471654
+  rotor_width_mm: 9.984604316770215
+  servo_time_constant_ms: 52.66216501907626
+- body_height_mm: 33.388325661848185
+  body_length_mm: 126.77478041668684
+  body_mass_g: 413.48426851922375
+  body_width_mm: 23.042608711773383
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 216.82884478038596
+  r_cg2nx_mm:
+  - -98.49506684843142
+  - -2.4305805407272243
+  - -52.541393912888395
+  r_cg2px_mm:
+  - 101.48221751105007
+  - -0.41788055039075456
+  - -49.71909991928213
+  rotor_length_mm: 126.40691024526706
+  rotor_mass_g: 2.147711994400251
+  rotor_thickness_mm: 1.046391842043762
+  rotor_width_mm: 9.9409658414356
+  servo_time_constant_ms: 51.57708044540835
+- body_height_mm: 34.001074366047334
+  body_length_mm: 118.15731416928068
+  body_mass_g: 389.6531802766356
+  body_width_mm: 26.28413984279989
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 202.73926874697148
+  r_cg2nx_mm:
+  - -101.20093997242564
+  - -0.07373219131899411
+  - -50.58910874744044
+  r_cg2px_mm:
+  - 99.95770633810562
+  - -0.04867388541272266
+  - -49.39786676578992
+  rotor_length_mm: 127.34828581024624
+  rotor_mass_g: 2.033932103933523
+  rotor_thickness_mm: 0.9450688408571524
+  rotor_width_mm: 10.016573116193682
+  servo_time_constant_ms: 52.02705181128472
+- body_height_mm: 33.77086311672641
+  body_length_mm: 128.93625019402845
+  body_mass_g: 407.6700634063712
+  body_width_mm: 24.73634829188933
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 182.41346929490456
+  r_cg2nx_mm:
+  - -100.8355028066958
+  - -1.39777339720205
+  - -50.480305779480766
+  r_cg2px_mm:
+  - 97.03363409721922
+  - 2.585810572602945
+  - -51.0383026022132
+  rotor_length_mm: 127.34879003212879
+  rotor_mass_g: 2.192501072136819
+  rotor_thickness_mm: 1.0834131078114537
+  rotor_width_mm: 9.921533872203295
+  servo_time_constant_ms: 54.57341750954318
+- body_height_mm: 33.64578174977238
+  body_length_mm: 111.62628073077927
+  body_mass_g: 414.5633967023236
+  body_width_mm: 26.46357480211416
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.25396146383284
+  r_cg2nx_mm:
+  - -98.2285108078641
+  - -0.7412046618802695
+  - -51.17197725376732
+  r_cg2px_mm:
+  - 98.5487462862401
+  - 0.26085791202147846
+  - -51.24968342454971
+  rotor_length_mm: 126.59371551202273
+  rotor_mass_g: 2.3642934783039675
+  rotor_thickness_mm: 0.9732907418771833
+  rotor_width_mm: 10.077521026048233
+  servo_time_constant_ms: 52.14512215755478
+- body_height_mm: 34.48620931198791
+  body_length_mm: 117.63496650999284
+  body_mass_g: 392.8522668959056
+  body_width_mm: 26.192204404999014
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 209.87598487729565
+  r_cg2nx_mm:
+  - -102.25373113036069
+  - -2.99580433963623
+  - -50.76418465615457
+  r_cg2px_mm:
+  - 102.18940608823759
+  - -0.3852618212316363
+  - -47.55360605173878
+  rotor_length_mm: 127.23909406100506
+  rotor_mass_g: 2.0191386344739595
+  rotor_thickness_mm: 1.0404811177741133
+  rotor_width_mm: 10.044941055948541
+  servo_time_constant_ms: 50.1611258874601
+- body_height_mm: 35.29985978797109
+  body_length_mm: 129.4057070259732
+  body_mass_g: 407.9809256918939
+  body_width_mm: 26.96486494053046
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.0017437735596
+  r_cg2nx_mm:
+  - -98.17168832285924
+  - 0.19003913722988575
+  - -48.877414337265165
+  r_cg2px_mm:
+  - 97.58391270578369
+  - -2.88669229139325
+  - -51.756412026206206
+  rotor_length_mm: 126.9015891218619
+  rotor_mass_g: 2.220693738239585
+  rotor_thickness_mm: 0.947061866244889
+  rotor_width_mm: 9.901578616558064
+  servo_time_constant_ms: 51.342281167145984
+- body_height_mm: 37.744862710019085
+  body_length_mm: 126.23754236212812
+  body_mass_g: 416.3567815119528
+  body_width_mm: 24.631362563583473
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 205.31554641064582
+  r_cg2nx_mm:
+  - -99.4635552625343
+  - -2.6469687111453477
+  - -51.19241156442777
+  r_cg2px_mm:
+  - 97.22758546302488
+  - -1.938776354743291
+  - -48.10149569875655
+  rotor_length_mm: 126.6040468988498
+  rotor_mass_g: 2.1963151421072156
+  rotor_thickness_mm: 0.967393446575982
+  rotor_width_mm: 9.934780659578667
+  servo_time_constant_ms: 52.221492892669616
+- body_height_mm: 34.1521402506614
+  body_length_mm: 128.4707166588808
+  body_mass_g: 381.9001486357116
+  body_width_mm: 26.12362732396968
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 187.54181877879196
+  r_cg2nx_mm:
+  - -99.50735211939755
+  - -2.916145099051723
+  - -51.25742093697739
+  r_cg2px_mm:
+  - 100.24278626419843
+  - 0.14664298475173432
+  - -47.67294089360074
+  rotor_length_mm: 127.53416033510402
+  rotor_mass_g: 2.341823103400896
+  rotor_thickness_mm: 1.0051630129030589
+  rotor_width_mm: 9.940191051036551
+  servo_time_constant_ms: 51.56276810083408
+- body_height_mm: 32.85941194217067
+  body_length_mm: 116.39619948979515
+  body_mass_g: 402.854052643877
+  body_width_mm: 25.68355429404979
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.80806746996876
+  r_cg2nx_mm:
+  - -101.11356494688259
+  - 0.04482999881665117
+  - -51.16191525241535
+  r_cg2px_mm:
+  - 99.57841618955868
+  - -1.9392507686762546
+  - -52.79292084984937
+  rotor_length_mm: 126.97195167034928
+  rotor_mass_g: 2.147952691085648
+  rotor_thickness_mm: 1.0291478289947715
+  rotor_width_mm: 9.925252686352321
+  servo_time_constant_ms: 45.16718181406287
+- body_height_mm: 32.4026278776084
+  body_length_mm: 114.25265703503817
+  body_mass_g: 394.4599589826171
+  body_width_mm: 26.139003175458946
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 199.0473751004762
+  r_cg2nx_mm:
+  - -101.58158165998714
+  - -2.372241706408129
+  - -52.27847111997913
+  r_cg2px_mm:
+  - 100.41131326859178
+  - 2.993266124738015
+  - -48.015919561846516
+  rotor_length_mm: 126.47416000795532
+  rotor_mass_g: 2.193026104381067
+  rotor_thickness_mm: 1.071677521787694
+  rotor_width_mm: 9.956215475865019
+  servo_time_constant_ms: 49.811043180116464
+- body_height_mm: 34.523054708039524
+  body_length_mm: 119.36908907659725
+  body_mass_g: 385.94195140438256
+  body_width_mm: 23.81436476750349
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.95071786519026
+  r_cg2nx_mm:
+  - -99.73608173784791
+  - 1.3358029630058876
+  - -51.21347010226269
+  r_cg2px_mm:
+  - 100.30082168554782
+  - -0.9495822866737091
+  - -47.90349417803815
+  rotor_length_mm: 126.53401805043313
+  rotor_mass_g: 2.0600445842347295
+  rotor_thickness_mm: 0.931332940612668
+  rotor_width_mm: 9.92052212061096
+  servo_time_constant_ms: 47.619853061556945
+- body_height_mm: 37.39689269398535
+  body_length_mm: 116.14407484739617
+  body_mass_g: 416.7743739230725
+  body_width_mm: 26.964146270727667
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.4589385477222
+  r_cg2nx_mm:
+  - -101.21270041622046
+  - 2.27066325478365
+  - -47.00634352119558
+  r_cg2px_mm:
+  - 102.55268016675011
+  - -2.57586578989733
+  - -48.406066085702534
+  rotor_length_mm: 126.6262546741627
+  rotor_mass_g: 2.1498602648587277
+  rotor_thickness_mm: 1.0250921136060118
+  rotor_width_mm: 9.99420655453181
+  servo_time_constant_ms: 53.49144689046231
+- body_height_mm: 34.24025794518189
+  body_length_mm: 116.40395333494614
+  body_mass_g: 415.5627226450417
+  body_width_mm: 24.55338612880369
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.03070818193555
+  r_cg2nx_mm:
+  - -98.70508929843496
+  - -1.1906337529623265
+  - -47.60744756314992
+  r_cg2px_mm:
+  - 101.52536597509447
+  - -1.8846739525324314
+  - -49.771661561258
+  rotor_length_mm: 126.82761103152943
+  rotor_mass_g: 2.2330525144836395
+  rotor_thickness_mm: 1.0471949581185367
+  rotor_width_mm: 10.074776216163958
+  servo_time_constant_ms: 53.97806008492235
+- body_height_mm: 35.57089915330147
+  body_length_mm: 127.22806404935778
+  body_mass_g: 402.1106763431072
+  body_width_mm: 24.192868717561844
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 200.98913571223508
+  r_cg2nx_mm:
+  - -97.06814786084344
+  - -2.2507281933189205
+  - -48.56483978211118
+  r_cg2px_mm:
+  - 100.84354980572911
+  - 1.779040594476406
+  - -47.828704102639676
+  rotor_length_mm: 127.03479238503513
+  rotor_mass_g: 2.1531773595605803
+  rotor_thickness_mm: 0.9442162083345716
+  rotor_width_mm: 9.98260311459898
+  servo_time_constant_ms: 54.34482701362159
+- body_height_mm: 32.32209627940313
+  body_length_mm: 114.0317727911915
+  body_mass_g: 398.4952654896404
+  body_width_mm: 26.099850954742127
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.52725669079217
+  r_cg2nx_mm:
+  - -99.76926919601883
+  - 2.261373002771629
+  - -50.596252579127544
+  r_cg2px_mm:
+  - 100.29228058908981
+  - 0.6790244467842053
+  - -49.734182012853196
+  rotor_length_mm: 127.5654216052479
+  rotor_mass_g: 2.360401897301161
+  rotor_thickness_mm: 1.0080799911514682
+  rotor_width_mm: 9.925127713219494
+  servo_time_constant_ms: 46.07923263467715
+- body_height_mm: 34.224995517418755
+  body_length_mm: 127.2035970548277
+  body_mass_g: 392.1992918262113
+  body_width_mm: 26.524118419419608
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 204.24342217520982
+  r_cg2nx_mm:
+  - -101.46281381295228
+  - 2.2368060310540976
+  - -50.02926100487848
+  r_cg2px_mm:
+  - 100.90265978925021
+  - 0.8410379246407804
+  - -49.083959858991484
+  rotor_length_mm: 126.20767629856682
+  rotor_mass_g: 2.142447879286943
+  rotor_thickness_mm: 1.0323478573530747
+  rotor_width_mm: 10.042643030469703
+  servo_time_constant_ms: 49.37597518600485
+- body_height_mm: 36.33305422979348
+  body_length_mm: 118.69443439759182
+  body_mass_g: 390.25784096945006
+  body_width_mm: 26.921397854136885
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 213.78153339803916
+  r_cg2nx_mm:
+  - -99.41808537687005
+  - -0.0824792655726645
+  - -47.716324986178876
+  r_cg2px_mm:
+  - 97.91372767328079
+  - 0.9970004142885482
+  - -48.60053941655306
+  rotor_length_mm: 127.90512270506632
+  rotor_mass_g: 2.1786500107329885
+  rotor_thickness_mm: 0.9289478885352697
+  rotor_width_mm: 9.967172645333713
+  servo_time_constant_ms: 52.39966643822617
+- body_height_mm: 33.76462747277423
+  body_length_mm: 111.35181711042941
+  body_mass_g: 406.4643685960746
+  body_width_mm: 25.474925426021688
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 206.63782954780203
+  r_cg2nx_mm:
+  - -102.52904236553954
+  - 1.8406339758281982
+  - -50.22617328260979
+  r_cg2px_mm:
+  - 97.66007936153962
+  - 0.8983159445681608
+  - -48.190146234416474
+  rotor_length_mm: 127.16835025704093
+  rotor_mass_g: 2.336026225931364
+  rotor_thickness_mm: 0.9922934500274061
+  rotor_width_mm: 10.047072295928656
+  servo_time_constant_ms: 50.44144110990446
+- body_height_mm: 35.74002010810494
+  body_length_mm: 119.31559075276895
+  body_mass_g: 391.95834436954374
+  body_width_mm: 26.079800982366073
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 214.07868768878168
+  r_cg2nx_mm:
+  - -102.58085564573445
+  - 1.4174400277281531
+  - -52.2325801773812
+  r_cg2px_mm:
+  - 98.29047095697001
+  - 1.0912504129194955
+  - -48.953448420543225
+  rotor_length_mm: 126.5619976829885
+  rotor_mass_g: 2.3141426340392632
+  rotor_thickness_mm: 1.0611523555130207
+  rotor_width_mm: 9.919895484563082
+  servo_time_constant_ms: 49.56938502854224
+- body_height_mm: 32.6101108458718
+  body_length_mm: 119.59900975173787
+  body_mass_g: 412.4031418329509
+  body_width_mm: 26.740393447142306
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 195.3559506279674
+  r_cg2nx_mm:
+  - -98.17479290910022
+  - 0.9563251777409949
+  - -50.1763440817182
+  r_cg2px_mm:
+  - 100.01696387694878
+  - -2.650444637325111
+  - -48.37062807236944
+  rotor_length_mm: 127.99454584426428
+  rotor_mass_g: 2.097908237407832
+  rotor_thickness_mm: 1.0466755385368394
+  rotor_width_mm: 9.949438230420306
+  servo_time_constant_ms: 49.05886058655017
+- body_height_mm: 33.908777089849686
+  body_length_mm: 119.75231156108147
+  body_mass_g: 412.9491783888557
+  body_width_mm: 23.590036435659385
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 189.58538091783458
+  r_cg2nx_mm:
+  - -102.76053007978379
+  - -0.28913453520689014
+  - -51.52443522195956
+  r_cg2px_mm:
+  - 98.35283727180102
+  - -1.926276262679176
+  - -48.73274076579644
+  rotor_length_mm: 127.34534376334067
+  rotor_mass_g: 2.340210847364189
+  rotor_thickness_mm: 0.9503916748385337
+  rotor_width_mm: 10.023836717345208
+  servo_time_constant_ms: 48.83705909621522
+- body_height_mm: 36.15436509784245
+  body_length_mm: 115.37419944083109
+  body_mass_g: 412.168902040793
+  body_width_mm: 23.985214047942176
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 185.05469383549374
+  r_cg2nx_mm:
+  - -101.33668730194061
+  - -2.401697600482265
+  - -48.00492539751475
+  r_cg2px_mm:
+  - 99.90939425621137
+  - 0.6755576465438473
+  - -52.52114579650788
+  rotor_length_mm: 126.0848878587067
+  rotor_mass_g: 2.3578273441423567
+  rotor_thickness_mm: 1.048361327157678
+  rotor_width_mm: 10.02726423610672
+  servo_time_constant_ms: 53.66475967734826
+- body_height_mm: 37.62706080237816
+  body_length_mm: 110.71701996231282
+  body_mass_g: 384.21621976324747
+  body_width_mm: 25.775310094007022
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 198.18190116222047
+  r_cg2nx_mm:
+  - -99.9140754308141
+  - 2.0032658317479948
+  - -52.0391869557391
+  r_cg2px_mm:
+  - 98.60130732879352
+  - 2.698592456245353
+  - -50.97871510282866
+  rotor_length_mm: 126.47826996656111
+  rotor_mass_g: 2.1364642910306344
+  rotor_thickness_mm: 0.9861607788563578
+  rotor_width_mm: 10.006896502401
+  servo_time_constant_ms: 45.78477553948528
+- body_height_mm: 34.07482123176166
+  body_length_mm: 125.41837933713934
+  body_mass_g: 418.4547616951463
+  body_width_mm: 23.868712266088703
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 207.99494632172576
+  r_cg2nx_mm:
+  - -100.08408542770975
+  - -2.660241593762088
+  - -49.037997474507875
+  r_cg2px_mm:
+  - 102.00268172902955
+  - 1.0008974565050544
+  - -48.45201045399987
+  rotor_length_mm: 127.43123920482503
+  rotor_mass_g: 2.372961045400552
+  rotor_thickness_mm: 1.0397278501139833
+  rotor_width_mm: 10.005441253281223
+  servo_time_constant_ms: 48.849906677200714
+- body_height_mm: 32.81328049329867
+  body_length_mm: 115.03821662582837
+  body_mass_g: 415.8029601541968
+  body_width_mm: 23.197057162627413
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 210.17190120612176
+  r_cg2nx_mm:
+  - -97.41240949533815
+  - 1.8975605739443058
+  - -47.17260195568751
+  r_cg2px_mm:
+  - 99.76073801432905
+  - -0.43898419586898196
+  - -47.943920019980375
+  rotor_length_mm: 127.22158230759781
+  rotor_mass_g: 2.3353107556533677
+  rotor_thickness_mm: 1.0357579660244969
+  rotor_width_mm: 10.066063708369951
+  servo_time_constant_ms: 46.54458245664165
+- body_height_mm: 33.15078651925363
+  body_length_mm: 128.12218655404803
+  body_mass_g: 388.15643859040813
+  body_width_mm: 26.842711902537143
+  motor_lookup: motor_lookup.csv
+  motor_time_constant_ms: 201.06752524258803
+  r_cg2nx_mm:
+  - -102.78356197076619
+  - 2.300745674333924
+  - -51.84010143152315
+  r_cg2px_mm:
+  - 100.53452997157173
+  - 2.8475091994178587
+  - -48.11619405614416
+  rotor_length_mm: 127.08469149159473
+  rotor_mass_g: 2.0351920626454834
+  rotor_thickness_mm: 0.9923890680888438
+  rotor_width_mm: 10.006308440062222
+  servo_time_constant_ms: 54.96999327668356
