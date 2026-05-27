@@ -1,0 +1,6 @@
+filter_cutoff_hz_body_rates: 200.0
+
+kf_q_servo: 0.0001
+kf_r_servo: 1.0
+kf_q_motor: 0.0001
+kf_r_motor: 0.001

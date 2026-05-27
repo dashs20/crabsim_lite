@@ -1,0 +1,12 @@
+rotor_length_mm: 1
+rotor_width_mm: 0.1
+rotor_thickness_mm: 0.1
+rotor_mass_g: 0.2
+body_length_mm: 10
+body_width_mm: 2
+body_height_mm: 3
+body_mass_g: 20
+r_cg2px_mm: [3, 3, 3]
+r_cg2nx_mm: [3, 3, 3]
+motor_time_constant_ms: 20
+servo_time_constant_ms: 5

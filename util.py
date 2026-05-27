@@ -25,3 +25,9 @@ def g2kg(mass_g):
 
 def ms2s(time_ms):
     return time_ms/1000
+
+def rad2deg(val_rad):
+    return val_rad * 180 / np.pi
+
+def deg2rad(val_deg):
+    return val_deg * np.pi / 180

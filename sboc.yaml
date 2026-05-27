@@ -20,8 +20,12 @@ r_cg2px_mm: [100, 0, -50]
 r_cg2nx_mm: [-100, 0, -50]
 
 # Q and R (abstracted to Bryson's rule)
-Q_max_acceptable_error_degps: [200,200,1000] # wx wy wz
+Q_max_acceptable_error_degps: [300,300,1500] # wx wy wz
 Servo_max_angles_deg: 60 # phi
 
 # matrix pickle
 pickle_path: 'bicopter_sdre_matrices.pkl'
+
+# Integrator
+integral_gain: [5.0, 2.0, 1.0]
+integral_limit: 2.0
