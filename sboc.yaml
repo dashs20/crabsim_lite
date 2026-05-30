@@ -29,3 +29,6 @@ pickle_path: 'bicopter_sdre_matrices.pkl'
 # Integrator
 integral_gain: [5.0, 2.0, 1.0]
 integral_limit: 2.0
+
+# Timestep
+dt_s: 0.002

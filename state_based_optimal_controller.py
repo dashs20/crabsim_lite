@@ -2,7 +2,7 @@ import numpy as np
 import dill
 import yaml
 from util import *
-from scipy.linalg import solve_continuous_are, inv
+from scipy.linalg import solve_discrete_are, inv
 
 class sboc:
     def __init__(self,sboc_yaml):
@@ -10,6 +10,8 @@ class sboc:
         # Load vehicle configuration data
         with open(sboc_yaml, 'r') as file:
             data = yaml.safe_load(file)
+            
+        self.dt_s = data['dt_s']
 
         # load A(x) and B(x)
         with open(data['pickle_path'], 'rb') as f:
@@ -110,19 +112,20 @@ class sboc:
         # Compute A and B
         A = self.A_func(*eval_args)
         B = self.B_func(*eval_args)
+        
+        # Discretize A and B using Forward Euler
+        A_d = np.eye(A.shape[0]) + A * self.dt_s
+        B_d = B * self.dt_s
 
         # Scale Q and R to improve the condition number of the Hamiltonian matrix
         scale = 1e9
 
-        # solve continuous ARE
+        # solve discrete ARE
         try:
-            P = solve_continuous_are(A, B, self.Q * scale, self.R * scale)
+            P = solve_discrete_are(A_d, B_d, self.Q * scale, self.R * scale)
         
-            # compute gain
-            # K = R_inv @ B.T @ P. But R_inv here must be the inverse of the SCALED R!
-            # Alternatively, since P is scaled by 'scale', and we use unscaled R_inv:
-            # K = self.R_inv @ B.T @ (P / scale)
-            K = self.R_inv @ B.T @ (P / scale)
+            # compute discrete gain
+            K = inv(self.R * scale + B_d.T @ P @ B_d) @ B_d.T @ P @ A_d
             
             # compute U delta
             # [phi_px, phi_nx, omega_rpx, omega_rnx]

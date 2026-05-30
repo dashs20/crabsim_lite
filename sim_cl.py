@@ -16,7 +16,7 @@ def run_sim(plant_config_dict=None, log_filename='log.csv', generate_pdf=True):
     thr_frac_lookup = lookup_1D(t_lookup_s, guidance_data[:,4])
 
     # define sim dt (seconds)
-    dt_s = 1/2000
+    dt_s = 1/1000
     t_end_s = t_lookup_s[-1]
     n_steps = round(t_end_s/dt_s)
     t_s = np.linspace(0,t_end_s,n_steps)
