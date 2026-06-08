@@ -24,7 +24,7 @@ class rotor_as_wheel:
         T_hat = compute_T_hat(phi_rotor_rad)
         Tdot_hat = compute_Tdot_hat(phi_rotor_rad,phidot_rotor_radps)
 
-        return -self.j_kgm2 * (Tdot_hat * w_rotor_radps + T_hat * wdot_rotor_radps2 + np.cross(T_hat * w_rotor_radps,W_B_wrt_I_radps,axis=0))
+        return -self.j_kgm2 * (Tdot_hat * w_rotor_radps + T_hat * wdot_rotor_radps2 + np.cross(W_B_wrt_I_radps,T_hat * w_rotor_radps,axis=0))
     
 class rotor_as_thruster:
     def __init__(self,w_radps_2_f_N,r_cg2r_m):
@@ -108,6 +108,8 @@ class bicopter:
         self.nx_motor_model = tf1(ms2s(data['motor_time_constant_ms']),1,self.dt_s)
         self.px_servo_model = tf1(ms2s(data['servo_time_constant_ms']),1,self.dt_s)
         self.nx_servo_model = tf1(ms2s(data['servo_time_constant_ms']),1,self.dt_s)
+        
+        self.thrust_enabled = True
 
     def step(self,act_cmd):
 
@@ -140,7 +142,10 @@ class bicopter:
         M_nx_thrust_Nm, F_nx_N = self.rotor_thruster_nx.get_M(phi_tilter_nx_rad,w_rotor_nx_radps)
 
         # get net moment on rigid body
-        M_net_Nm = M_px_wheel_Nm + M_nx_wheel_Nm + M_px_thrust_Nm + M_nx_thrust_Nm
+        if self.thrust_enabled:
+            M_net_Nm = M_px_wheel_Nm + M_nx_wheel_Nm + M_px_thrust_Nm + M_nx_thrust_Nm
+        else:
+            M_net_Nm = M_px_wheel_Nm + M_nx_wheel_Nm
 
         # update rigid body state
         self.body.step(M_net_Nm)

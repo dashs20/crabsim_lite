@@ -216,6 +216,7 @@ class gnc:
             i_lims = np.array(i_limit_raw)
             
         self.integrator = error_integrator(ki, i_lims, dt_s)
+        self.integrator_enabled = True
 
         # build navigation object
         self.nav = nav(nav_yaml_path, dt_s, servo_tau_s, motor_tau_s)
@@ -232,7 +233,10 @@ class gnc:
 
         # integrate error
         err = w_des_radps - w_est_flat
-        w_des_modified = w_des_radps + self.integrator.step(err)
+        if self.integrator_enabled:
+            w_des_modified = w_des_radps + self.integrator.step(err)
+        else:
+            w_des_modified = w_des_radps
 
         # build full state estimate
         full_state_est = np.hstack((w_est_flat, act_est_filtered))
