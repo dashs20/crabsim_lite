@@ -1,9 +1,6 @@
 import numpy as np
-import yaml
 from util import *
-from gnc.state_based_optimal_controller import sboc
-from models.tf import tf1
-from gnc.nav import nav
+from config.config_util import load_gnc_config
 
 def compute_T_hat(phi_rad):
     return np.array([[0],[np.sin(phi_rad)],[-np.cos(phi_rad)]])
@@ -25,31 +22,8 @@ class error_integrator:
         return self.ki * self.i_err
 
 class gnc:
-    def __init__(self,ctrl_yaml_path,nav_yaml_path,dt_s):
-
-        # build state-based optimal controller
-        self.ctl = sboc(ctrl_yaml_path)
-
-        # obtain max force from motor lookup
-        self.f_max_N = np.max(self.ctl.w_rapds_2_f_N.y)
-
-        # read actuator time constants for Kalman filtering - Use YAML values EXACTLY
-        with open(ctrl_yaml_path, 'r') as file:
-            ctrl_data = yaml.safe_load(file)
-        servo_tau_s = ms2s(ctrl_data['servo_time_constant_ms'])
-        motor_tau_s = ms2s(ctrl_data['motor_time_constant_ms'])
-
-        # build error integrator
-        ki = ctrl_data['integral_gain']
-        i_limit_raw = ctrl_data['integral_limit']
-        i_lims = np.array([-1,1]) * abs(i_limit_raw)            
-        self.integrator = error_integrator(ki, i_lims, dt_s)
-
-        # build navigation object
-        self.nav = nav(nav_yaml_path, dt_s, servo_tau_s, motor_tau_s)
-
-        # store previous command for Kalman filter predict step and A/B formulation
-        self.prev_u_nav = np.zeros(4)
+    def __init__(self,gnc_config: gnc_config):
+        self.gnc_config = gnc_config
         
     def step(self,w_des_radps,w_est_radps,act_est,thr_frac):
 

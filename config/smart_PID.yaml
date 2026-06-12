@@ -1,7 +1,0 @@
-x_gains: [0.1,0,0.01]
-y_gains: [0,0,0]
-z_gains: [0,0,0]
-
-x_i_lim: 2
-y_i_lim: 2
-z_i_lim: 2

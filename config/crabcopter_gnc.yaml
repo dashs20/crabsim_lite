@@ -1,6 +1,0 @@
-r_cg2px_mm: [100, 0, -50]
-r_cg2nx_mm: [-100, 0, -50]
-motor_lookup: 'motor_lookup.csv'
-min_thr_frac: 0.05
-phi_max_deg: 45
-controller_yaml: 'smart_PID.yaml'

@@ -1,0 +1,21 @@
+plant: '../plant/plant.yaml'
+ctl:
+  # Q and R (abstracted to Bryson's rule)
+  Q_max_acceptable_error_degps: [300,300,1500] # wx wy wz
+  Servo_max_angles_deg: 60 # phi
+
+  # Integrator
+  integral_gain: [5.0, 2.0, 1.0]
+  integral_limit: 2.0
+
+  # Timestep
+  dt_s: 0.002
+nav:
+  # body rate lowpass filter cutoff frequency
+  filter_cutoff_hz_body_rates: 200.0
+
+  # kalman filter q/r of servo
+  kf_q_servo: 0.0001
+  kf_r_servo: 1.0
+  kf_q_motor: 0.0001
+  kf_r_motor: 0.001
