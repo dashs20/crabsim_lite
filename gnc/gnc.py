@@ -1,9 +1,9 @@
 import numpy as np
 import yaml
 from util import *
-from state_based_optimal_controller import sboc
-from tf import tf1
-from nav import nav
+from gnc.state_based_optimal_controller import sboc
+from models.tf import tf1
+from gnc.nav import nav
 
 def compute_T_hat(phi_rad):
     return np.array([[0],[np.sin(phi_rad)],[-np.cos(phi_rad)]])

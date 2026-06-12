@@ -1,5 +1,5 @@
-from plants import *
-from util import *
+from models.plants import *
+from util.util import *
 import matplotlib.pyplot as plt
 import numpy as np
 import random

@@ -4,8 +4,8 @@ import multiprocessing
 import os
 import copy
 import glob
-from sim_cl import run_sim
-from mc_report import generate_mc_report
+from simulation.sim_cl import run_sim
+from reporting.mc_report import generate_mc_report
 
 def worker(run_id):
     # Load base config and dispersions

@@ -1,4 +1,4 @@
-from plants import *
+from models.plants import *
 from util import *
 
 # define sim dt (seconds)

@@ -1,8 +1,8 @@
 import numpy as np
-from integrator import rk4
+from util.integrator import rk4
 from util import *
 import yaml
-from tf import tf1
+from models.tf import tf1
 
 def compute_T_hat(phi_rad):
     return np.array([[0],[np.sin(phi_rad)],[-np.cos(phi_rad)]])

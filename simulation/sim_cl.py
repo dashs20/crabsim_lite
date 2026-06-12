@@ -1,8 +1,8 @@
-from plants import *
+from models.plants import *
 from gnc import *
 from util import *
-from sensor import ICM42688
-from csv_to_pdf_smart import generate_smart_pdf_plots
+from models.sensor import ICM42688
+from reporting.csv_to_pdf_smart import generate_smart_pdf_plots
 
 ACTUATOR_NOISE_STD_DEV = 0.01
 

@@ -1,4 +1,4 @@
-from integrator import rk4
+from util.integrator import rk4
 import numpy as np
 
 class tf1:
